@@ -26,7 +26,7 @@ Rustic-chess.org is Rustic's home on the internet. This site will document the e
 
 ## It looks weird. What software does it use?
 
-Yeah. This might come as a shock, but it's not Wordpress. This site is written using MD Book. This is a small program/compiler, that creates books/websites out of Markdown files. It's open source, written by, and for the Rust language community, and it's used to create the Rust language documentation. I am using it because it allows me to write documentation which is then output into a static book/website, so I don't have to maintain or update a website. Rustic-chess.org is purely informative. The less work needs to be done to maintain it, the more I can either develop Rustic, or write its documentation.
+Yeah. This might come as a shock, but it's not Wordpress. This site is written using MD Book. This is a commandline utility written in Rust. It creates websites as books out of Markdown files. It's open source, written by and for the Rust language community, and it's used to create the Rust language documentation. I am using it because it allows me to write documentation which is then converted into a static website, so I don't have to maintain or update a content management system such as Wordpress. Rustic-chess.org is purely informative. It is going to contain a lot of information, so it's priority is to be easy to navigate, very readable, and easy to maintain. The less work needs to be done to maintain it, the more I can either develop Rustic, or write its documentation.
 
 ## Hasn't this been done before?
 
