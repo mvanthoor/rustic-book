@@ -30,13 +30,13 @@ Yeah. This might come as a shock, but it's not Wordpress. This site is written u
 
 ## Hasn't this been done before?
 
-Of course, this has been done before. There are some well known "tutorial engines" around, but I think there are issues with most of them, such as:
+Of course, this has been done before. There are some well known tutorial engines around. Most of them do have some issues, for example:
 
 * The engines and tutorials are getting older.
 * The source code may be old enough to not compile cleanly using a current-day compiler.
-* These engines mainly use older techniques (for example, not bitboards).
-* Even though the engines are available, in some cases the accompanying website has been gone for a long time.
+* These engines mainly use older techniques (for example, not bitboards) for simplicity's sake. Those techniques work well to learn the basics of chess engine programming, but because of speed limitations, the engine will always be at a disadvantage to an engine using bitboards if everything else is equal.
+* Even though the engines may be available with (some) documentation in the source code, in some cases the accompanying website has been gone for a long time.
 * The code isn't always as readable as could be.
 * Most if not all engines are written in C or C++.
 
-Even if this has been done before, I still get fun out of doing this myself, in exactly the way I want to be done. Rustic is an original engine, not derived from any other engine, and this site is its chronicle. Even though I'll be standing on the shoulders of giants that have shared information before me, this project is mine.
+Even if this has been done before, I still get fun out of doing this myself, in exactly the way I want to be done and in a programming language of my choice. Even though I'll be standing on the shoulders of giants that have shared information before me, this project is my own. It makes it worthwhile to me. I hope, in the future, other people starting out to write a chess engine will find it useful.
