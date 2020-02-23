@@ -12,7 +12,7 @@ There are other problems I could list, but most of them come down to the fact th
 
 And, one of the main reasons to avoid C or C++ when writing a *chess engine* specifically, isn't technical at all. In my case, it's personal. Everybody and their grandma, dog _and_ cat has a chess engine in C or C++ nowadays. I want mine to be written in a different language.
 
-Preferably, that would be a language as fast as C or C++, but avoiding most or even all of the memory and thread unsafety issues. I've looked at different compiled languages such as C#, Go, Ada That is why I've chosen Rust.
+Preferably, that would be a language as fast as C or C++, but avoiding most or even all of the memory and thread unsafety issues. I've looked at different compiled languages such as C#, Go, Ada, and others. In the end I've chosen Rust.
 
 ## As fast as C, but completely safe? I wanna know!
 
