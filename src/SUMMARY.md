@@ -1,3 +1,4 @@
 # Summary
 
-- [About](./about.md)
+[About](./about.md)
+[FAQ](./faq.md)
