@@ -14,7 +14,7 @@ And, one of the main reasons to avoid C or C++ when writing a *chess engine* spe
 
 Preferably, that would be a language as fast as C or C++, but avoiding most or even all of the memory and thread unsafety issues. I've looked at different compiled languages such as C#, Go, Ada That is why I've chosen Rust.
 
-## So tell me about Rust.
+## As fast as C, but completely safe? I wanna know!
 
 [Rust Language website](https://www.rust-lang.org/)
 
@@ -24,11 +24,11 @@ Preferably, that would be a language as fast as C or C++, but avoiding most or e
 
 Rustic-chess.org is Rustic's home on the internet. This site will document the entire development of Rustic, starting from the very beginning, and its progress after each new feature is added. It will also collect all the information that was found around the internet. As such, it will be possible to write one's own chess engine by following Rustic's development steps.
 
-## This site looks weird. What software does it use?
+## It looks weird. What software does it use?
 
 Yeah. This might come as a shock, but it's not Wordpress. This site is written using MD Book. This is a small program/compiler, that creates books/websites out of Markdown files. It's open source, written by, and for the Rust language community, and it's used to create the Rust language documentation. I am using it because it allows me to write documentation which is then output into a static book/website, so I don't have to maintain or update a website. Rustic-chess.org is purely informative. The less work needs to be done to maintain it, the more I can either develop Rustic, or write its documentation.
 
-## Why? Hasn't this been done before?
+## Hasn't this been done before?
 
 Of course, this has been done before. There are some well known "tutorial engines" around, but I think there are issues with most of them, such as:
 
