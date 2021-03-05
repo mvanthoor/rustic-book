@@ -3,10 +3,4 @@ authors = ["Marcel Vanthoor"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Rustic Chess Engine"
-
-[preprocessor.mermaid]
-command = "mdbook-mermaid"
-
-[output.html]
-additional-js = ["mermaid.min.js", "mermaid-init.js"]
+title = "Chess Programming"
