@@ -3,6 +3,6 @@
 
 # Creating the Rustic chess engine
 
-or, The basics of Chess Programming in Rust.
+or, the art of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__

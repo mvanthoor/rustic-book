@@ -2,11 +2,12 @@
 
 ## What's wrong with C and C++?
 
-Nothing. I actually like C and C++; especially C, because it is such a
-small language, and very easy to learn. C gives me the same sort of thrill
-as I'd get from handling a live piece of dynamite. No, really. I love C to
-bits. If Rust hadn't existed, my chess engine would have been written in C
-and would (probably) have a different name.
+Nothing... and a lot, both at the same time. I actually like C and C++;
+especially C, because it is such a small language, and very easy to learn.
+C gives me the same sort of thrill as I'd get from handling a live piece of
+dynamite. No, really. I love C to bits. If Rust hadn't existed, my chess
+engine might have been written in C and in that case would probably have
+had a different name.
 
 These languages are the 800 pound gorilla's in the room with regard to
 systems programming, embedded software engineering, and also, chess
