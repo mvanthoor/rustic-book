@@ -3,4 +3,4 @@ authors = ["Marcel Vanthoor"]
 language = "en"
 multilingual = false
 src = "src"
-title = "Chess Programming"
+title = "Creating the Rustic chess engine"
