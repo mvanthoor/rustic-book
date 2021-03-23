@@ -3,6 +3,6 @@
 
 # Creating the Rustic chess engine
 
-or The basics Chess Programming, using the Rust programming language.
+or, The basics of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__
