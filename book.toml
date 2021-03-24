@@ -4,3 +4,7 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Creating the Rustic chess engine"
+
+[output.html.fold]
+enable = true
+level = 0
