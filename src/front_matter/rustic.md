@@ -1,11 +1,11 @@
 # About Rustic
 
-The chess engine discussed in this book is called Rustic, which is written
-in the Rust programming language. The engine is an original work, but it
+The chess engine discussed in this book is Rustic, which is written in the
+Rust programming language. The engine is an original work, but it
 implements many well-known concepts, both from computer science in general,
 and chess programming in particular.
 
-Rustic is an open-source engine licensed under GPL version 3, so anyone can
+Rustic is an open-source engine licensed under GPL v3, so anyone can
 download the source code and change it to their liking, and compile it for
 their particular platform or CPU. Creating derivative works is possible,
 within the rules stated by GPL v3.
