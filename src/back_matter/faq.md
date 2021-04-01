@@ -57,7 +57,6 @@ In short, the Rust programming language can be summed up as such:
 - Because of point 1, the following happens:
     - No uninitialized variables... ever.
     - No memory leaks.
-    - No deadlocks.
     - No race conditions.
     - Multi-threading actually becomes fairly easy!
 - No dependency problems: if you know and like any package manager
