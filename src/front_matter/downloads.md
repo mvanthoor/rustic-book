@@ -8,7 +8,7 @@ release page. Versions that have been tested by the CCRL list have a
 clickable Elo rating, linking to their CCRL page.
 
 **Rustic Alpha 2** | March 17, 2021 | [Download](https://git.io/JYL6G) |
-[Github](https://git.io/JYLBS) | 1845 Elo
+[Github](https://git.io/JYLBS) | 1815 Elo
 
 **Rustic Alpha 1.1** | March 15, 2021 | [Download](https://git.io/JYL6L) |
 [Github](https://git.io/JYLBo) | 1675 Elo
