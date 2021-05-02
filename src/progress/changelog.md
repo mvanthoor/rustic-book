@@ -1,5 +1,25 @@
 # Changelog
 
+## ? ??, 2021 - Rustic Alpha 3.0.0 (work in progress)
+
+- New features:
+  - Killer Heuristic
+  - History Heuristic
+- Changes:
+  - Switch versioning scheme to SemVer. Versions are going to be in the
+    form "a.b.c" from now on, with the following meaning:
+    - Increment **a**: A new strength-gaining feature was added.
+    - Increment **b**: A bug was fixed that gained strength.
+    - Increment **c**: A feature was added or a bug was fixed that did not
+      gain stregnth. It is not necessary to test this version for a rating
+      change.
+- Misc:
+  - A build script was added, so all versions of Rustic for a particular
+    operating system can be compiled at once, without having to manually
+    set compilation flags. Of course, the basic "cargo build --release"
+    will also still work, but the resulting version of the engine will not
+    be optimized for the specific hardware.
+
 ## March 17, 2021 - Rustic Alpha 2
 
 - New Features:
