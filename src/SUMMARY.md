@@ -10,4 +10,5 @@
     - [Changelog](./progress/changelog.md)
 
 [FAQ](./back_matter/faq.md)
+[About me](./back_matter/me.md)
 [Credits](./back_matter/credits.md)
