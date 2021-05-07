@@ -29,9 +29,10 @@ other engines: adding the features in a different order, will give
 different results.
 
 Reading the table works like this: Rustic Alpha 1 is the baseline version.
-On top of that, the transposition table is added, and tested (+105 Elo),
-and TT Move ordering is added after that, with an improvement of +65 Elo.
-The result is Rustic Alpha 2. This version is tested by CCRL, to have a
+On top of that, the transposition table is added, using only hash cuts (+40
+Elo). Then TT Move ordering is added after that, on top of the TT hash
+cuts, with a further improvement of +112 Elo. That version of the engine
+turned into  Rustic Alpha 2. This version is tested by CCRL, to have a
 rating of 1815 Elo. The "Test" column shows the rating obtained in my own
 testing procedure.
 
@@ -40,9 +41,9 @@ testing procedure.
 | Version | Feature             | Test     | Improvement | CCRL |
 |---------|---------------------|----------|-------------|------|
 | Alpha 1 | Baseline version    | **1675** | -           | 1677 |
-|         | Transposition Table | 1780     | 105         |      |
-|         | TT Move sorting     | 1845     | 65          |      |
-| Alpha 2 |                     | **1845** |             | 1815 |
+|         | Transposition Table | 1715     | 40          |      |
+|         | TT Move sorting     | 1827     | 112         |      |
+| Alpha 2 |                     | **1827** |             | 1815 |
 |         | Killer Moves        |          | ?           |      |
 |         | History Heuristic   |          | ?           |      |
 |         | Aspiration Window   |          | ?           |      |

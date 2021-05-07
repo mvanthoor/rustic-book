@@ -5,6 +5,12 @@
 [About Rustic](./front_matter/rustic.md)
 [Downloads](./front_matter/downloads.md)
 
+- [Engine](./engine/introduction.md)
+    - [Introduction](./engine/introduction.md)
+    - [Design](./engine/design.md)
+- [Evaluation](./evaluation/introduction.md)
+    - [Introduction](./evaluation/introduction.md)
+    - [Piece-Square Tables](./evaluation/psqt.md)
 - [Progress](./progress/playing_strength.md)
     - [Playing Strength](./progress/playing_strength.md)
     - [Changelog](./progress/changelog.md)

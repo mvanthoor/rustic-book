@@ -42,7 +42,6 @@ was easy to crash and easy to defeat. Not blundering any pieces or mate was
 enough to win.
 
 After I finished high-school and went to study computer science, playing
-
 chess as a hobby basically dropped by the wayside for quite a number of
 years, but I still wanted to write a chess engine "some day." It took me
 nearly 20 years to get around to it, because there were always more
@@ -54,8 +53,8 @@ already had one in either one (or both!) of those languages.
 Then at some point I heard about Rust as an alternative to C and C++. I
 started following the language, and serious thoughts about finally writing
 that chess engine cropped up again when it reached version 1.0 in 2015.
-While I was intrigued with the premise, and tinkered around with it, I
-found the language somewhat cumbersome to use. The authors promised that
+While I was intrigued with the premise of this language and tinkered around
+with it, I found it somewhat cumbersome to use. The authors promised that
 this would get better. Three years later, Edition 2018 was released, and it
 _did_ get better, by a lot. So in the summer of 2019, after my last move
 and my girlfriend having moved in with me, I decided to start writing
