@@ -14,11 +14,8 @@
       gain stregnth. It is not necessary to test this version for a rating
       change.
 - Misc:
-  - A build script was added, so all versions of Rustic for a particular
-    operating system can be compiled at once, without having to manually
-    set compilation flags. Of course, the basic "cargo build --release"
-    will also still work, but the resulting version of the engine will not
-    be optimized for the specific hardware.
+  - A Makefile was added, so Rustic can be built using "GNU Make"
+  - Re-add showing the size of the TT and number of threads in About.
 
 ## March 17, 2021 - Rustic Alpha 2
 
