@@ -1,0 +1,28 @@
+@startuml architecture
+skinparam shadowing false
+skinparam componentStyle rectangle
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab
+component "Search" as Search #a1fdff
+component "Evaluation" as Evaluation #f5ccff
+component IComm #ffdc96
+component "UCI" as Uci #a1fdff
+component "XBoard" as XBoard #a1fdff
+component "Transposition\nTable" as TT
+component Board
+component MoveGenerator
+component "Chess Program\n(User Interface)" as GUI #cdffab
+
+Engine *-- IComm
+Engine *-up- Board
+Engine *-up- MoveGenerator
+Engine *-- TT
+IComm <|-- Uci
+IComm <|-- XBoard
+Engine *-- Search
+Search --> Evaluation
+Uci <..> GUI
+XBoard <..> GUI
+@enduml

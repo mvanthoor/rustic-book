@@ -1,0 +1,11 @@
+@startuml concept
+skinparam shadowing false
+skinparam componentStyle rectangle
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab
+component "Chess Program\n(User Interface)" as Gui #cdffab
+
+Engine <-right-> Gui : "communication\n(UCI, XBoard, ...)"
+@enduml
