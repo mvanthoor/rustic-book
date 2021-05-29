@@ -35,7 +35,6 @@ proper chess.
   information about any other object, except if the Engine gives it to
   them. The engine knows all, and controls all.
 - **MoveGenerator**: Generates pseudo-legal moves when requested.
-- Board: Holds the current board position and game state.
 - **Board**: Holds the current board and game state.
 - **Search**: Searches for the best move in the position.
 - **Evaluation**: Is called by Search, for evaluating positions during search.

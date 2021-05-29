@@ -1,29 +1,31 @@
 # Frequently asked questions
 
-## What's wrong with C and C++?
+## Why Rust? What's wrong with C and C++?
 
 Nothing... and a lot, both at the same time. I actually like C and C++;
-especially C, because it is such a small language, and very easy to learn.
-C gives me the same sort of thrill as I'd get from handling a live piece of
-dynamite. No, really. I love C to bits. If Rust hadn't existed, my chess
-engine might have been written in C and in that case would probably have
-had a different name.
+especially C, because it is such a small language, very easy to learn, and
+it basically runs on every computer platform ever created. C gives me the
+same sort of thrill as I get from handling a live piece of dynamite. No,
+really. I love C to bits. (I should stop making word jokes, I know.) If
+Rust hadn't existed, my chess engine may have been written in C and in that
+case would probably have had a different name.
 
 These languages are the 800 pound gorilla's in the room with regard to
 systems programming, embedded software engineering, and also, chess
-engines. The reason is that these languages compile down to native machine
-code which runs at lightning speed, so they can be used to obtain maximum
-performance. Also, these languages have also been around for a long time.
-They are well known, and a lot of open source code is floating around the
-internet, ready to be used. While all of this can be an advantage, there
-are also some drawbacks.
+programming. The reason is that these languages compile down to native
+machine code which runs at lightning speed, so they can be used to obtain
+maximum performance. Also, these languages have also been around for a long
+time. They are well known, and a lot of open source code is floating around
+the internet, ready to be used. While all of this can be an advantage,
+there are also some drawbacks.
 
-Both C and C++ are inherently unsafe, because the programmer is basically
-allowed to do anything he or she wants. These languages are fast, but also
-dangerous. One has to be very precise in managing memory and resources. If
-one isn't, it's easy to create memory leaks, subtle and hard to find bugs,
-race conditions and deadlocks when programming multi-threaded, or you could
-crash the program.
+Both C and C++ are inherently unsafe, because the programmer is allowed to
+do anything he or she wants. These languages are fast, but also dangerous.
+Even though C is easy to learn, it has a lot of pitfalls one should be
+careful about. Managing memory and resources correctly is hard, and has to
+be exactly right. If they aren't, it's easy to create memory leaks, subtle
+and really hard to find bugs, race conditions and deadlocks when
+programming multi-threaded. You could also crash the program.
 
 There are other problems I could list, but most of them come down to the
 fact that C, as of 2020, was designed 47 years ago. Think about that. In
@@ -31,15 +33,18 @@ the world of computers, 47 years ago is akin to prehistory. Even though
 newer versions of C and C++ are adding more modern features, they can never
 escape their (unsafe) roots completely.
 
-And, one of the main reasons to avoid C or C++ when writing a *chess
-engine* specifically, isn't technical at all. In my case, it's personal.
+One of the main reasons to avoid C or C++ when writing a *chess engine*
+specifically, isn't technical at all. In my case, it's personal.
 *Everybody* has a chess engine written in C or C++; using a different
 language is more the exception than the rule. I want mine to be written in
 a different language.
 
 Preferably, that would be a language as fast as C or C++, but avoiding most
 or even all the pitfalls of those languages. I've looked at different
-options such as C#, Go, Ada, and others. In the end I chose Rust.
+options such as C#, Go, Ada, and others. In the end I chose Rust. Even
+though Rust itself is not a perfect language and it can't solve _all_ the
+problems (it's still possible to create subtle bugs or crash the program),
+it goes a long way in making memory management and threading a lot easier.
 
 ## As fast as C, but safe? I wanna know!
 
