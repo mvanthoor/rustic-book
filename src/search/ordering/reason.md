@@ -34,9 +34,11 @@ be a mistake. The better move is:
 __Rc8xe8#!__
 
 Black is in checkmate. The queen is unable to move off the back rank and
-keep the knight covered at the same time. Qb8xh2+ is possible, but then
-white will just recapture the black queen, so that's not good. Worse, the
-Rc8xe8 checkmate threat is still on the board.
+keep the knight defended at the same time. (Qb8-e5 does not work, because
+white will just capture the queen with d4xe5.) Qb8xh2+ is possible because
+it checks the white king, but then white will just recapture the black
+queen, so that's no good either. Worse, the Rc8xe8 checkmate threat is
+still on the board.
 
 Thus after Rc2xc8, the response Qb8xc8 is the only good (or more accurate,
 the least bad) move for black, even though white will follow it up with
@@ -49,6 +51,9 @@ the order in which moves are evaluated is the following.
 - Captures are evaluated before quiet moves.
 - Good captures are evaluated before bad captures.
 - Checks come before completely quiet moves.
+- Quiet moves will only be evaluated if there are no immediate threats to
+  to make against the opponent's king, or no threats against the king or
+  one's one pieces needs to be addressed.
 
 Using techniques like these, humans narrow down the list of moves to
 examine. A chess engine has to do the same thing, or it will be examining a
@@ -58,6 +63,6 @@ first, it can skip searching huge chunks of the search tree, saving a lot
 of time in finding the promising variations. It can use this saved time to
 search deeper, and it will become stronger as a result.
 
-In this subchapter, we'll discuss various techniques on how to order moves
-during the search. To make the gains of these techniques clear, some
-examples with the results obtained will be provided.
+In this chapter, we'll discuss various techniques on how to order moves
+during the search. To make the gains of move ordering more tangible, an
+example will be provided in the MVV-LVA chapter, which will be up next.

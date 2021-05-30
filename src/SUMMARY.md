@@ -15,6 +15,7 @@
     - [Move Ordering](./search/ordering/ordering.md)
         - [The reason](./search/ordering/reason.md)
         - [MVV_LVA](./search/ordering/mvv_lva.md)
+        - [TT-move ordering](./search/ordering/tt_move.md)
         - [Killer moves](./search/ordering/killers.md)
         - [History heuristic](./search/ordering/history.md)
 - [Evaluation](./evaluation/evaluation.md)
