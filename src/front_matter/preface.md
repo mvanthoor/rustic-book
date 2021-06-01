@@ -1,6 +1,7 @@
 # Preface
 
-Hi there. Nice of you to hang around. You're about to step into the
+Hi there. Nice of you to hang around. I'm Marcel, the author of the chess
+engine Rustic, and the writer of this text. You're about to step into the
 wonderful and sometimes aggravating world of chess programming. This can be
 a rewarding endavour... but maybe _addictive_ is the better word. There
 will be lots of challenges, but with perseverance you'll be able to
@@ -33,5 +34,5 @@ if you want it to.
 
 Welcome on the long road towards your own chess engine, and good luck!
 
-The author of Rustic,<br />
-Marcel Vanthoor
+Have fun,<br />
+Marcel

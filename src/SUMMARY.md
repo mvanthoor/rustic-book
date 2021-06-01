@@ -5,6 +5,7 @@
 [About this book](./front_matter/about_book.md)
 [About Rustic](./front_matter/about_rustic.md)
 [Downloads](./front_matter/downloads.md)
+[Prerequisites](./front_matter/prereq.md)
 
 - [Introduction](./introduction/introduction.md)
     - [Concept](./introduction/concept.md)
