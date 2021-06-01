@@ -7,7 +7,7 @@ Let's take the alpha-beta function, which performs the core part of the
 search in a chess engine. To keep this simple, all parts not related to
 move ordering have been removed.
 
-```js
+```javascript
 pub fn alpha_beta(
         mut depth: i8,
         mut alpha: i16,
@@ -66,7 +66,7 @@ So, only points 2 and 5 are actually involved in ordering, and then picking
 the moves. We'll see score_move() in several different versions when we
 discuss the move ordering techniques, but pick_move() is always the same:
 
-```js
+```javascript
 pub fn pick_move(ml: &mut MoveList, start_index: u8) {
     for i in (start_index + 1)..ml.len() {
         if ml.get_move(i).get_sort_score() > ml.get_move(start_index).get_sort_score() {

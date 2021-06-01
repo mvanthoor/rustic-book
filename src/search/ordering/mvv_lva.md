@@ -19,7 +19,7 @@ getting your engine to play decent chess.
 
 The function is implemented as a two-dimensional array:
 
-```js
+```javascript
 // MVV_VLA[victim][attacker]
 pub const MVV_LVA: [[u8; NrOf::PIECE_TYPES + 1]; NrOf::PIECE_TYPES + 1] = [
     [0, 0, 0, 0, 0, 0, 0],       // victim K, attacker K, Q, R, B, N, P, None
@@ -35,7 +35,7 @@ pub const MVV_LVA: [[u8; NrOf::PIECE_TYPES + 1]; NrOf::PIECE_TYPES + 1] = [
 The two-dimensional array is addressed in the victim-attacker order,
 just as MVV-LVA says. Each combination has a value. For example:
 
-```js
+```javascript
 let value1 = MVV_LVA[Pieces::BISHOP][Pieces::PAWN];
 ```
 
@@ -43,7 +43,7 @@ In this case, the victim is a Bishop, while the attacker is a pawn. The
 value of this capture as provided by the MVV-LVA array, will therefore be
 35. Another capture could be:
 
-```js
+```javascript
 let value2 = MVV_LVA[PIECES::QUEEN][Pieces::ROOK];
 ```
 
@@ -67,7 +67,7 @@ of material gain.)
 This is how the ordering is implemented, when MVV_LVA is the only sort
 scoring functionality in the engine:
 
-```js
+```javascript
 pub fn score_moves(ml: &mut MoveList) {
     for i in 0..ml.len() {
         let m = ml.get_mut_move(i);
