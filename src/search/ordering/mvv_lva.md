@@ -54,17 +54,15 @@ first, because capturing the queen using a rook is probably better (5
 points of material gain), than capturing the bishop using a pawn (2 points
 of material gain.)
 
-> **Sidenote**
-> 
-> You may be wondering about the values in the table: why did I choose 10,
-> 11, 12.... and then 20, 21, 22... for the next row? The simple answer is
-> that these values are arbitrary. The only thing that counts is to make
-> sure that the values for the better captures are higher. Instead of 10,
-> 11, 12..., I could have chosen 137, 180, 231,... and then for 20, 21,
-> 22,... the values could have been 400, 473, 474. It doesn't matter.
-> Personally, when choosing values like these, I like to keep them as small
-> as possible. Then they are easier to understand, easier to edit if
-> necessary, and they fit into smaller integers.
+> **Sidenote** You may be wondering about the values in the table: why did
+> I choose 10, 11, 12.... and then 20, 21, 22... for the next row? The
+> simple answer is that these values are arbitrary. The only thing that
+> counts is to make sure that the values for the better captures are
+> higher. Instead of 10, 11, 12..., I could have chosen 137, 180, 231,...
+> and then for 20, 21, 22,... the values could have been 400, 473, 474. It
+> doesn't matter. Personally, when choosing values like these, I like to
+> keep them as small as possible. Then they are easier to understand,
+> easier to edit if necessary, and they fit into smaller integers.
 
 This is how the ordering is implemented, when MVV_LVA is the only sort
 scoring functionality in the engine:
@@ -137,14 +135,12 @@ first. On top of this technique, further move ordering enhancements can be
 implemented which will be discussed in the next chapters.
 
 
-> **Sidenote**
->
-> So, what about the 0's in the table? The number of elements for the rows
-> and columns in the table is "NrOf::PIECE_TYPES + 1". There are 6 piece
-> types in chess: King, Queen, Rook, Bischop, Knight, Pawn. Rustic also has
-> a piece type called Pieces::NONE, which is used when there's no piece on
-> a square, or, in the move integer, there is no piece in the Promotion or
-> Captured fields. That is where the +1 comes from.
+> **Sidenote** So, what about the 0's in the table? The number of elements
+> for the rows and columns in the table is "NrOf::PIECE_TYPES + 1". There
+> are 6 piece types in chess: King, Queen, Rook, Bischop, Knight, Pawn.
+> Rustic also has a piece type called Pieces::NONE, which is used when
+> there's no piece on a square, or, in the move integer, there is no piece
+> in the Promotion or Captured fields. That is where the +1 comes from.
 > 
 > In MVV_LVA move ordering, Piece::NONE cannot be the victim and it also
 > cannot be the attacker. You can't capture TO an empty square. You also

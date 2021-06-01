@@ -14,6 +14,7 @@
     - [Introduction](./search/introduction.md)
     - [Move Ordering](./search/ordering/ordering.md)
         - [The reason](./search/ordering/reason.md)
+        - [How it works](./search/ordering/how.md)
         - [MVV_LVA](./search/ordering/mvv_lva.md)
         - [Killer moves heuristic](./search/ordering/killers.md)
         - [TT-move ordering](./search/ordering/tt_move.md)

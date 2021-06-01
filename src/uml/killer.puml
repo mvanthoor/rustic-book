@@ -1,7 +1,7 @@
 @startuml killer_move
 skinparam shadowing false
 skinparam componentStyle rectangle
-skinparam backgroundColor #FFFFFF
+skinparam backgroundColor #FFFFFE
 
 hide empty methods
 hide empty members
