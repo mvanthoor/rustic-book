@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="359px" preserveAspectRatio="none" style="width:548px;height:359px;" version="1.1" viewBox="0 0 548 359" width="548px" zoomAndPan="magnify"><defs/><g><!--MD5=[c3dd7293d4e74cc67bec6d68663a773e]
+entity p1--><rect fill="#CDFFAB" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="49" x="274" y="8.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="29" x="284" y="33.0332">f3-f4</text><!--MD5=[f3929e065b321440b4eee273bd9781ea]
+entity p2--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="62" x="93.5" y="109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="42" x="103.5" y="133.5332">Ng5-f6</text><!--MD5=[e37156ec2c7d0a63c8d30e6af773044e]
+entity p3--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="57" x="191" y="109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="201" y="133.5332">g7-g6</text><!--MD5=[53bced5eb8957db72541a66defa9639b]
+entity p4--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="57" x="283" y="109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="37" x="293" y="133.5332">a6-a5</text><!--MD5=[f409605d22668b0c04e45f97ea1d1007]
+entity p5--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="68" x="401.5" y="109"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="48" x="411.5" y="133.5332">Qd7-e8</text><!--MD5=[8a11d1af3ff0533d79024e82295089fe]
+entity p6--><rect fill="#CDFFAB" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="70" x="184.5" y="209.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="50" x="194.5" y="234.0332">Bg2-c6!</text><!--MD5=[d97433d6196f7d4b51505926f92753eb]
+entity p7--><rect fill="#CDFFAB" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="28" x="421.5" y="209.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="8" x="431.5" y="234.0332">?</text><path d="M140.5,14.5 L140.5,40.8516 A0,0 0 0 0 140.5,40.8516 L238.5,40.8516 A0,0 0 0 0 238.5,40.8516 L238.5,32.5 L273.82,27.5 L238.5,24.5 L238.5,24.5 L228.5,14.5 L140.5,14.5 A0,0 0 0 0 140.5,14.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M228.5,14.5 L228.5,24.5 L238.5,24.5 L228.5,14.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="146.5" y="32.9951">white at ply 5</text><path d="M51.5,207 L51.5,249.7031 A0,0 0 0 0 51.5,249.7031 L149.5,249.7031 A0,0 0 0 0 149.5,249.7031 L149.5,232.5 L184.36,228.5 L149.5,224.5 L149.5,217 L139.5,207 L51.5,207 A0,0 0 0 0 51.5,207 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M139.5,207 L139.5,217 L149.5,217 L139.5,207 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="61" x="57.5" y="225.4951">white killer</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="77" x="57.5" y="241.8467">move at ply 7</text><path d="M6,14.5 L6,40.8516 A0,0 0 0 0 6,40.8516 L59.96,40.8516 L111.74,108.79 L67.96,40.8516 L105,40.8516 A0,0 0 0 0 105,40.8516 L105,24.5 L95,14.5 L6,14.5 A0,0 0 0 0 6,14.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M95,14.5 L95,24.5 L105,24.5 L95,14.5 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="78" x="12" y="32.9951">black at ply 6</text><path d="M358,6 L358,48.7031 A0,0 0 0 0 358,48.7031 L442.53,48.7031 L438.09,108.79 L450.53,48.7031 L541,48.7031 A0,0 0 0 0 541,48.7031 L541,16 L531,6 L358,6 A0,0 0 0 0 358,6 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M531,6 L531,16 L541,16 L531,6 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="162" x="364" y="24.4951">The killer move doens't work</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="364" y="40.8467">against this black move...</text><path d="M351,310 L351,352.7031 A0,0 0 0 0 351,352.7031 L520,352.7031 A0,0 0 0 0 520,352.7031 L520,320 L510,310 L439.5,310 L435.5,247.56 L431.5,310 L351,310 A0,0 0 0 0 351,310 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><path d="M510,310 L510,320 L520,320 L510,310 " fill="#FBFB77" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="128" x="357" y="328.4951">... so white has to find</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="148" x="357" y="344.8467">something else over here.</text><!--MD5=[4ef60940496ff64d6ff13fdfdd3cc31c]
+link p1 to p2--><path d="M273.94,42.4 C244.26,59.2 194.1,87.6 160.17,106.81 " fill="none" id="p1-to-p2" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="155.7,109.34,165.5042,108.4033,160.0552,106.8839,161.5745,101.4349,155.7,109.34" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[7c5adbe08b3c450ab8f0bf0a699c9362]
+link p1 to p3--><path d="M284.01,46.57 C270.95,62.85 251.7,86.85 237.62,104.4 " fill="none" id="p1-to-p3" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="234.17,108.71,242.9218,104.1927,237.2987,104.8098,236.6815,99.1868,234.17,108.71" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[346a90a79ebc4d062b29a929188f1dc4]
+link p1 to p4--><path d="M300.88,46.57 C303,62.57 306.09,86.04 308.4,103.5 " fill="none" id="p1-to-p4" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="309.09,108.71,311.8726,99.2624,308.4329,103.7534,303.942,100.3137,309.09,108.71" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[544a79ed156e0a2ca379e348b50486ad]
+link p1 to p5--><path d="M323.31,46.34 C346.64,63.11 381.56,88.22 406.24,105.96 " fill="none" id="p1-to-p5" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="410.41,108.96,405.4339,100.4607,406.3491,106.043,400.7667,106.9581,410.41,108.96" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[c8307ae6e4f8b55f1d479c52204a14f6]
+link p2 to p6--><path d="M141.92,147.07 C157.76,163.49 181.17,187.76 198.13,205.35 " fill="none" id="p2-to-p6" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="201.86,209.21,198.4922,199.9549,198.3893,205.6108,192.7334,205.5079,201.86,209.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[6a6de29dbbb06a07890080bbcc71d999]
+link p3 to p6--><path d="M219.5,147.07 C219.5,163.07 219.5,186.54 219.5,204 " fill="none" id="p3-to-p6" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="219.5,209.21,223.5,200.21,219.5,204.21,215.5,200.21,219.5,209.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[ba30aef8f2d147107a6d9d560d05ad99]
+link p4 to p6--><path d="M294.63,147.07 C279.29,163.49 256.62,187.76 240.19,205.35 " fill="none" id="p4-to-p6" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="236.58,209.21,245.6456,205.361,239.9921,205.5552,239.7979,199.9017,236.58,209.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[94d4e57f9958b912560cba667da765d0]
+link p5 to p7--><path d="M435.5,147.07 C435.5,163.07 435.5,186.54 435.5,204 " fill="none" id="p5-to-p7" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="435.5,209.21,439.5,200.21,435.5,204.21,431.5,200.21,435.5,209.21" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[3e8e761fb8debe3b55e55135981bf8e8]
+@startuml killer_move
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+
+hide empty methods
+hide empty members
+
+component "f3-f4" as p1 #cdffab
+component "Ng5-f6" as p2
+component "g7-g6" as p3
+component "a6-a5" as p4
+component "Qd7-e8" as p5
+component "Bg2-c6!" as p6 #cdffab
+component "?" as p7 #cdffab
+
+note left of p1: white at ply 5
+note left of p6: white killer\nmove at ply 7
+note top of p2: black at ply 6
+note top of p5
+    The killer move doens't work
+    against this black move...
+end note
+note bottom of p7
+    ... so white has to find 
+    something else over here.
+end note
+
+p1 - -> p2
+p1 - -> p3
+p1 - -> p4
+p1 - -> p5
+p2 - -> p6
+p3 - -> p6
+p4 - -> p6
+p5 - -> p7
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

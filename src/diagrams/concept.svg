@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="77px" preserveAspectRatio="none" style="width:330px;height:77px;" version="1.1" viewBox="0 0 330 77" width="330px" zoomAndPan="magnify"><defs/><g><!--MD5=[89b32fd22c7afa88e0ae1984250e1822]
+entity Engine--><rect fill="#CDFFAB" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="64" x="7" y="24.3564"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="17" y="48.8896">Engine</text><!--MD5=[e0c734f8551c8b9202b2f0a5c366ac92]
+entity Gui--><rect fill="#CDFFAB" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="118" x="206" y="15.8564"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="216" y="40.3896">Chess Program</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="216" y="57.999">(User Interface)</text><!--MD5=[437178ff2865f75ff0975f2859f4a5db]
+link Engine to Gui--><path d="M76.44,43.3564 C110.17,43.3564 160.47,43.3564 200.64,43.3564 " fill="none" id="Engine-Gui" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="205.98,43.3564,196.98,39.3564,200.98,43.3564,196.98,47.3564,205.98,43.3564" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="71.38,43.3564,80.38,47.3564,76.38,43.3564,80.38,39.3564,71.38,43.3564" style="stroke:#A80036;stroke-width:1.0;"/><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="88" x="94.5" y="20.8516">communication</text><text fill="#000000" font-family="sans-serif" font-size="13" lengthAdjust="spacing" textLength="98" x="89.5" y="37.2031">(UCI, XBoard, ...)</text><!--MD5=[9e46490ca94536878d694cf5ec9bbfa6]
+@startuml concept
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab
+component "Chess Program\n(User Interface)" as Gui #cdffab
+
+Engine <-right-> Gui : "communication\n(UCI, XBoard, ...)"
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>

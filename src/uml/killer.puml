@@ -1,6 +1,8 @@
 @startuml killer_move
 skinparam shadowing false
 skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+
 hide empty methods
 hide empty members
 
@@ -8,17 +10,26 @@ component "f3-f4" as p1 #cdffab
 component "Ng5-f6" as p2
 component "g7-g6" as p3
 component "a6-a5" as p4
-component "Qd7-e7" as p5
+component "Qd7-e8" as p5
 component "Bg2-c6!" as p6 #cdffab
 component "?" as p7 #cdffab
 
-note left of p1: white, 5 ply deep
+note left of p1: white at ply 5
+note left of p6: white killer\nmove at ply 7
+note top of p2: black at ply 6
+note top of p5
+    The killer move doens't work
+    against this black move...
+end note
+note bottom of p7
+    ... so white has to find 
+    something else over here.
+end note
 
 p1 --> p2
 p1 --> p3
 p1 --> p4
 p1 --> p5
-
 p2 --> p6
 p3 --> p6
 p4 --> p6

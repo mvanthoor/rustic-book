@@ -13,7 +13,7 @@ attention to the GUI from this point onward (apart from the commands we're
 going to send and receive), we can focus on the engine. Let's unpack the
 Engine component from the concept diagram we saw on the previous page:
 
-![](../diagrams/architecture.png)
+![](../diagrams/architecture.svg)
 
 Wow. That got complicated fast. Don't panic. Just lets list all the shown
 components and shortly describe what they do. Let's start with the meaning

@@ -14,7 +14,7 @@ to interact with a user, from a user's point of view.
 
 So, they go together, like this:
 
-![](../diagrams/concept.png)
+![](../diagrams/concept.svg)
 
 The chess engine is on the left, the user interface is on the right. They
 communicate with one another. This is done through strict rules, which are

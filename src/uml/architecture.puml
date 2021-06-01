@@ -1,6 +1,8 @@
 @startuml architecture
 skinparam shadowing false
 skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+
 hide empty methods
 hide empty members
 

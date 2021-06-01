@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="477px" preserveAspectRatio="none" style="width:328px;height:477px;" version="1.1" viewBox="0 0 328 477" width="328px" zoomAndPan="magnify"><defs/><g><!--MD5=[89b32fd22c7afa88e0ae1984250e1822]
+entity Engine--><rect fill="#CDFFAB" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="64" x="117" y="105"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="44" x="127" y="129.5332">Engine</text><!--MD5=[f08d99a5d954cab98c847de775e5956b]
+entity Search--><rect fill="#A1FDFF" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="65" x="17.5" y="211.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="45" x="27.5" y="236.0332">Search</text><!--MD5=[b7aac19e27ec720d3ba4cb6dfc8e7ff8]
+entity Evaluation--><rect fill="#F5CCFF" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="86" x="7" y="318"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="66" x="17" y="342.5332">Evaluation</text><!--MD5=[e91435ab1f527aa0e9f53b055fdf6d98]
+entity IComm--><rect fill="#FFDC96" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="63" x="117.5" y="211.5"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="43" x="127.5" y="236.0332">IComm</text><!--MD5=[f5bd6f86c1355628a58cd48367c1c291]
+entity Uci--><rect fill="#A1FDFF" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="42" x="128" y="318"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="22" x="138" y="342.5332">UCI</text><!--MD5=[07bb0ef4b23ed48ab26ad6dc6ccda7f9]
+entity XBoard--><rect fill="#A1FDFF" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="66" x="205" y="318"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="46" x="215" y="342.5332">XBoard</text><!--MD5=[d5b990657b755b3990e29dd75f2a2198]
+entity TT--><rect fill="#FEFECE" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="106" x="216" y="203"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="86" x="226" y="227.5332">Transposition</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="36" x="226" y="245.1426">Table</text><!--MD5=[563c8103e92128030235f3c56ede6b9d]
+entity Board--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="58" x="182" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="38" x="192" y="31.5332">Board</text><!--MD5=[4ed3bb14fc6817bee82aa1da62dce697]
+entity MoveGenerator--><rect fill="#FEFECE" height="37.6094" style="stroke:#000000;stroke-width:1.5;" width="119" x="27.5" y="7"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="99" x="37.5" y="31.5332">MoveGenerator</text><!--MD5=[beb5ad5244d3d849df9473931f7c2e5e]
+entity GUI--><rect fill="#CDFFAB" height="55.2188" style="stroke:#000000;stroke-width:1.5;" width="118" x="134" y="416"/><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="144" y="440.5332">Chess Program</text><text fill="#000000" font-family="sans-serif" font-size="14" lengthAdjust="spacing" textLength="98" x="144" y="458.1426">(User Interface)</text><!--MD5=[9966e320f5d303ddf3adf1b667bcf855]
+reverse link Engine to IComm--><path d="M149,156.23 C149,174.14 149,196 149,211.16 " fill="none" id="Engine-backto-IComm" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="149,143.2,145,149.2,149,155.2,153,149.2,149,143.2" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[91e92f148d6dd3e2e11fcca91f82d4fe]
+link Board to Engine--><path d="M199.34,45.06 C190.56,58.65 178.34,77.57 168.14,93.37 " fill="none" id="Board-to-Engine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="160.82,104.7,167.4351,101.8295,167.3297,94.6192,160.7146,97.4897,160.82,104.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[82e97750006bd17c44d4f056763a105f]
+link MoveGenerator to Engine--><path d="M98.66,45.06 C107.44,58.65 119.66,77.57 129.86,93.37 " fill="none" id="MoveGenerator-to-Engine" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="137.18,104.7,137.2854,97.4897,130.6703,94.6192,130.5649,101.8295,137.18,104.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[a4517b7e117067201e6949aba7f31f23]
+reverse link Engine to TT--><path d="M179.9,151.9 C197.89,167.58 220.5,187.26 238.44,202.89 " fill="none" id="Engine-backto-TT" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="169.9,143.2,171.8002,150.1562,178.9521,151.0777,177.052,144.1215,169.9,143.2" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[416db41f77c4103c5e5d1f8412824d61]
+reverse link IComm to Uci--><path d="M149,269.78 C149,286.13 149,304.44 149,317.66 " fill="none" id="IComm-backto-Uci" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="142,269.7,149,249.7,156,269.7,142,269.7" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[41c2d4f10d5fff81e0c92935ae66a3e5]
+reverse link IComm to XBoard--><path d="M177.65,265.13 C192.49,282.56 210.04,303.17 222.38,317.66 " fill="none" id="IComm-backto-XBoard" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="172.14,269.47,164.5,249.7,182.8,260.39,172.14,269.47" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e1065f988d0de1d5934ea5c661e8728b]
+reverse link Engine to Search--><path d="M122.62,152.84 C105.13,171.31 82.66,195.03 67.38,211.16 " fill="none" id="Engine-backto-Search" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="131.76,143.2,124.73,144.8059,123.5085,151.9128,130.5385,150.3069,131.76,143.2" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[07786af87e6cbb241fa755fde7dfeeb0]
+link Search to Evaluation--><path d="M50,249.7 C50,267.13 50,293.5 50,312.5 " fill="none" id="Search-to-Evaluation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="50,317.66,54,308.66,50,312.66,46,308.66,50,317.66" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[97777214f4d7f76ce00ec712761eafca]
+link Uci to GUI--><path d="M158.7,361.04 C164.88,375.72 172.97,394.93 179.74,411 " fill="none" id="Uci-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="181.79,415.89,181.984,406.0431,179.8497,411.2818,174.6109,409.1475,181.79,415.89" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="156.66,356.2,156.466,366.0469,158.6003,360.8082,163.8391,362.9425,156.66,356.2" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5392b2b8ae9d4c3f064353e7ee6b5a8]
+link XBoard to GUI--><path d="M228.08,361.04 C221.76,375.72 213.49,394.93 206.56,411 " fill="none" id="XBoard-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="204.46,415.89,211.6994,409.2123,206.4416,411.2995,204.3545,406.0417,204.46,415.89" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="230.16,356.2,222.9131,362.8695,228.1732,360.7883,230.2543,366.0484,230.16,356.2" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e42de4e3d2a9fe58aa3b82ab3af6a595]
+@startuml architecture
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFF
+
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab
+component "Search" as Search #a1fdff
+component "Evaluation" as Evaluation #f5ccff
+component IComm #ffdc96
+component "UCI" as Uci #a1fdff
+component "XBoard" as XBoard #a1fdff
+component "Transposition\nTable" as TT
+component Board
+component MoveGenerator
+component "Chess Program\n(User Interface)" as GUI #cdffab
+
+Engine *- - IComm
+Engine *-up- Board
+Engine *-up- MoveGenerator
+Engine *- - TT
+IComm <|- - Uci
+IComm <|- - XBoard
+Engine *- - Search
+Search - -> Evaluation
+Uci <..> GUI
+XBoard <..> GUI
+@enduml
+
+PlantUML version 1.2021.00(Sun Jan 10 11:25:05 CET 2021)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Default Encoding: Cp1252
+Language: en
+Country: US
+--></g></svg>
