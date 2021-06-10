@@ -1,3 +1,17 @@
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Frequently asked questions](#frequently-asked-questions)
+  - [Why Rust? What's wrong with C and C++?](#why-rust-whats-wrong-with-c-and-c)
+  - [As fast as C, but safe? I wanna know!](#as-fast-as-c-but-safe-i-wanna-know)
+  - [What about this site?](#what-about-this-site)
+  - [It looks weird. What software does it use?](#it-looks-weird-what-software-does-it-use)
+  - [Hasn't this been done before?](#hasnt-this-been-done-before)
+
+<!-- /code_chunk_output -->
+
 # Frequently asked questions
 
 ## Why Rust? What's wrong with C and C++?

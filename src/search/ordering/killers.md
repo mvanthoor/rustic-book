@@ -1,3 +1,15 @@
+
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [Killer move heuristic](#killer-move-heuristic)
+  - [Explanation](#explanation)
+  - [Implementation](#implementation)
+  - [Puzzle solution](#puzzle-solution)
+
+<!-- /code_chunk_output -->
+
 # Killer move heuristic
 
 (Implemented since Rustic Alpha 3.)
@@ -291,6 +303,8 @@ unordered move.
 > some engines this actually works, but you will have to try and test it.
 
 <hr />
+
+## Puzzle solution
 
 Here is the position from the start again:
 

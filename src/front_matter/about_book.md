@@ -1,5 +1,14 @@
-# About this book
 
+<!-- @import "[TOC]" {cmd="toc" depthFrom=1 depthTo=6 orderedList=false} -->
+
+<!-- code_chunk_output -->
+
+- [About this book](#about-this-book)
+  - [What this book is](#what-this-book-is)
+  - [What this book is not](#what-this-book-is-not)
+
+<!-- /code_chunk_output -->
+# About this book
 ## What this book is
 
 This book is the documentation for the chess engine Rustic. It describes

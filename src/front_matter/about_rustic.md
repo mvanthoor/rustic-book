@@ -10,20 +10,25 @@ download the source code and change it to their liking, and compile it for
 their particular platform or CPU. Creating derivative works is possible,
 within the rules stated by GPL v3.
 
-At the time of writing, March 23rd of 2021, the engine's version is Rustic
-Alpha 2, with the following features:
+The feature-set for Rustic Alpha 3.0.0 is:
 
-* Board representation
-* Fancy magic bitboards
-* Move generator
-* Make/Unmake move
-* Alpha-Beta search
-* Transposition Table
-* MVV-LVA move sorting
-* Transposition table move sorting
-* Material count + PST evaluation
-* Simple time management
-* UCI protocol support
+- Engine:
+  - Bitboard board representation
+  - Fancy Magic bitboard move generator
+  - Transposition Table
+  - UCI-protocol
+- Search
+  - Alpha/Beta search
+  - Quiescence search
+  - Check extension
+  - PVS
+- Move ordering
+  - TT Move priority
+  - MVV-LVA
+  - Killer moves
+- Evaluation
+  - Material counting
+  - Piece-Square Tables
 
 Obviously the feature list will grow longer as the engine gets developed
 further. The book will chronicle those developments and descibe how each
