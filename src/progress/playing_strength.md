@@ -37,7 +37,7 @@ provides an overview of the added features per version and the gain in
 playing strength they provide. The strength gain is measured by playing the
 new Rustic version against the previous version. Please note that the
 results obtained in my tests will be different from other engines: adding
-the features in a different order, will give different results.
+the features in a different order will give different results.
 
 Also take into account that results by self-play are inflated. Because one
 engine has a feature the other doesn't have, with that feature being the
@@ -46,26 +46,36 @@ the end the real increase in playing strength can only be measured in large
 tournaments. Self-play is used to prove that the newer engine is stronger
 than the previous version, not to obtain a rating.
 
-In the table below, we start with the baseline version. The feature "TT
-cuts only" was built on top of Alpha 1. The rating increase in self-play
-against Alpha 1 was +50 Elo. Then the "TT Move Ordering" feature was built
-on top of the "TT Cuts Only" version, and this gained +100 Elo in
-self-play. This version became Alpha 2, which was tested in the CCRL list
-at 1815 Elo.
+In the table below, we start by writing the baseline version, which is then
+known as version Alpha 1. CCRL tested this version with a result of 1675
+ELo in their Blitz list.
+
+The feature "TT cuts only" was built on top of Alpha 1. The rating increase
+in self-play against Alpha 1 was +50 Elo. Then the "TT Move Ordering"
+feature was built on top of the "TT Cuts Only" version, and this gained
++100 Elo in self-play. This completes the transposition table. This version
+became Alpha 2, which was tested in the CCRL list at 1815 Elo. Then "Killer
+moves" were built on top of Alpha 2... and so on.
 
 ## Progress per feature and version
 
-| Version     | Feature           | Improvement | CCLR |
-|-------------|-------------------|-------------|------|
-| Alpha 1     | Baseline version  | ---         | 1675 |
-|             | TT cuts only      | 42          |      |
-|             | TT Move sorting   | 103         |      |
-| Alpha 2     |                   |             | 1815 |
-|             | Killer Moves      | 56          |      |
-|             | PVS               | 55          |      |
-| Alpha 3.0.0 |                   |             | ?    |
-|             | Aspiration Window |             | ?    |
-|             | History Heuristic |             | ?    |
+| Version     | Feature              | Improvement | CCRL   |
+|-------------|----------------------|-------------|--------|
+|             | Writing baseline...  |             |        |
+| Alpha 1     |                      |             | 1675   |
+|             | TT cuts only         | 42          |        |
+|             | TT Move sorting      | 103         |        |
+| Alpha 2     |                      |             | 1815   |
+|             | Killer Moves         | 56          |        |
+|             | PVS                  | 55          |        |
+| Alpha 3.0.0 |                      |             | ?      |
+| &nbsp;      | &nbsp;               | &nbsp;      | &nbsp; |
+| Later...    |                      |             |        |
+|             | Tapered & tuned eval |             | ?      |
+|             | Aspiration Window    |             | ?      |
+|             | History Heuristic    |             | ?      |
+|             | Null move pruning    |             | ?      |
+|             | ... ?                |             | ?      |
 
 
 ## Determining progression in actual playing strength

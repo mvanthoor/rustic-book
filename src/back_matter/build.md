@@ -44,7 +44,7 @@ MacOS needs an updated version of Make.
 
 First, download the Rust installer for Windows:
 
-https://www.rust-lang.org/tools/install
+[Rust installer page](https://www.rust-lang.org/tools/install)
 
 Run through the installation. Make sure you select the GNU target as the
 default. This is the target used to develop and test Rustic.

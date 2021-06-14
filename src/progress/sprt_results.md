@@ -8,6 +8,7 @@
   - [TT-move ordering](#tt-move-ordering)
   - [Killer Move Heuristic](#killer-move-heuristic)
   - [Principal Variation Search](#principal-variation-search)
+  - [Killer Move heuristic + PVS](#killer-move-heuristic-pvs)
 
 <!-- /code_chunk_output -->
 
@@ -62,10 +63,20 @@ Elo difference: 54.8 +/- 16.6, LOS: 100.0 %, DrawRatio: 24.5 %
 SPRT: llr 2.95 (100.3%), lbound -2.94, ubound 2.94 - H1 was accepted
 ```
 
+## Killer Move heuristic + PVS
+```
+Score of Rustic Alpha 2.2.100 vs Rustic Alpha 2: 423 - 218 - 174  [0.626] 815
+...      Rustic Alpha 2.2.100 playing White: 221 - 106 - 80  [0.641] 407
+...      Rustic Alpha 2.2.100 playing Black: 202 - 112 - 94  [0.610] 408
+...      White vs Black: 333 - 308 - 174  [0.515] 815
+Elo difference: 89.3 +/- 21.7, LOS: 100.0 %, DrawRatio: 21.3 %
+SPRT: llr 2.96 (100.4%), lbound -2.94, ubound 2.94 - H1 was accepted
+```
+
 ---
 
 > __Sidenote__: Version Alpha 1.5 is a seperate version for testing
-> transposition __table cu__ts without hash the TT-move ordering. This has not
-> been released as __an offic__ial version. The versions with patch numbers of
-> 100 and up are for __testing __each features.
+> transposition table cuts without hash the TT-move ordering. This has not
+> been released as an official version. The versions with patch numbers of
+> 100 and up are for testing each features.
 

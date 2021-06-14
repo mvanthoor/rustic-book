@@ -1,0 +1,76 @@
+Date : 2021-06-14 16:56:36
+Directory : c:\Code\rustic-book\src
+Total : 40 files,  2119 codes, 131 comments, 484 blanks, all 2734 lines
+
+Languages
++----------+------------+------------+------------+------------+------------+
+| language | files      | code       | comment    | blank      | total      |
++----------+------------+------------+------------+------------+------------+
+| Markdown |         34 |      2,005 |         27 |        474 |      2,506 |
+| PlantUML |          3 |         70 |          0 |         10 |         80 |
+| XML      |          3 |         44 |        104 |          0 |        148 |
++----------+------------+------------+------------+------------+------------+
+
+Directories
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                  | files      | code       | comment    | blank      | total      |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                     |         40 |      2,119 |        131 |        484 |      2,734 |
+| back_matter                                           |          5 |        468 |          6 |        107 |        581 |
+| communication                                         |          1 |         24 |          0 |          4 |         28 |
+| diagrams                                              |          3 |         44 |        104 |          0 |        148 |
+| evaluation                                            |          3 |        162 |          3 |         40 |        205 |
+| front_matter                                          |          6 |        217 |          6 |         52 |        275 |
+| introduction                                          |          4 |        171 |          0 |         32 |        203 |
+| progress                                              |          5 |        281 |          9 |         81 |        371 |
+| search                                                |          9 |        650 |          3 |        154 |        807 |
+| search\ordering                                       |          7 |        648 |          3 |        154 |        805 |
+| uml                                                   |          3 |         70 |          0 |         10 |         80 |
++-------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++-------------------------------------------------------+----------+------------+------------+------------+------------+
+| filename                                              | language | code       | comment    | blank      | total      |
++-------------------------------------------------------+----------+------------+------------+------------+------------+
+| c:\Code\rustic-book\src\SUMMARY.md                    | Markdown |         32 |          0 |          4 |         36 |
+| c:\Code\rustic-book\src\back_matter\build.md          | Markdown |        190 |          3 |         59 |        252 |
+| c:\Code\rustic-book\src\back_matter\credits.md        | Markdown |         67 |          0 |          5 |         72 |
+| c:\Code\rustic-book\src\back_matter\faq.md            | Markdown |        116 |          3 |         26 |        145 |
+| c:\Code\rustic-book\src\back_matter\glossary.md       | Markdown |         38 |          0 |          5 |         43 |
+| c:\Code\rustic-book\src\back_matter\me.md             | Markdown |         57 |          0 |         12 |         69 |
+| c:\Code\rustic-book\src\communication\introduction.md | Markdown |         24 |          0 |          4 |         28 |
+| c:\Code\rustic-book\src\diagrams\architecture.svg     | XML      |         22 |         38 |          0 |         60 |
+| c:\Code\rustic-book\src\diagrams\concept.svg          | XML      |          5 |         21 |          0 |         26 |
+| c:\Code\rustic-book\src\diagrams\killer_move.svg      | XML      |         17 |         45 |          0 |         62 |
+| c:\Code\rustic-book\src\evaluation\evaluation.md      | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\evaluation\psqt.md            | Markdown |        104 |          3 |         28 |        135 |
+| c:\Code\rustic-book\src\evaluation\understand.md      | Markdown |         57 |          0 |         12 |         69 |
+| c:\Code\rustic-book\src\front_matter\about_book.md    | Markdown |         47 |          3 |         12 |         62 |
+| c:\Code\rustic-book\src\front_matter\about_rustic.md  | Markdown |         38 |          0 |          6 |         44 |
+| c:\Code\rustic-book\src\front_matter\downloads.md     | Markdown |         13 |          0 |          4 |         17 |
+| c:\Code\rustic-book\src\front_matter\preface.md       | Markdown |         32 |          0 |          7 |         39 |
+| c:\Code\rustic-book\src\front_matter\prereq.md        | Markdown |         82 |          3 |         20 |        105 |
+| c:\Code\rustic-book\src\front_matter\title.md         | Markdown |          5 |          0 |          3 |          8 |
+| c:\Code\rustic-book\src\introduction\concept.md       | Markdown |         30 |          0 |          8 |         38 |
+| c:\Code\rustic-book\src\introduction\design.md        | Markdown |         47 |          0 |         10 |         57 |
+| c:\Code\rustic-book\src\introduction\introduction.md  | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\introduction\roadmap.md       | Markdown |         93 |          0 |         14 |        107 |
+| c:\Code\rustic-book\src\progress\changelog.md         | Markdown |         66 |          3 |         17 |         86 |
+| c:\Code\rustic-book\src\progress\playing_strength.md  | Markdown |         80 |          3 |         22 |        105 |
+| c:\Code\rustic-book\src\progress\progress.md          | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\progress\sprt_results.md      | Markdown |         60 |          3 |         20 |         83 |
+| c:\Code\rustic-book\src\progress\sprt_testing.md      | Markdown |         74 |          0 |         22 |         96 |
+| c:\Code\rustic-book\src\search\introduction.md        | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\search\ordering\history.md    | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\search\ordering\how.md        | Markdown |         91 |          0 |         14 |        105 |
+| c:\Code\rustic-book\src\search\ordering\killers.md    | Markdown |        248 |          3 |         73 |        324 |
+| c:\Code\rustic-book\src\search\ordering\mvv_lva.md    | Markdown |        130 |          0 |         27 |        157 |
+| c:\Code\rustic-book\src\search\ordering\ordering.md   | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\search\ordering\reason.md     | Markdown |         59 |          0 |         15 |         74 |
+| c:\Code\rustic-book\src\search\ordering\tt_move.md    | Markdown |        118 |          0 |         25 |        143 |
+| c:\Code\rustic-book\src\search\search.md              | Markdown |          1 |          0 |          0 |          1 |
+| c:\Code\rustic-book\src\uml\architecture.puml         | PlantUML |         27 |          0 |          3 |         30 |
+| c:\Code\rustic-book\src\uml\concept.puml              | PlantUML |         10 |          0 |          3 |         13 |
+| c:\Code\rustic-book\src\uml\killer.puml               | PlantUML |         33 |          0 |          4 |         37 |
+| Total                                                 |          |      2,119 |        131 |        484 |      2,734 |
++-------------------------------------------------------+----------+------------+------------+------------+------------+
