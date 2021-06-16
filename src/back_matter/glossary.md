@@ -20,6 +20,8 @@
 - P
     - **Principal Variation (PV)**: The main line in the game.
     - **PV-Move**: A move that is part of the main line.
+    - **PST** or **PSQT**: Piece-Square Tables. This is a set of tables
+      which tells the engine which are good squares for each piece type.
 - T
     - **Transposition Table (TT)**: A structure which stores moves and
       information about positions that were visited before, by taking

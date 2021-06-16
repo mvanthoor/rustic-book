@@ -21,6 +21,7 @@
         - [TT-move ordering](./search/ordering/tt_move.md)
 - [Evaluation](./evaluation/evaluation.md)
     - [Understanding evaluation](./evaluation/understand.md)
+    - [Material counting](./evaluation/material.md)
     - [Piece-Square Tables](./evaluation/psqt.md)
 - [Progress](./progress/progress.md)
     - [Playing Strength](./progress/playing_strength.md)
