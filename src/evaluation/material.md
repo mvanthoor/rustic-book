@@ -312,3 +312,8 @@ tables incrementally, which will be the next chapter. It is exactly the
 same, only there are 6 arrays instead of 2 (one for each piece type instead
 of each side), and 64 integers per array instead of 6 (one for each square
 instead of for each piece type).
+
+Now that we know how we can keep the material count, we can move on to the
+next part of the evaluation: Piece-Square Tables. These will add a little
+bit of positional knowledge to the chess engine on top of the material
+count, so it will have an idea of what to do with a piece.
