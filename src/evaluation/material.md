@@ -7,9 +7,9 @@
   - [Explanation](#explanation)
   - [Implementation](#implementation)
     - [Value per piece type](#value-per-piece-type)
-  - [Counting vs. Updating](#counting-vs-updating)
-    - [Counting from scratch](#counting-from-scratch)
-    - [Incrementally updating](#incrementally-updating)
+    - [Counting vs. Updating](#counting-vs-updating)
+      - [Counting from scratch](#counting-from-scratch)
+      - [Incrementally updating](#incrementally-updating)
 
 <!-- /code_chunk_output -->
 
@@ -109,22 +109,28 @@ let v = PIECE_VALUES[Pieces::Queen]; // v = 900 here.
 let v = PIECE_VALUES[Pieces::Pawn]; // v = 100 here.
 ```
 
-There are some differences with the values we saw earlier in the chapter.
+There are two differences with the values we saw earlier in the chapter.
+
 First, the evaluation is MUCH faster if we only use integers. If at all
 possible, we will never use floating point numbers while calculating
-anything. (Except, maybe, in the very last step before outputting a value.)
-This is the reason why we have mulitplied all the values by 100. It gives
-the evaluation to think in terms of "half a pawn", by using values such as
-50, instead of 0.5. Second, in _most_ chess engines, it turns out to be
-better that the bishop is worth slightly more than the knight, and that a
-light piece is a bit better to have than three pawns.
+anything. (Except, maybe, in the very last step before outputting
+something.) This is the reason why we have mulitplied all the values by one
+hundred. This gives the evaluation a way to think in terms of "parts of a
+pawn", by using values such as 50 or 10, instead of 0.5 or 0.1.
+
+Second, in _most_ chess engines, it turns out to be better to have the
+bishop be worth slightly more than the knight, and that a light piece is a
+bit better to have than three pawns. This causes the engine to not trade a
+bishop for a knight (all else being equal), and it'll keep the light piece
+instead of trading it for three pawns.
 
 Again, don't fret too much about these values because in later stages of
-engine development, they will be automatically tuend.
+engine development, they will be merged with the Piece-Square Tables and
+automatically tuend.
 
-## Counting vs. Updating
+### Counting vs. Updating
 
-### Counting from scratch
+#### Counting from scratch
 
 There are two ways you could know the material balance when evaluating the
 position: you can actually count the material at that point, or you update
@@ -168,7 +174,7 @@ you have the balance: if positive, white is ahead, if negative, black is
 ahead. If material balance is exactly equal, then "balance" will obviously
 be zero.
 
-### Incrementally updating
+#### Incrementally updating
 
 Counting from scratch works perfectly well, but it is slow: each time the
 engine evaluates a position, it has to calculate the material balance all
