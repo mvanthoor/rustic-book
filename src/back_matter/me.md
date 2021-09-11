@@ -2,6 +2,8 @@
 
 Hi again,
 
+(Testing commit verification on Linux)
+
 Right before the end of all things, I'll drop in a short scribble about
 myself. I'm sure you're just _dying_ to read a rambling piece of text
 that's all about me, myself and I.
