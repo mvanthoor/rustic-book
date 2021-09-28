@@ -42,20 +42,22 @@ result from the test.)
 A cutechess_cli command could look like this:
 
 ```bash
-cutechess-cli.exe \
--engine conf="Rustic Alpha 2" \
--engine conf="Rustic Alpha 1" \
--each tc=inf/10+0.1 \
-    book="C:\Programs\Chess\OpeningBooks\gm1950.bin" \
+cutechess-cli \
+-engine conf="Rustic Alpha 3.15.100" \
+-engine conf="Rustic Alpha 3.1.112" \
+-each \
+    tc=inf/10+0.1 \
+    book="/home/marcel/Chess/OpeningBooks/gm1950.bin" \
     bookdepth=4 \
--games 2 -rounds 10000 -repeat 2 -maxmoves 200 \
--sprt elo0=1 elo1=5 alpha=0.05 beta=0.05 \
--concurrency 4 -wait 100 \
--pgnout "C:\Users\Marcel\Desktop\test.pgn"
+-games 2 -rounds 2500 -repeat 2 -maxmoves 200 \
+-sprt elo0=0 elo1=10 alpha=0.05 beta=0.05 \
+-concurrency 4 \
+-ratinginterval 10 \
+-pgnout "/home/marcel/Chess/sprt.pgn"
 ```
 
-With this command, we're testing Alpha 2 (NEW) against Alpha 1 (OLD), where
-we run 10.000 rounds with 2 games each, so each engine plays the same
+With this command, we're testing 3.15.100 (NEW) against 3.1.112 (OLD),
+where we run 2500 rounds with 2 games each, so each engine plays the same
 opening with white and black. Time control is 10 seconds + 0.1 increment.
 
 Now we start the match between our NEW and OLD (previous) engine version,
