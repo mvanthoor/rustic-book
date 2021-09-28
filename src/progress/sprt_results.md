@@ -9,6 +9,8 @@
   - [Killer Move Heuristic](#killer-move-heuristic)
   - [Principal Variation Search](#principal-variation-search)
   - [Killer Move heuristic + PVS](#killer-move-heuristic-pvs)
+  - [Tapered Evaluation (3.1.112)](#tapered-evaluation-31112)
+  - [Refactoring/optimization (3.16.100)](#refactoringoptimization-316100)
 
 <!-- /code_chunk_output -->
 
@@ -73,10 +75,24 @@ Elo difference: 89.3 +/- 21.7, LOS: 100.0 %, DrawRatio: 21.3 %
 SPRT: llr 2.96 (100.4%), lbound -2.94, ubound 2.94 - H1 was accepted
 ```
 
----
+## Tapered Evaluation (3.1.112)
+```
+Score of Rustic Alpha 3.1.112 vs Rustic Alpha 3.0.0: 105 - 19 - 16  [0.807] 140
+...      Rustic Alpha 3.1.112 playing White: 51 - 9 - 11  [0.796] 71
+...      Rustic Alpha 3.1.112 playing Black: 54 - 10 - 5  [0.819] 69
+...      White vs Black: 61 - 63 - 16  [0.493] 140
+Elo difference: 248.7 +/- 67.6, LOS: 100.0 %, DrawRatio: 11.4 %
+SPRT: llr 2.97 (101.0%), lbound -2.94, ubound 2.94 - H1 was accepted
+Finished match
+```
 
-> __Sidenote__: Version Alpha 1.5 is a seperate version for testing
-> transposition table cuts without hash the TT-move ordering. This has not
-> been released as an official version. The versions with patch numbers of
-> 100 and up are for testing each features.
-
+## Refactoring/optimization (3.16.100)
+```
+Score of Rustic Alpha 3.15.100 vs Rustic Alpha 3.1.112: 224 - 145 - 160  [0.575] 529
+...      Rustic Alpha 3.15.100 playing White: 125 - 60 - 80  [0.623] 265
+...      Rustic Alpha 3.15.100 playing Black: 99 - 85 - 80  [0.527] 264
+...      White vs Black: 210 - 159 - 160  [0.548] 529
+Elo difference: 52.3 +/- 24.9, LOS: 100.0 %, DrawRatio: 30.2 %
+SPRT: llr 2.98 (101.2%), lbound -2.94, ubound 2.94 - H1 was accepted
+Finished match
+```
