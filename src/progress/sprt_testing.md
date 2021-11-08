@@ -8,7 +8,7 @@ SPRT parameter.
 
 It is beyond the scope of this book to explain all the mathematics behind
 these formulas, even _if_ I'd understand everything in detail. I'm a
-programmer, not a Statistician.
+programmer, not a statistician.
 
 It is sufficient to understand the basics.
 
