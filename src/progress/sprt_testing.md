@@ -2,7 +2,9 @@
 
 One of the best ways to test one engine against another is by using SPRT,
 which stands for "Sequential Probability Ratio Test." A program which can
-run such matches is _cutechess-cli_, by using the SPRT parameter.
+run such matches is
+[_cutechess-cli_](https://github.com/cutechess/cutechess), by using the
+SPRT parameter.
 
 It is beyond the scope of this book to explain all the mathematics behind
 these formulas, even _if_ I'd understand everything in detail. I'm a
@@ -16,30 +18,26 @@ number of games, such as 20.000. To make SPRT work, we need to set two
 hypotheses: one we hope that comes true (H1), and one we hope that isn't
 true (H0, the NULL hypothesis). We allow for a chance of 5% that the
 SPRT-test gives us the wrong result. So, we are 95% confident that the
-result is correct. (You can lower the 5% margin, but the test will run _a
-lot longer_.)
+result is correct. (You can lower the 5% margin, but the test will run for
+a _very_ long time. I deem 5% to still be practical; it is also the value
+used by many other engine authors.)
 
 Let's say we have a new engine, called version NEW. We also have an old
-version, we call version OLD.
+version, we call version OLD. We want to know if NEW is stronger than OLD,
+and by how much Elo.
 
 Now we state:
 
-- H1: Engine NEW is at lesat 0 Elo stronger than engine OLD. (So, the new
-  engine is, at the very minimum, not weaker then the old engine.) We hope
-  that this is hypothesis is true.
-- H0: Engine NEW is NOT at least more than 10 Elo stronger than OLD.
-- Error margin: 5%.
+- H0: Engine NEW is at least 0 Elo stronger than OLD.
+- H1: Engine NEW is stronger than OLD outside an error margin of 10 Elo.
+- We set confidence level at 95%, so there's a 5% chance of getting the
+  wrong result from the test.
 
 When running cutechess_cli, we give it the SPRT parameter:
 
 ```
 -sprt elo0=0 elo1=10 alpha=0.05 beta=0.05
 ```
-
-(Alpha an Beta have nothing to do with Alpha/Beta searching. In this case,
-Alpha is the chance we accept H1 while we shouldn't, and Beta is the chance
-we accept H0 while we shouldn't; i.e., a chance of 5% we get the wrong
-result from the test.)
 
 A cutechess_cli command could look like this:
 
@@ -62,41 +60,40 @@ With this command, we're testing 3.15.100 (NEW) against 3.1.112 (OLD),
 where we run 2500 rounds with 2 games each, so each engine plays the same
 opening with white and black. Time control is 10 seconds + 0.1 increment.
 
-Now we start the match between our NEW and OLD (previous) engine version,
+Now we start the match between our NEW and OLD engine version,
 and cutechess_cli will start to play games.
 
-Let's say that, after 400 games, Alpha 2 is 100 Elo stronger than Alpha 1.
-This could still change, if you play enough games... but it also may not
-change. That is the point of SPRT testing. As soon as cutechess_cli is 95%
-sure that the difference between the two engines is outside the error
-margin, it will abort the match, which saves _a lot of time_.
+As long as the difference between NEW and OLD is between 0 and 10 Elo, the
+SPRT-test keeps running, because it cannot be determined which hypothesis
+is true. If NEW is 7 Elo stronger, then NEW is at least 0 Elo stronger than
+OLD, but it isn't outside the 10 Elo error margin yet. The test could still
+go either way. If this stays the case up to and including the maximum
+number of games to play, then cutechess_cli will abort without accepting
+either hypothesis, and the test is inconclusive.
 
-At that point, cutechess_cli compares the result in Elo against the stated
-hypotheses. With a result of +100 Elo for engine NEW, we can see:
+On the other hand, if NEW is +100 Elo stronger than OLD after only 400
+games, that is _clearly_ outside the 10 Elo margin required for H1 to be
+accepted. As soon as cutechess_cli is 95% certain that the result will stay
+outside the error margin, the test will be aborted, and H1 accepted.
 
-- H1: NEW is at least 0 Elo stronger than OLD. True, because 100 Elo is
-  more than 0 Elo.
-- H0: NEW is _NOT_ more than at least 10 Elo stronger than OLD. False,
-  because it IS more than 10 Elo stronger (100 Elo is more than 10 Elo).
+Likewise, if NEW is -50 Elo, then this is clearly weaker than OLD, and the
+error margin is outside the stated 10 Elo. As soon as cutechess_cli is
+95% certain that the test will stay outside the error margin, the test is
+aborted and H0 is accepted.
 
-So H1 is accepted, and we have determined that NEW is a stronger engine
-than OLD, and by how much (self-play) Elo.
+If you increase elo1, the error margin becomes larger, and thus cutechess
+will be faster to terminate the test. Your self-play Elo will become much
+less accurate tough. Let's say you set this:
 
-If NEW scored -23 Elo, then we would have had this result:
+```
+-sprt elo0=0 elo1=50 alpha=0.05 beta=0.05
+```
 
-- H1: NEW is at least 0 Elo stronger than OLD: This is false, because -23
-  Elo is less than 0 Elo.
-- H0: NEW is NOT more than at least 10 Elo stronger than OLD: True, because
-  -23 Elo loss is indeed _not_ at least 10 Elo gain.
-
-So H0 is accepted, which means that our NEW engine is not stronger than our
-OLD engine; it is actually weaker. We should not include the feature we
-have been testing. At least, not yet: a feature which causes a strength
-loss now, could cause a strength gain when added on top of other features,
-so it's worth it to try again later.
-
-As long as the difference between NEW and OLD is between 1 and 5 Elo, the
-SPRT-test keeps running, because both hypotheses are still true: 3 Elo is
-"at least 1 Elo stronger", but it is also "not more than 5 Elo stronger."
-If this result doesn't change, cutechess_cli would run forever; that is the
-reason why we set a match limit of something like 20.000 games.
+If NEW is 60 Elo stronger, and the error margin is 50 Elo, cutechess_cli
+may accept that the engine is stronger, because 60 is outside the 50 Elo
+margin. Even though NEW is stronger, the strength range is 10-110 Elo: NEW
+can be anywhere between 10 and 110 Elo stronger, which is a very inaccurate
+determination. If you had set elo1 to 10, the range would have been 50-70
+Elo. If you set elo1 to 2 Elo, the range would be 58-62 Elo, but that will
+take a very long time to test. I've found 10 Elo to be a fair setting, at
+least on my (current) i7-6700K running 4 games concurrently at 10s+0.1s.
