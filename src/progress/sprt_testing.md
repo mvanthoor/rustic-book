@@ -24,14 +24,16 @@ version, we call version OLD.
 
 Now we state:
 
-- H1: Engine NEW is at lesat 1 Elo stronger than engine OLD.
-- H0: Engine NEW is NOT more than 5 Elo stronger than Engine OLD.
+- H1: Engine NEW is at lesat 0 Elo stronger than engine OLD. (So, the new
+  engine is, at the very minimum, not weaker then the old engine.) We hope
+  that this is hypothesis is true.
+- H0: Engine NEW is NOT at least more than 10 Elo stronger than OLD.
 - Error margin: 5%.
 
 When running cutechess_cli, we give it the SPRT parameter:
 
 ```
--sprt elo0=1 elo1=5 alpha=0.05 beta=0.05
+-sprt elo0=0 elo1=10 alpha=0.05 beta=0.05
 ```
 
 (Alpha an Beta have nothing to do with Alpha/Beta searching. In this case,
@@ -64,32 +66,34 @@ Now we start the match between our NEW and OLD (previous) engine version,
 and cutechess_cli will start to play games.
 
 Let's say that, after 400 games, Alpha 2 is 100 Elo stronger than Alpha 1.
-This could still change, if you play enough games... but that is the point
-of SPRT testing. As soon as cutechess_cli is 95% sure that the difference
-between the two engines is not going to change anymore, it will abort the
-match, which saves _a lot of time_.
+This could still change, if you play enough games... but it also may not
+change. That is the point of SPRT testing. As soon as cutechess_cli is 95%
+sure that the difference between the two engines is outside the error
+margin, it will abort the match, which saves _a lot of time_.
 
 At that point, cutechess_cli compares the result in Elo against the stated
 hypotheses. With a result of +100 Elo for engine NEW, we can see:
 
-- H1: NEW is at least 1 Elo stronger than OLD. True, because 100 > 1.
-- H0: NEW is _NOT_ more than 5 Elo stronger than OLD. False, because it IS
-  more than 5 Elo stronger (100 Elo is more than 5 Elo).
+- H1: NEW is at least 0 Elo stronger than OLD. True, because 100 Elo is
+  more than 0 Elo.
+- H0: NEW is _NOT_ more than at least 10 Elo stronger than OLD. False,
+  because it IS more than 10 Elo stronger (100 Elo is more than 10 Elo).
 
 So H1 is accepted, and we have determined that NEW is a stronger engine
 than OLD, and by how much (self-play) Elo.
 
-If NEW scored -20 Elo, then we would have had this result:
+If NEW scored -23 Elo, then we would have had this result:
 
-- H1: NEW is at least 1 Elo stronger than OLD. False, because -10 < 1.
-- H0: NEW is NOT more than 5 Elo stronger than Old. True, because -10 is
-  indeed less than 5 Elo.
+- H1: NEW is at least 0 Elo stronger than OLD: This is false, because -23
+  Elo is less than 0 Elo.
+- H0: NEW is NOT more than at least 10 Elo stronger than OLD: True, because
+  -23 Elo loss is indeed _not_ at least 10 Elo gain.
 
 So H0 is accepted, which means that our NEW engine is not stronger than our
-OLD engine; it is actually weaker, and we should not include this feature.
-(At least, not yet: a feature which causes a strength loss now, could cause
-a strength gain when added on top of other features, so it's worth it to
-try again later.)
+OLD engine; it is actually weaker. We should not include the feature we
+have been testing. At least, not yet: a feature which causes a strength
+loss now, could cause a strength gain when added on top of other features,
+so it's worth it to try again later.
 
 As long as the difference between NEW and OLD is between 1 and 5 Elo, the
 SPRT-test keeps running, because both hypotheses are still true: 3 Elo is
