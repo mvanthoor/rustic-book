@@ -11,11 +11,11 @@ You should have already implemented the TT to be able to add the TT-move
 ordering. If you haven't, it's recommended to take a look at the
 Transposition table chapter. It explains what the TT is exactly, how it
 works, and how it can be implemented. Then add create the TT first. In that
-chapter it's also explained that the TT can store moves which  cause a bèta
+chapter it's also explained that the TT can store moves which  cause a beta
 cutoff, or are part of the principal variation.
 
 It should be very obvious by now why you want to try either of those moves
-ASAP. If a move causes a bèta cutoff, you want to try it as soon as
+ASAP. If a move causes a beta cutoff, you want to try it as soon as
 possible, because it saves you having to search large parts of the tree. If
 a move is a PV-move, you also want to try it as soon as possible, as it
 makes you find your best move faster. Again, the result is that you have to
@@ -115,7 +115,7 @@ pub fn score_moves(ml: &mut MoveList, tt_move: ShortMove, refs: &SearchRefs) {
 
 The constant _TTMOVE\_SORT\_VALUE_ was added, which is higher than the
 highest value from the MVV-LVA table. (See the chapter about MVV-LVA move
-ordering, should you have forgotten this.) We then iterate trhough all the
+ordering, should you have forgotten this.) We then iterate through all the
 moves, but now we first take a look if the move we are at in the list, is
 the TT-Move which was just passed into the function. If so, we assign
 MVV_LVA_OFFSET + TTMOVE_SORT_VALUE to _"value"_, and the TT-move will
@@ -125,7 +125,7 @@ this move will be put first by the _pick\_move()_ function.
 That's all, folks. Told you this was an easy one 😊 (After you implement
 the TT itself that is, which isn't that easy at all 😱)
 
-> **Sidenote: what about ordering on the PV-move?** There is a techique
+> **Sidenote: what about ordering on the PV-move?** There is a technique
 > called PV-move ordering, which orders the best move from the previous
 > iteration in the first spot. Ordering the move works the same was is with
 > the TT-move; the only difference is that you pass the PV-move to the

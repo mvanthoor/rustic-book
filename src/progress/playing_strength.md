@@ -11,7 +11,7 @@
 # Playing Strength
 
 As mentioned in the preface of this book, writing a chess engine can be a
-rewarding endavour. It takes a long time to write a very strong engine,
+rewarding endeavour. It takes a long time to write a very strong engine,
 especially if you are just starting out. It takes some knowledge about
 programming and chess, lots of time, and often, perseverance, to get the
 first basic version up and running. After this version works and plays

@@ -58,7 +58,7 @@ obviously not that great. The point is still the same though: the move
 _Bg2-c6!_ is a good move after a variety of black moves. This can be
 defined as follows:
 
-> A "killer move" is a quiet, non-captureing move which can cause a
+> A "killer move" is a quiet, non-capturing move which can cause a
 > beta-cutoff in different branches of the tree at the same ply.
 
 This may not be very intuitive. A diagram will probably help to clarify.
@@ -84,7 +84,7 @@ This assumption is correct: the move is a good response against at least
 two other black moves, so it "kills" them too. In those two branches, the
 killer move will turn out so strong, that searching deeper is useless,
 because if black should allow this move without taking care of the threat,
-black's going to lose big time. This is called a bèta cutoff.
+black's going to lose big time. This is called a beta cutoff.
 
 (This is the reason why the _Bg2-c6_ doesn't work against Qd7-e8. After
 this move, black can actually escape from the double attack. He has thus
@@ -228,7 +228,7 @@ To make this work, we use the MVV_LVA_OFFSET. This value is the maximum a
 32-bit integer can hold, minus 256. So, we have 256 values available,
 'above' MVV_LVA_OFFSET. Now you can see why in the MVV-LVA chapter, I said
 that I like to keep values as low as possible. As the highest value in the
-MVV-LVA table is 55, it will fit comfortably in the 256 values wich are
+MVV-LVA table is 55, it will fit comfortably in the 256 values which are
 available above MVV_LVA_OFFSET.
 
 First, we iterate through the move list, so we can order all the moves.
@@ -314,7 +314,7 @@ White plays _f3-f4_, setting up the double attack threat _Bg2-c6_, which
 can be used as a killer move after various black moves. Question: Why does
 _Bg2-c6_ not work anymore as a killer move, when black plays _Qd7-e8_?
 
-> **Solution** After _Qd7-e8_, _Bg2-c6_ doens't work as a killer move
+> **Solution** After _Qd7-e8_, _Bg2-c6_ doesn't work as a killer move
 > because black can escape the double attack by playing Qe8-e3+. White has
 > to get his king out of check, for example _Kg1-h1_, and then black can
 > move the rook on _b5_ out of danger.

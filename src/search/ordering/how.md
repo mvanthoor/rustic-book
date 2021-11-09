@@ -26,7 +26,7 @@ pub fn alpha_beta(
 
         // Loop through all the moves, where moves will be picked.
         for i in 0..move_list.len() {
-            // Put the move with the higest sort socre at the loop's index.
+            // Put the move with the highest sort score at the loop's index.
             Search::pick_move(&mut move_list, i);
 
             // Get this move and examine it.
@@ -80,7 +80,7 @@ It receives a reference to the move list, and the index it should start at.
 This is the index where alpha/beta's move loop currently is. Then
 pick_move() runs through the list, and keeps swapping moves with higher
 scores into the start_index location. In the end, the move having the
-higest sort score will end there, so alpha/beta will examine this move
+highest sort score will end there, so alpha/beta will examine this move
 next. (This function could be optimized a tiny bit to do only ONE swap, but
 for some reason, this made Rustic slower each time I've tried it. Maybe
 this optimization will make it in later.)
@@ -93,7 +93,7 @@ this optimization will make it in later.)
 > It's possible, but we don't do that because of how alpha/beta works. If
 > alpha/beta encounters a move that is so good that searching further down
 > the move list is no longer required, then it will exit and return the
-> evaluation score of that move. (This is a so-called bèta-cutoff.) If you
+> evaluation score of that move. (This is a so-called beta-cutoff.) If you
 > physically sorted all the moves before the move loop starts, you may have
 > sorted lots of moves that may never be examined by alpha/beta. This costs
 > time, and thus it makes the engine slower.

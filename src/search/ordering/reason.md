@@ -9,7 +9,7 @@ chess game. Consider the following position, with white to move:
 <img src="../../positions/position_1.png" width=400 />
 
 There are a lot of possible moves to be played. The rook and the queen have
-22 moves together, and we're not even counting the king, the kinght, and
+22 moves together, and we're not even counting the king, the knight, and
 the pawns. You may ask yourself: Which moves should I consider _first_?
 That is a perfectly valid question, because moves are not of equal value.
 For example:
@@ -50,7 +50,7 @@ of the best move.)
 The takeaway from this example is that most moves on the board are actually
 not even considered by humans. If you're in the middle of an attack such as
 in the position discussed above, it's unlikely you're going to consider
-moves sucah as _a2-3_. The order in which moves are mostly evaluated is the
+moves such as _a2-3_. The order in which moves are mostly evaluated is the
 following:
 
 - Captures are evaluated before quiet moves.

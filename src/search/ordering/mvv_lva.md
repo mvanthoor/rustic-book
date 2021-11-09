@@ -88,7 +88,7 @@ chapters.)
 An example of the effectiveness of this implementation is given below. In
 the first run, Rustic Alpha 1 is searching a position without any move
 ordering in place. In the second run, MVV-LVA has been enabled as the one
-and only move ordering techique. (For brevity's sake, part of the output
+and only move ordering technique. (For brevity's sake, part of the output
 string has been truncated, as the extra information is not relevant for
 this example.)
 
@@ -137,7 +137,7 @@ implemented which will be discussed in the next chapters.
 
 > **Sidenote** So, what about the 0's in the table? The number of elements
 > for the rows and columns in the table is "NrOf::PIECE_TYPES + 1". There
-> are 6 piece types in chess: King, Queen, Rook, Bischop, Knight, Pawn.
+> are 6 piece types in chess: King, Queen, Rook, Bishop, Knight, Pawn.
 > Rustic also has a piece type called Pieces::NONE, which is used when
 > there's no piece on a square, or, in the move integer, there is no piece
 > in the Promotion or Captured fields. That is where the +1 comes from.
