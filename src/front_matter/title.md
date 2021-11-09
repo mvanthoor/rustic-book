@@ -5,4 +5,6 @@
 
 or, the art of Chess Programming in Rust.
 
-__**Marcel Vanthoor**__
+__**Marcel Vanthoor**__<br /><br />
+
+_Latest update: November 09, 2021_
