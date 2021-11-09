@@ -37,4 +37,5 @@
 [Building Rustic](./back_matter/build.md)
 [FAQ](./back_matter/faq.md)
 [About me](./back_matter/me.md)
+[Further study](./back_matter/further_study.md)
 [Credits](./back_matter/credits.md)
