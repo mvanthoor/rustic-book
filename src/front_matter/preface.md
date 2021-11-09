@@ -3,7 +3,7 @@
 Hi there. Nice of you to hang around. I'm Marcel, the author of the chess
 engine Rustic and the writer of this text. You're about to step into the
 wonderful and sometimes aggravating world of chess programming. This can be
-a rewarding endavour... but maybe _addictive_ is the better word. There
+a rewarding endeavour... but maybe _addictive_ is the better word. There
 will be lots of challenges, but with perseverance you'll be able to
 overcome them one at a time. When you reach the point where your chess
 engine is capable of playing its first full game against yourself or
