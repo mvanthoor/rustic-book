@@ -86,7 +86,7 @@ it. Don't skimp on this. Many IDE's and editors have provisions for Git and
 other version control systems built in, or they provide plugins or
 extensions. If you don't like these, then there are many GUI-applications
 to be found to use Git. If you are really a contrarian, you can also use
-choose a different verison control system... as long as you use
+choose a different version control system... as long as you use
 _something_.
 
 ## Actually know something about chess

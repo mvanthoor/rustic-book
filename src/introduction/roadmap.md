@@ -13,7 +13,7 @@ unpacked into smaller parts which can be implemented one at a time.
 
 The roadmap will describe how to get the engine to play somewhat decent
 chess. From that point onward, it "just" becomes a matter of adding
-features to make the engine stronger. If your overal design and
+features to make the engine stronger. If your overall design and
 implementation is well done, adding newer features on top of the baseline
 version is much less difficult than getting to the baseline itself.
 
@@ -35,7 +35,7 @@ When we get to the design and implementation, these will be explained.
     - Generate moves for all the pieces when the MG is given a position
     - Take special moves into account (such as castling)
     - Adds generated moves to a move list and returns this when done
-    - Can generate captures and silent moves seperately
+    - Can generate captures and silent moves separately
     - Can determine if a square is attacked
 - Write the search functionality
     - Structs (information) needed by the search

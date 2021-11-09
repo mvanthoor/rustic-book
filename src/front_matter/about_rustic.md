@@ -31,7 +31,7 @@ The feature-set for Rustic Alpha 3.0.0 is:
   - Piece-Square Tables
 
 Obviously the feature list will grow longer as the engine gets developed
-further. The book will chronicle those developments and descibe how each
+further. The book will chronicle those developments and describe how each
 feature is implemented. Example code will be in Rust, coming straight from
 a working version of the engine, but there will be enough explanation so
 that each feature can be rewritten in any desired programming language.

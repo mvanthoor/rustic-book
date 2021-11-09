@@ -3,7 +3,7 @@
 What this book is about, is writing the chess *engine*, not the chess
 *program*. There is a distinct difference. Most people know chess programs
 in one way or another; many operating systems even include one in their
-default installation. So what is the differnce?
+default installation. So what is the difference?
 
 The part of the software that people normally call the "chess program" is
 actually only the user interface, which the player uses to interact with
