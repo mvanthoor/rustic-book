@@ -20,7 +20,7 @@ Sciences]((https://www.zuyd.nl/en)), with specialization in software
 engineering and writing embedded software. My main occupation at the moment
 is writing backends for business software.
 
-Even though it would be easey to spend quite some time talking about my
+Even though it would be easy to spend quite some time talking about my
 other hobbies, such as reading, martial arts (I hold a black belt in
 [Hapkido](https://www.cheonkwon.nl//index.php?p=dangraadhouders)),
 photography, music and others, I'm sure the main stuff you're interested in

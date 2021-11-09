@@ -105,7 +105,7 @@ write one's own chess engine by following Rustic's development steps.
 ## It looks weird. What software does it use?
 
 Yeah. This might come as a shock, but it's not Wordpress. This site is
-written using MD Book. This is a commandline utility written in Rust. It
+written using MD Book. This is a command line utility written in Rust. It
 creates websites as books out of Markdown files. It's open source, written
 by and for the Rust language community, and it's used to create the Rust
 language documentation. I am using it because it allows me to write
