@@ -16,7 +16,7 @@
 
 Piece-Square Tables (henceforth PST, often also called PSQT) are the most
 fundamental part of an engine's evaluation function. Without PST's it's
-very hard to get the engine to play a dcent game of chess. They have been
+very hard to get the engine to play a decent game of chess. They have been
 present since the very first version of the engine. After counting
 material, this is the first evaluation function to implement.
 
@@ -45,7 +45,7 @@ const ROOK_MG: Psqt = [
 ```
 
 The rook has 14 squares available to move to, from any square on the board.
-Given only that criterium, it doesn't matter where the rook is. It always
+Given only that criterion, it doesn't matter where the rook is. It always
 has 14 squares available on an empty board. Therefore, most of the values
 in the table are 0.
 
@@ -105,13 +105,13 @@ which gives the engine _two_ sets of PST's, one set for the
 opening/middle-game, and one for the endgame. Then the engine can gradually
 "glide" from the opening/middle-game PST into the endgame PST as the game
 progresses. (The values are "tapered", or interpolated, between the
-opening/middle-game and engame values.)
+opening/middle-game and endgame values.)
 
 After that, we will also write an automatic tuner, which populates the
 PST's with values that give good results; often better than what you will
 be able to do by hand. (Not to mention that tweaking 12 PST's by hand is
-boooring, and it has to be re-done after you change _anything_ in either
-the search or the evaluation!)
+boring and it has to be re-done after you change _anything_ in either the
+search or the evaluation!)
 
 Tapering and tuning the PST's is a major strength boost for most engines.
 
@@ -132,5 +132,5 @@ basis; the starting point to get going.
 
 ## Implementation
 
-Implementing the PST's is not hard, but it requires a bit of tought.
+Implementing the PST's is not hard, but it requires a bit of thought.
 

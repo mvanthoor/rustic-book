@@ -35,13 +35,13 @@ my queen (if it's not the queen of the opponent)? Humans often use this:
 - Knights: 3 points
 - Pawn: 1 points
 
-So a knight is worht 3 pawns. A Rook is worth one bishop and two pawns. Two
+So a knight is worth 3 pawns. A Rook is worth one bishop and two pawns. Two
 rooks are worth slightly more than a queen. Three light pieces are exactly
 worth a queen too. A queen is also equivalent to a rook + knight + pawn,
 and so on.
 
 Some people prefer the values below. For example, Max Euwe (World Champion
-1935-1937), who was a well-known chess enducator in the middle part of the
+1935-1937), who was a well-known chess educator in the middle part of the
 20th century:
 
 - Queen: 9.5 points
@@ -93,7 +93,7 @@ impl Pieces {
 }
 ```
 
-Usig this, we can create an array which assigns a numerical value to each
+Using this, we can create an array which assigns a numerical value to each
 piece. These are implementations of the values from above:
 
 ```csharp
@@ -114,7 +114,7 @@ There are two differences with the values we saw earlier in the chapter.
 First, the evaluation is MUCH faster if we only use integers. If at all
 possible, we will never use floating point numbers while calculating
 anything. (Except, maybe, in the very last step before outputting
-something.) This is the reason why we have mulitplied all the values by one
+something.) This is the reason why we have multiplied all the values by one
 hundred. This gives the evaluation a way to think in terms of "parts of a
 pawn", by using values such as 50 or 10, instead of 0.5 or 0.1.
 
@@ -126,7 +126,7 @@ instead of trading it for three pawns.
 
 Again, don't fret too much about these values because in later stages of
 engine development, they will be merged with the Piece-Square Tables and
-automatically tuend.
+automatically tuned.
 
 ### Counting vs. Updating
 
@@ -281,7 +281,7 @@ pub fn put_piece(&mut self, side: Side, piece: Piece, square: Square) {
 Note that this will even take promotions into account: remove a pawn from
 the 7th rank and thus subtract _the knight's_ value from the material
 count, and then put a queen down, adding _the queen's_ value back to the
-meterial count.
+material count.
 
 Obviously, the remove_piece() and put_piece() functions also actually
 remove and put the piece, and they keep other incremental scores next to
@@ -311,9 +311,9 @@ pub fn evaluate_position(board: &Board) -> i16 {
 
 As you can see, the re-counting of the piece value from scratch has been
 reduced to just getting the white and black values from the board and then
-substracting them.
+subtracting them.
 
-This exact same techinque will also be used to implement the Piece-Square
+This exact same technique will also be used to implement the Piece-Square
 tables incrementally, which will be the next chapter. It is exactly the
 same, only there are 6 arrays instead of 2 (one for each piece type instead
 of each side), and 64 integers per array instead of 6 (one for each square

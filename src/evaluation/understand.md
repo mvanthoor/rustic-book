@@ -12,7 +12,7 @@ than all the atoms in the universe. It would take until the end of time
 (and beyond) to calculate all the possible paths to all the possible ending
 positions.
 
-We do have opening books with some very long lines in them, and engame
+We do have opening books with some very long lines in them, and endgame
 tablebases containing all endgames with up to 7 pieces (even though they
 require a huge amount of storage space). So, the beginning and ending of
 the game are coming closer together. The middle game, the part just after
