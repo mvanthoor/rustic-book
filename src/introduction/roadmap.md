@@ -37,6 +37,12 @@ When we get to the design and implementation, these will be explained.
     - Adds generated moves to a move list and returns this when done
     - Can generate captures and silent moves separately
     - Can determine if a square is attacked
+- Add perft (performance testing)
+    - Add a perft function that runs on a given position.
+    - Run through a perft suite containing "tricky" positions.
+
+** First milestone reached: move generator is bug-free **
+
 - Write the search functionality
     - Structs (information) needed by the search
     - Write the iterative deepening function
@@ -56,6 +62,33 @@ When we get to the design and implementation, these will be explained.
     - Make sure the engine understands the commands
     - Make sure the engine reacts correctly
 
+** Second milestone reached: baseline is done. 1500-1700 Elo **
+
+- Add more advanced functionality
+    - Transposition table
+    - TT move ordering
+    - Principal Variation Search
+    - Killer moves
+    - Tapered Evaluation
+    - Texel tuning
+
+** Third milestone reached: the engine should be >= 2000 Elo **
+
+- Keep adding more features to become stronger
+    - History heuristics
+    - Pruning capability
+        - Null move pruning
+        - Futility pruning
+        - Mate pruning
+        - ... etc ...
+    - Evaluation
+        - Mobility
+        - King safety
+        - Passed pawns
+        - General knowledge
+        - ... etc ...
+    - Many other features
+
 _Do not begin to extend the engine_ with new features until the baseline as
 outlined above has proven to be bug-free. It should be able to complete a
 perft suite without errors and it should be able to play thousands and
@@ -71,11 +104,10 @@ to be working correctly. Fixing bugs _afterwards_, in a feature you added
 weeks or even months ago is difficult in a chess engine; much more so than
 it is in "normal" software.    
 
-After all this is implemented, you should have an engine that is on par
-with Rustic Alpha 1 with regard to functionality. The engine has no chess
-knowledge apart from PST's and material values. You can use Rustic Alpha 1
-versions to get started. If you do, the only difference between your engine
-and Rustic Alpha 1 should be speed.
+After you hit the second milestone, you should have an engine that is on
+par with Rustic Alpha 1 with regard to functionality. The engine has no
+chess knowledge apart from PST's and material values. You can use Rustic
+Alpha 1 versions to get started with engine to engine testing.
 
 If your engine has no bugs, and you're using Rustic's PST's and material
 values, you can expect an rating of 1500-1700 Elo after the engine is
@@ -83,10 +115,11 @@ tested in a list such as the CCRL 2m+1s Blitz list. Rustic Alpha 1 has a
 rating of [1675
 Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?match_length=30&each_game=1&print=Details&each_game=1&eng=Rustic%20Alpha%201%2064-bit#Rustic_Alpha_1_64-bit).
 
-In case your baseline engine reaches less than 1500 Elo, it's either slow,
-buggy, or both. First make sure there are no bugs, then try to optimize for
-speed. If you are using a slow programming language, there are obviously
-limits to what you can do with regard to speed.
+In case your baseline engine reaches less than 1500 Elo, it's either very
+slow, buggy, or both. First make sure there are no bugs, then try to
+optimize for speed. This is the reason why you should choose a fast
+programming language; if you don't, you could start out with a 200 Elo
+disadvantage against engines with a similar feature set.
 
 Should you be in the high 1600's, you _could_ possibly hit 1700 by
 tinkering a lot with the material values, piece square tables, and time
@@ -94,14 +127,14 @@ management. It's probably not worth it, as all those functions will either
 be improved or replaced in later versions, so don't spend too much time on
 this.
 
-(I actually believe 1700 on the CCRL Blitz list is the absolute maximum you
-could reach with the given baseline version that has only material values,
-PST's, MVV-LVA move sorting, and no special search or move generator
-optimizations.)
+(I actually believe 1700 on the CCRL Blitz list is the about the maximum
+you could reach with the given baseline version that has only material
+values, PST's, MVV-LVA move sorting, and no special search or move
+generator optimizations.)
 
-From this point onward, you can add features in any order you want. Mostly,
-at least. There are features that depend on other features. To implement
-transposition table move ordering, you obviously first need to have a
-working transposition table.
+From this point onward, you can add features in any order you want, but I
+suggest to follow the roadmap up to the third milestone. There are features
+that depend on other features. To implement transposition table move
+ordering, you obviously first need to have a working transposition table.
 
 Let's move on to the first topic: board representation.
