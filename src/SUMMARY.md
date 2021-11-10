@@ -25,6 +25,7 @@
     - [Piece-Square Tables](./evaluation/psqt.md)
 - [Communication](./communication/communication.md)
     - [Introduction](./communication/introduction.md)
+    - [Comparison](./communication/comparison.md)
     - [Design](./communication/design.md)
     - [UCI](./communication/uci.md)
     - [XBoard](./communication/xboard.md)

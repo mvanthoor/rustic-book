@@ -41,7 +41,7 @@ When we get to the design and implementation, these will be explained.
     - Add a perft function that runs on a given position.
     - Run through a perft suite containing "tricky" positions.
 
-** First milestone reached: move generator is bug-free **
+** **First milestone reached: move generator is bug-free** **
 
 - Write the search functionality
     - Structs (information) needed by the search
@@ -62,7 +62,7 @@ When we get to the design and implementation, these will be explained.
     - Make sure the engine understands the commands
     - Make sure the engine reacts correctly
 
-** Second milestone reached: baseline is done. 1500-1700 Elo **
+** **Second milestone reached: baseline is done. 1500-1700 Elo** **
 
 - Add more advanced functionality
     - Transposition table
@@ -72,7 +72,7 @@ When we get to the design and implementation, these will be explained.
     - Tapered Evaluation
     - Texel tuning
 
-** Third milestone reached: the engine should be >= 2000 Elo **
+** **Third milestone reached: the engine should be >= 2000 Elo** **
 
 - Keep adding more features to become stronger
     - History heuristics
@@ -95,14 +95,19 @@ perft suite without errors and it should be able to play thousands and
 thousands of test games in a row without crashing, making illegal moves or
 forfeiting on time.
 
-Go back and read the above paragraph again. This is one of the most
-important things in chess programming. If your baseline engine is not
-bug-free, any and all features you add next will either not bring you the
-improvement they should, or they won't work at all. This also means you
-should only move on to the next feature if the previous feature has proven
-to be working correctly. Fixing bugs _afterwards_, in a feature you added
-weeks or even months ago is difficult in a chess engine; much more so than
-it is in "normal" software.    
+Go back and read the above paragraph again. This is absolutely essential.
+If your baseline engine is not bug-free, any and all features you add next
+will either not bring you the improvement they should, or they won't work
+at all. This also means you should only move on to the next feature if the
+previous feature has proven to be working correctly.
+
+Fixing bugs _afterwards_, in a feature you added weeks or even months ago
+is difficult in a chess engine; much more so than it is in "normal"
+software. The reason is that many features are synergetic; this means that
+the behavior or effectiveness of one feature can be altered by another. If
+you add a new feature and it doesn't work right, it could be because of a
+bug in an older piece of code... but you won't know until you check _all_
+the code.
 
 After you hit the second milestone, you should have an engine that is on
 par with Rustic Alpha 1 with regard to functionality. The engine has no
