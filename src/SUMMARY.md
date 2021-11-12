@@ -26,6 +26,7 @@
 - [Communication](./communication/communication.md)
     - [Introduction](./communication/introduction.md)
     - [Comparison](./communication/comparison.md)
+    - [How it works](./communication/how_it_works.md)
     - [Design](./communication/design.md)
     - [UCI](./communication/uci.md)
     - [XBoard](./communication/xboard.md)
