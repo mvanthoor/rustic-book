@@ -1,0 +1,33 @@
+@startuml comm_threads
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFE
+
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab {
+    note "Knows nothing\nabout protocols" as n1
+    note "Knows everything\nabout protocols" as n2
+
+    component "Main Thread" as Main #a1fdff
+    component "Comm\nHandler" as Handler #f5ccff
+    component "Action" as Action #f5ccff
+    component "UCI" as Uci #fefece {
+        component "out" as Out #a1fdff
+        component "in" as In #a1fdff
+    }
+}
+component "Chess\nProgram" as GUI #cdffab
+
+Main *-right-> Handler : command
+Handler -up-> Action : call
+Handler <-up- Action : " result"
+Handler --> Out : reply
+Main <-- In : " command"
+In <.. GUI : "command\n(stdin)"
+Out ..> GUI : "reply\n(stdout)"
+
+Main .up. n1
+Handler .. n2
+@enduml

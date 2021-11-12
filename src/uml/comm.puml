@@ -1,0 +1,20 @@
+@startuml comm
+skinparam shadowing false
+skinparam componentStyle rectangle
+skinparam backgroundColor #FFFFFE
+
+hide empty methods
+hide empty members
+
+component "Engine" as Engine #cdffab
+component IComm #ffdc96
+component "UCI" as Uci #a1fdff
+component "XBoard" as XBoard #a1fdff
+component "Chess Program\n(User Interface)" as GUI #cdffab
+
+Engine *-- IComm
+IComm <|-- Uci
+IComm <|-- XBoard
+Uci <..> GUI
+XBoard <..> GUI
+@enduml
