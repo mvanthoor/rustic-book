@@ -17,6 +17,8 @@ component "Engine" as Engine #cdffab {
         component "out" as Out #a1fdff
         component "in" as In #a1fdff
     }
+
+    interface "  IComm" as IComm
 }
 component "Chess\nProgram" as GUI #cdffab
 
@@ -27,6 +29,8 @@ Handler --> Out : reply
 Main <-- In : " command"
 In <.. GUI : "command\n(stdin)"
 Out ..> GUI : "reply\n(stdout)"
+Uci -left- IComm
+Main --( IComm
 
 Main .up. n1
 Handler .. n2
