@@ -49,3 +49,74 @@ used is the handler; and each handler only knows one protocol. Visualizing
 this for UCI would look like this:
 
 ![Communication Threaded](../diagrams/comm_threads.svg)
+
+This is a fairly complicated diagram which requires some explanation, but
+in the end it will turn out to be fairly straightforward. First, we have
+the IComm interface in the lower left. This interface is used to build the
+structure you see in the diagram. When the IComm object is initialized, it
+sets up the in/out threads you see in the UCI part, and connects them to
+the engine's main thread with so called _channels_.
+
+A channel is a way of communication between two threads. Channels are used
+to send messages between threads. One thread is the sender, while the other
+thread is the receiver. If you want two threads to both send and receive
+information back and forth, you will need two channels. (There probably are
+ways to do this with only one channel, but I haven't looked into any for
+Rustic.) If you want some more information about channels right now, you
+can find it [in the Rust Programming Language
+book](https://doc.rust-lang.org/book/ch16-02-message-passing.html).
+
+Let's see what happens if the chess program sends the "uci" command.
+
+![Communication Threaded](../diagrams/comm_sequence.svg)
+
+In the diagram above, the GUI prints the "uci" command as text to its own
+stdout. This is connected to the engine's stdin, where the UCI
+communication module sits waiting for input. It catches the "uci" text and
+puts it through a parsing function, which turns the command into an enum
+variant, which also happens to be called "uci". (It could have been called
+anything else.) Now the "uci" enum is sent to the main thread.
+
+However... the main thread doesn't know anything about incoming commands;
+uci, xboard, or otherwise. It receives an enum variant called "uci", so it
+just passes it along to the handler. The handler _knows_ about the "uci"
+enum and it determines that "someone" wants the engine to identify itself.
+The handler doesn't know how that "someone" is: a GUI, or a user typing on
+the command-line; it doesn't care. It just returns the enum variant
+"identify" to the place where the incoming command came from.
+
+In the UCI Out thread, the "identify" enum is of course known. It means
+that it should execute the functions "id()", "options()", and "uciok(),
+which makes the engine print the engine and author name, the UCI options,
+and the text "uciok" to standard out. The GUI, whose stdin is connected to
+that stdout, receives the reply and we're done.
+
+All other commands and replies will travel the same path regardless of
+which protocol they belong to. If the engine had been instantiated using
+the XBoard protocol, it wouldn't understand UCI commands (because it's the
+XBoard module running), but if you put in an XBoard command, it will handle
+it in exactly the same way.
+
+Note that there could have been an extra entry at the right of the above
+sequence diagram: Actions. If a command comes in, it could be that the
+engine needs to perform some action, such as setting up the board. The
+handler will initiate this action and wait for the result. If required it
+will then send a reply based on that result.
+
+In the case of the "uci" command the engine doesn't need to perform any
+actions, so this part has been left out. If we had described the "position"
+command, the engine would have set up the incoming position using an
+action, but it would not have sent back a reply because "position" doesn't
+require a reply.
+
+If you have been watching carefully, you may have noticed that the engine
+_only_ receives input from the outside through an instance of IComm (in
+this case, UCI or XBoard), and it _only_ sends replies through IComm. It
+_never_ receives or prints things from anywhere else. This is essential of
+keeping the engine itself clean of any protocol handling. If you use a
+threaded infrastructure such as this one, there is no need to read commands
+and print replies throughout the engine. This will keep the main engine and
+the protocol handling separated, which will make it easy to add new
+protocols in the future, should this be required.
+
+The next topic will be on how to implement this threaded setup in Rust.

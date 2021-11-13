@@ -1,0 +1,22 @@
+@startuml comm_sequence
+participant "GUI" as GUI
+participant "UCI In" as UciIn
+participant "Parse" as Parse
+participant "Print" as Print
+participant "UCI Out" as UciOut
+participant "Main Thread" as MT
+participant "Handler" as HexagonBorderColor
+
+GUI --> UciIn : uci (text)
+UciIn --> Parse : uci (text)
+UciIn <-- Parse : uci (enum)
+UciIn --> MT : uci (enum)
+MT --> Handler : uci (enum)
+UciOut <-- Handler : Identify (enum)
+Print <-- UciOut : id()
+GUI <-- Print : engine name\nauthor name\n(text)
+Print <-- UciOut : options()
+GUI <-- Print : UCI options (text)
+Print <-- UciOut : uciok()
+GUI <-- Print : uciok (text)
+@enduml
