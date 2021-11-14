@@ -7,4 +7,4 @@ or, the art of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__<br /><br />
 
-_Latest update: November 09, 2021_
+_Latest update: November 14, 2021_
