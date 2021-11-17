@@ -34,7 +34,7 @@ nowadays, stdout and stderr are normally just the computer's display.)
 At the very beginning of this journey, the only code you had was probably
 something like this:
 
-```js
+```csharp
 const NAME: &str = "Engine";
 const VERSION: &str = "0.1";
 
