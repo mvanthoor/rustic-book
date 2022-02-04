@@ -8,6 +8,7 @@
 [Prerequisites](./front_matter/prereq.md)
 
 - [Introduction](./introduction/introduction.md)
+    - [On idiomatic Rust](./introduction/idiomatic.md)
     - [Concept](./introduction/concept.md)
     - [Design](./introduction/design.md)
     - [Roadmap](./introduction/roadmap.md)
