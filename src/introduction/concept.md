@@ -6,11 +6,11 @@ in one way or another; many operating systems even include one in their
 default installation. So what is the difference?
 
 The part of the software that people normally call the "chess program" is
-actually only the user interface, which the player uses to interact with
-the engine. In the past, the user interface and the engine were often the
-same piece of software, but nowadays this is mostly not the case. The user
-interface cannot play chess, while the engine has only very limited means
-to interact with a user, from a user's point of view.
+only the user interface, which the player uses to interact with the engine.
+In the past, the user interface and the engine were often the same piece of
+software, but nowadays this is mostly not the case. The user interface
+cannot play chess, while the engine has only very limited means to interact
+with a user, from a user's point of view.
 
 So, they go together, like this:
 

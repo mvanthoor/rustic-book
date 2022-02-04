@@ -47,11 +47,10 @@ white will follow it up with _Nf5-e7+_, which wins the black queen and the
 game. (You could therefore say that _Qb8xc8_ is the least bad move instead
 of the best move.)
 
-The takeaway from this example is that most moves on the board are actually
-not even considered by humans. If you're in the middle of an attack such as
-in the position discussed above, it's unlikely you're going to consider
-moves such as _a2-3_. The order in which moves are mostly evaluated is the
-following:
+The takeaway from this example is that most moves on the board are not even
+considered by humans. If you're in the middle of an attack such as in the
+position discussed above, it's unlikely you're going to consider moves such
+as _a2-3_. The order in which moves are mostly evaluated is the following:
 
 - Captures are evaluated before quiet moves.
 - Good captures are evaluated before bad captures.

@@ -16,11 +16,11 @@
 
 ## Why Rust? What's wrong with C and C++?
 
-Nothing... and a lot, both at the same time. I actually like C and C++;
-especially C, because it is such a small language, very easy to learn, and
-it basically runs on every computer platform ever created. C gives me the
-same sort of thrill as I get from handling a live piece of dynamite. No,
-really. I love C to bits. (I should stop making word jokes, I know.) If
+Nothing... and a lot, both at the same time. To be honest, I like C and
+C++; especially C, because it is such a small language, very easy to learn,
+and it basically runs on every computer platform ever created. C gives me
+the same sort of thrill as I get from handling a live piece of dynamite.
+No, really. I love C to bits. (I should stop making word jokes, I know.) If
 Rust hadn't existed, my chess engine may have been written in C and in that
 case would probably have had a different name.
 
@@ -77,7 +77,7 @@ In short, the Rust programming language can be summed up as such:
     - No uninitialized variables... ever.
     - No memory leaks.
     - No race conditions.
-    - Multi-threading actually becomes fairly easy!
+    - Multi-threading becomes fairly easy!
 - No dependency problems: if you know and like any package manager
    (apt-get, yum, npm, pip), you'll love cargo. (However, if you hate all
    package managers, you'll hate this one too.)

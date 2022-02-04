@@ -24,8 +24,8 @@ The first early commercial chess computers where released in the late
 1970's. These computers looked more like a large calculator than a chess
 board. Indeed, you often had to put in moves in algebraic notation and then
 wait for the computer to print its response on a display. You had to have a
-separate normal chess set available to move the pieces, so you could
-actually see the position.
+separate normal chess set available to move the pieces, so you could see
+the position.
 
 In later iterations of this idea the calculator-like interface became
 smaller, until it could be integrated into a small chess board. This was

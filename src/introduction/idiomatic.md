@@ -49,9 +49,9 @@ enum, just to create a different type.
 
 This makes the code very verbose, hard to understand and harder to
 maintain, because it is an extra struct/enum layer on top of the u8 type we
-actually need. Therefore I did not do any of these wrappings to keep all
-the u8 types seperated and chose to just keep my eyes open and make sure I
-don't swap (for example) squares and pieces.
+need. Therefore I did not do any of these wrappings to keep all the u8
+types seperated and chose to just keep my eyes open and make sure I don't
+swap (for example) squares and pieces.
 
 One place where you may encounter an "old-fashioned" way of doing things is
 when Rustic iterates over the move list. It uses a for-loop, instead of an

@@ -66,7 +66,7 @@ one or more contributions (in no particular order).
 
 I always wanted to be "one of them": the programmers who could write chess
 engines. I have always wanted to have my own, but there was always
-"something" that got in the way of actually writing it. Now it's done: even
-though it is not very strong yet, I wrote my own chess engine from scratch.
-It was a long process and lots of work, but thanks to the help of the chess
+"something" that got in the way of writing it. Now it's done: even though
+it is not very strong yet, I wrote my own chess engine from scratch. It was
+a long process and lots of work, but thanks to the help of the chess
 programming community, it went relatively smoothly. Thanks guys.

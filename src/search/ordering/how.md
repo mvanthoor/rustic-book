@@ -2,7 +2,7 @@
 
 Move ordering is a very important part of a chess engine, as described in
 the previous chapter. There are several techniques involved, but if you get
-right down the basics, what happens is actually quite easy to understand.
+right down the basics, what happens is quite easy to understand.
 Let's take the alpha-beta function, which performs the core part of the
 search in a chess engine. To keep this simple, all parts not related to
 move ordering have been removed.
@@ -62,7 +62,7 @@ alpha/beta-function. Further down, the function does the following things:
 6. Then that move is put into _current_move_, so we don't have to
    move_list.get_move(i) over and over again in the loop.
 
-So, only points 2 and 5 are actually involved in ordering, and then picking
+So, only points 2 and 5 are involved in ordering, and then picking
 the moves. We'll see score_move() in several different versions when we
 discuss the move ordering techniques, but pick_move() is always the same:
 
@@ -87,7 +87,7 @@ this optimization will make it in later.)
 
 > **Sidenote** Why do we assign sort scores to the moves, and then use
 > pick_move() to swap one move to the current index of the move list while
-> alpha/beta iterates over it? Couldn't we just actually _physically sort
+> alpha/beta iterates over it? Couldn't we just _physically sort
 > the list_ before the move loop starts, and be done with it?
 >
 > It's possible, but we don't do that because of how alpha/beta works. If
@@ -100,6 +100,6 @@ this optimization will make it in later.)
 > 
 > You can hear and read "move ordering" and "move sorting" interchangeably.
 > The difference is that "move ordering" does the "score and pick"
-> approach, and "move sorting" actually physically sorts the entire move
+> approach, and "move sorting" physically sorts the entire move
 > list. The result is the same, but move ordering is the faster approach,
 > as described above.

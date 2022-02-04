@@ -5,11 +5,11 @@
 
 - [Prerequisites](#prerequisites)
   - [This is gonna take a while](#this-is-gonna-take-a-while)
-  - [Not for total beginners](#not-for-total-beginners)
+  - [Not for complete beginners](#not-for-complete-beginners)
   - [Mind your language](#mind-your-language)
   - [Be happy with your environment](#be-happy-with-your-environment)
   - [Git those versions under control](#git-those-versions-under-control)
-  - [Actually know something about chess](#actually-know-something-about-chess)
+  - [Know something about chess](#know-something-about-chess)
 
 <!-- /code_chunk_output -->
 
@@ -43,10 +43,10 @@ low(er) level programming languages such as C, C++, Rust, or even classic
 Pascal, this book and the subject of chess programming will be easier for
 you. If you are coming from the web-development world, used to Javascript,
 Python or PHP, it will (probably) be harder, but certainly not impossible.
-(You can actually write chess engines in Javascript and Python, but those
-languages wouldn't be my personal choice.) If you just learned to write
-"Hello World", this probably will not be the project for you... yet. Of
-course, you're invited to come back later.
+(You can write chess engines in Javascript and Python, but those languages
+wouldn't be my personal choice.) If you just learned to write "Hello
+World", this probably will not be the project for you... yet. Of course,
+you're invited to come back later.
 
 ## Mind your language
 
@@ -90,7 +90,7 @@ to be found to use Git. If you are really a contrarian, you can also use
 choose a different version control system... as long as you use
 _something_.
 
-## Actually know something about chess
+## Know something about chess
 
 _Six:_ Also not strictly necessary, but it would be very helpful if you
 know _all_ the chess rules already. As with other programming projects, it

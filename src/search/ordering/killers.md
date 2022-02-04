@@ -24,7 +24,7 @@ because of its huge Elo-boost, and I felt particularly greedy at the time
 
 ## Explanation
 
-First let's take a look at what a killer move actually is.
+First let's take a look at what a killer move even is.
 
 A "killer move" is a quiet move that does not capture anything, but brings
 a large advantage for the side making that move. The move is so named
@@ -87,7 +87,7 @@ because if black should allow this move without taking care of the threat,
 black's going to lose big time. This is called a beta cutoff.
 
 (This is the reason why the _Bg2-c6_ doesn't work against Qd7-e8. After
-this move, black can actually escape from the double attack. He has thus
+this move, black can escape from the double attack. He has thus
 taken care of the threat, and the killer move doesn't work. Try to find out
 later, how black escapes! If you can't see the solution, look at the bottom
 of this page.)
@@ -300,7 +300,7 @@ unordered move.
 > than two killer moves unique is detrimental to the engine's speed. With
 > the implementation above, you could try to keep three killer moves for
 > each ply, hoping that some of the time there will be no duplicates. In
-> some engines this actually works, but you will have to try and test it.
+> some engines this can work, but you will have to try and test it.
 
 <hr />
 
@@ -319,6 +319,6 @@ _Bg2-c6_ not work anymore as a killer move, when black plays _Qd7-e8_?
 > to get his king out of check, for example _Kg1-h1_, and then black can
 > move the rook on _b5_ out of danger.
 > 
-> Warning: Qe8-e3+ as actually quite sneaky. If white tries to to trade the
+> Warning: Qe8-e3+ is quite a sneaky move. If white tries to to trade the
 > queens by blocking the check with _Qb2-f2_, the rook on _c1_ becomes
 > undefended and the black queen can capture it with another check!

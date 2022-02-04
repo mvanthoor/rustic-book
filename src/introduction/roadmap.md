@@ -132,7 +132,7 @@ management. It's probably not worth it, as all those functions will either
 be improved or replaced in later versions, so don't spend too much time on
 this.
 
-(I actually believe 1700 on the CCRL Blitz list is the about the maximum
+(I believe 1700 on the CCRL Blitz list is the about the maximum
 you could reach with the given baseline version that has only material
 values, PST's, MVV-LVA move sorting, and no special search or move
 generator optimizations.)

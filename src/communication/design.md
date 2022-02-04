@@ -2,10 +2,10 @@
 
 We finally arrived at the point where we can start designing the last piece
 of the puzzle to complete the baseline chess engine. For some people,
-creating the communication may actually be the first thing they do, or just
-do somewhere in between, but I prefer to save it for last. First let's take
-a look again at the architecture diagram from the _Design_ page in the _Introduction_
-chapter:
+creating the communication may be the first thing they do, or just do
+somewhere in between, but I prefer to save it for last. First let's take a
+look again at the architecture diagram from the _Design_ page in the
+_Introduction_ chapter:
 
 ![Architecture](../diagrams/architecture.svg)
 
@@ -42,7 +42,7 @@ the following:
 
 That's it. The engine has a _receiver_ for incoming commands and it obtains
 a _sender_ for outgoing messages as soon as it instantiates IComm. In this
-way, the engine doesn't need to know what the protocol actually is: it only
+way, the engine doesn't need to know what the protocol even is: it only
 knows how to handle its incoming commands, and what replies it should send.
 The only part of the entire engine that knows anything about the protocol
 used is the handler; and each handler only knows one protocol. Visualizing

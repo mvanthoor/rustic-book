@@ -133,7 +133,7 @@ automatically tuned.
 #### Counting from scratch
 
 There are two ways you could know the material balance when evaluating the
-position: you can actually count the material at that point, or you update
+position: you can count the material at that point, or you update
 the value incrementally.
 
 Counting the material balance at the point where you need to know it is
@@ -223,7 +223,7 @@ fn init(&mut self) {
 }
 ```
 
-The function actually counting the material is an implementation of the
+The function counting the material is an implementation of the
 pseudo-code given before, in Rust:
 
 ```csharp
@@ -283,10 +283,9 @@ the 7th rank and thus subtract _the knight's_ value from the material
 count, and then put a queen down, adding _the queen's_ value back to the
 material count.
 
-Obviously, the remove_piece() and put_piece() functions also actually
-remove and put the piece, and they keep other incremental scores next to
-the material, such as as the incrementally updated PST's. That code has
-been omitted.
+Obviously, the remove_piece() and put_piece() functions also remove and put
+the piece, and they keep other incremental scores next to the material,
+such as as the incrementally updated PST's. That code has been omitted.
 
 With this implementation, the engine knows the white and black piece value
 count throughout the entire game, and the evaluation function only has to

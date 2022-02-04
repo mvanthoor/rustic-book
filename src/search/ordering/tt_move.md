@@ -4,8 +4,8 @@
 
 TT-move ordering is a technique where a move returned from the
 transposition table is ordered first in the list, in front of all other
-moves. The hard part is implementing the TT itself; actually ordering on
-the TT-move is very easy.
+moves. The hard part is implementing the TT itself; ordering on the TT-move
+is very easy.
 
 You should have already implemented the TT to be able to add the TT-move
 ordering. If you haven't, it's recommended to take a look at the

@@ -145,12 +145,12 @@ implemented which will be discussed in the next chapters.
 > In MVV_LVA move ordering, Piece::NONE cannot be the victim and it also
 > cannot be the attacker. You can't capture TO an empty square. You also
 > can't capture FROM an empty square. Therefore all the cells that have
-> Piece::NONE as part of the combination are 0. (Actually, a move FROM an
-> empty square isn't even possible... supposing your engine has no bugs in
-> the move generator.) The top row is also 0, because the King cannot be
+> Piece::NONE as part of the combination are 0. (A move FROM an empty
+> square isn't even possible... supposing your engine has no bugs in the
+> move generator.) The top row is also 0, because the King cannot be
 > captured.
 > 
 > Setting up the MVV_LVA array this way makes the scoring function somewhat
-> simpler because you don't have to check if the FROM and TO square
-> actually contain pieces, and that you're not capturing a king.
+> simpler because you don't have to check if the FROM and TO square contain
+> pieces and that you're not capturing a king.
 

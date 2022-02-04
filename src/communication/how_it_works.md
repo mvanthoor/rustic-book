@@ -58,8 +58,8 @@ stdin through the same pipe, so any text the engine prints is received by
 the GUI.
 
 If you have ever used a command line, especially on Linux, you may have
-actually seen a pipe and may not have known the name. For example, let's
-see what files are in a directory:
+seen a pipe and may not have known the name. For example, let's see what
+files are in a directory:
 
 ```bash
 $ ls
