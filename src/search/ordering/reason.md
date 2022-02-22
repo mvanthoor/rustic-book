@@ -6,7 +6,7 @@ moment to take into account how a human thinks about a position, everything
 will become clear. Let's review an example that could occur in an actual
 chess game. Consider the following position, with white to move:
 
-<img src="../../positions/position_1.png" width=400 />
+<img src="../../positions/position_1.png" />
 
 There are a lot of possible moves to be played. The rook and the queen have
 22 moves together, and we're not even counting the king, the knight, and
