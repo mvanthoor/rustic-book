@@ -1,4 +1,4 @@
-# Bishop pair detection
+# Detecting the bishop pair
 
 It is very useful to know if one side or the other has a bishop pair, as
 having the two bishops can be an advantage in some positions. Some of these
@@ -36,7 +36,7 @@ It turns out to be very simple:
 
 ```csharp
 pub fn has_bishop_pair(&self, side: Side) -> bool {
-    let mut bishops = self.get_pieces(Pieces::BISHOP, side);
+    let mut bishops = self.get_pieces(side, Pieces::BISHOP);
     let mut white_square = 0;
     let mut black_square = 0;
 

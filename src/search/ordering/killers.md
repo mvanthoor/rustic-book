@@ -33,7 +33,7 @@ because it is so strong that the opponent _must_ react to it, and thus it
 position in which nothing much is happening, but white is a bit better.
 White is to move, but obviously, black is also thinking.
 
-<img src="../../positions/position_2.png" width=400 />
+<img src="../../positions/killers_1.png" />
 
 Assume black is thinking to improve the position of his knight: "My knight
 is on the rim. I remember from my lessons: a knight on the rim is dim. When
@@ -46,6 +46,8 @@ pawn move and blindly goes ahead with his plan of _Nh5-f6_, white will
 respond with:
 
 __Bg2-c6!__
+
+<img src="../../positions/killers_2.png" />
 
 This Bishop move, which came available after _f3-f4_, attacks both the rook
 and the queen. This is the "killer move", because it "kills" all the black
@@ -302,13 +304,11 @@ unordered move.
 > each ply, hoping that some of the time there will be no duplicates. In
 > some engines this can work, but you will have to try and test it.
 
-<hr />
-
 ## Puzzle solution
 
 Here is the position from the start again:
 
-<img src="../../positions/position_2.png" width=400 />
+<img src="../../positions/killers_1.png" />
 
 White plays _f3-f4_, setting up the double attack threat _Bg2-c6_, which
 can be used as a killer move after various black moves. Question: Why does
