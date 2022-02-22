@@ -8,6 +8,13 @@ representation to detect these draws.
 
 ## Draw by insufficient material rule
 
+> Note: If you are only implementing the UCI protocol, then you can omit
+> this function. It is only needed for the XBoard protocol to be able to
+> claim draw by insufficient material under the FIDE rules. The engine also
+> has a function called *sufficient_material_to_force_checkmate()*, which
+> is used while searching and can score drawn positions, which is
+> sufficient for UCI.
+
 There is a rule in chess which is often misunderstood: draw by insufficient
 material. It seems simple: if none of the players have enough material on
 the board to checkmate the king, a draw can be claimed. However, this is
@@ -19,11 +26,12 @@ relevant rule is as follows:
 > checkmate the opponent’s king with any series of legal moves.
 
 This is slightly different from the commonly held belief of "not having
-enough material to checkmate the enemy king. If you have a King+Bishop vs.
-King, then the position is a draw, because no player can checkmate the
-other using any series of legal moves. What about King+Bishop vs.
-King+Bishop, or King+Knight vs. King+Knight? These positions should be
-drawn, because no player can achieve a mate, right? Wrong...
+enough material to checkmate the enemy king can be claimed as a draw." If
+you have a King+Bishop vs. King, then the position is a draw, because no
+player can checkmate the other using any series of legal moves. What about
+King+Bishop vs. King+Bishop, or King+Knight vs. King+Knight? These
+positions should be drawn, because no player can achieve a mate, right?
+Wrong...
 
 K+B vs. K+B:<br />
 <img src="../../positions/kbkb_mate.png" />
