@@ -8,12 +8,12 @@
 [Prerequisites](./front_matter/prereq.md)
 
 - [Introduction](./introduction/introduction.md)
-    - [On idiomatic Rust](./introduction/idiomatic.md)
     - [Concept](./introduction/concept.md)
     - [Design](./introduction/design.md)
     - [Roadmap](./introduction/roadmap.md)
 - [Board Representation](./board_representation/board_rep.md)
     - [Introduction](./board_representation/introduction.md)
+    - [Bitboards](./board_representation/bitboards.md)
     - [Reading FEN-strings](./board_representation/reading_fen_strings.md)
     - [Zobrist Hashing](./board_representation/zobrist_hashing.md)
     - [Game State](./board_representation/game_state.md)
@@ -48,6 +48,7 @@
     - [SPRT results](./progress/sprt_results.md)
     - [Changelog](./progress/changelog.md)
 
+[On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)
 [FAQ](./back_matter/faq.md)
 [About me](./back_matter/me.md)
