@@ -93,9 +93,9 @@ Every board representation comes with its own strengths and weaknesses. A
 strength can be as simple as "easy to understand", while a weakness can be
 "uses lots of memory." So what board representation should we use?
 
-In Rustic the choice has been made to use the bitboard approach [CPW
-page](https://www.chessprogramming.org/Bitboards). In the beginning this is
-somewhat harder to understand compared to the array approach mentioned
+In Rustic the choice has been made to use the bitboard approach ([CPW
+page](https://www.chessprogramming.org/Bitboards)). In the beginning this
+is somewhat harder to understand compared to the array approach mentioned
 above, but once you get the hang of it this representation becomes very
 natural to work with. Also, current-day computers are 64-bit, and a
 (Western!) chess board has 64 sqaures... this seems a match made in heaven.
