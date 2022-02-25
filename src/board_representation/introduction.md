@@ -51,7 +51,7 @@ representation*. It can be constructed in many different ways. The most
 obvious and intuitive would be to just give every piece its own number, and
 put all of them in an 8x8 array, like this (in pseudo-code):
 
-```csharp
+```rust,ignore
 // Empty square
 const ES = 0
 
@@ -101,6 +101,13 @@ natural to work with. Also, current-day computers are 64-bit, and a
 (Western!) chess board has 64 sqaures... this seems a match made in heaven.
 
 Now that you know what a board representation is and why we need it, we can
-start looking into how Rustic tackles this part of the chess engine. The
-next chapter will explain how bitboards work and how the board
+start looking into how Rustic tackles this part of the chess engine.
+
+Well... after you made sure you thoroughly understand the [binary
+system](../appendix/binary_system.md) and [bitwise
+operations](../appendix/bitwise_operations.md) Last chance to study these
+topics before you're going to need them. A lot. Don't say I didn't warn
+you. [I did: in the second prerequisite.](../front_matter/prereq.md))
+
+The next chapter will explain how bitboards work and how the board
 representation is organized.

@@ -47,6 +47,9 @@
     - [SPRT testing](./progress/sprt_testing.md)
     - [SPRT results](./progress/sprt_results.md)
     - [Changelog](./progress/changelog.md)
+- [Appendix](./appendix/appendix.md)
+    - [The binary system](./appendix/binary_system.md)
+    - [Bitwise operations](./appendix/bitwise_operations.md)
 
 [On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)

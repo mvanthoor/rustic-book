@@ -31,7 +31,7 @@ Let's take a look at how it's done. This is a PST for a rook, from white's
 point of view (a1 is on the lower left, to make the table easy to read and
 edit):
 
-```csharp
+```rust,ignore
 const ROOK_MG: Psqt = [
     0,   0,   0,   0,   0,   0,   0,   0,
    15,  15,  15,  20,  20,  15,  15,  15,
@@ -58,7 +58,7 @@ is on _h1_.
 
 A somewhat busier PST is the one from the knight:
 
-```csharp
+```rust,ignore
 const KNIGHT_MG: Psqt = [
     -20, -10,  -10,  -10,  -10,  -10,  -10,  -20,
     -10,  -5,   -5,   -5,   -5,   -5,   -5,  -10,

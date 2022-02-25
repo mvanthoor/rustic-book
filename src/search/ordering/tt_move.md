@@ -24,7 +24,7 @@ search less.
 This is the alpha/beta function with all the parts removed that have
 nothing to do with TT-move ordering:
 
-```csharp
+```rust,ignore
 impl Search {
     pub fn alpha_beta( ... ) -> i16 {
 
@@ -80,7 +80,7 @@ then call score_moves(). We pass the tt_move variable into score_moves().
 We have seen this function before, but now it has been extended to take the
 TT-move into account:
 
-```csharp
+```rust,ignore
 const TTMOVE_SORT_VALUE: u32 = 60;
 
 pub fn score_moves(ml: &mut MoveList, tt_move: ShortMove, refs: &SearchRefs) {

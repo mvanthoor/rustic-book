@@ -34,7 +34,7 @@ The best way to determine if either black or white has a bishop pair is to
 just ask the board itself, so we should add a function to calculate this.
 It turns out to be very simple:
 
-```csharp
+```rust,ignore
 pub fn has_bishop_pair(&self, side: Side) -> bool {
     let mut bishops = self.get_pieces(side, Pieces::BISHOP);
     let mut white_square = 0;
@@ -71,7 +71,7 @@ The important part is the call to _Board::is_white_square()_. This function
 determines if a square is white. There's a nice trick involved there which
 needs some explanation. This is _Board::is_white_square()_:
 
-```csharp
+```rust,ignore
 pub fn is_white_square(square: Square) -> bool {
     let rank = square / 8;
     let even_square = (square & 1) == 0;
@@ -117,14 +117,14 @@ If you take a closer look at the pattern these lines make, you'll see:
 
 As such, that is the result for the _Board::is_white_square()_ function:
 
-```csharp
+```rust,ignore
 (even_rank && !even_square) || (!even_rank && even_square)
 ```
 
 So now we can determine if a side has the bishop pair by making the
 following two function calls:
 
-```csharp
+```rust,ignore
 let white_bishop_pair = board.has_bishop_pair(Sides::WHITE);
 let black_bishop_pair = board.has_bishop_pair(Sides::BLACK);
 ```

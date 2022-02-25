@@ -112,7 +112,7 @@ Rustic has an instance of a struct called SearchInfo, which contains all
 the information about the currently running search. The killer move slots
 are part of this struct:
 
-```csharp
+```rust,ignore
 type KillerMoves = [[ShortMove; MAX_DEPTH as usize]; MAX_KILLER_MOVES];
 
 pub struct SearchInfo {
@@ -129,7 +129,7 @@ The KillerMoves type is an array, indexed by the number of killer moves
 (MAX_PLY, which is set at 125 for Alpha 3). This gives us _two_ killer
 moves at each depth, which can be stored and retrieved by:
 
-```csharp
+```rust,ignore
 let ply = 7;
 let k1 = killer_moves[0][ply];
 let k2 = killer_moves[1][ply];
@@ -141,7 +141,7 @@ instead of one or three or even more.
 
 The killer move is saved like this:
 
-```csharp
+```rust,ignore
 pub fn store_killer_move(current_move: Move, refs: &mut SearchRefs) {
     let ply = refs.search_info.ply as usize;
     let first_killer = refs.search_info.killer_moves[0][ply];
@@ -182,7 +182,7 @@ Ordering moves is a little bit more complicated than ordering on MVV-LVA.
 The score_move function needs to be extended, to take the killer moves into
 account. This is the score_moves function, with killer move ordering added:
 
-```csharp
+```rust,ignore
 const MVV_LVA_OFFSET: u32 = u32::MAX - 256;
 const KILLER_VALUE: u32 = 10;
 
@@ -213,7 +213,7 @@ pub fn score_moves(ml: &mut MoveList, tt_move: ShortMove, refs: &SearchRefs) {
 There are some new parts in the function. At first, we have these two new
 constants:
 
-```csharp
+```rust,ignore
 const MVV_LVA_OFFSET: u32 = u32::MAX - 256;
 const KILLER_VALUE: u32 = 10;
 ```
@@ -236,14 +236,14 @@ available above MVV_LVA_OFFSET.
 First, we iterate through the move list, so we can order all the moves.
 This is the first for-loop:
 
-```csharp
+```rust,ignore
 for i in 0..ml.len() { ... }
 ```
 
 Inside the loop we now need to distinguish between captures and
 non-captures. This is what the if-statement does.
 
-```csharp
+```rust,ignore
 if m.captured() != Pieces::NONE { ... }
 ```
 
@@ -257,7 +257,7 @@ If the move is not a capture, we try to find it in the list of killer
 moves. We just loop through the list as long as we are not at the end, and
 as long as the sort value is still 0.
 
-```csharp
+```rust,ignore
 while i < MAX_KILLER_MOVES && value == 0 { ... }
 ```
 
@@ -266,13 +266,13 @@ we match the move in the move list against a killer move, its sort value is
 calculated, using both MVV_LVA_OFFSET, and KILLER_VALUE (which is set to
 10).
 
-```csharp
+```rust,ignore
 value = MVV_LVA_OFFSET - ((i as u32 + 1) * KILLER_VALUE);
 ```
 
 If we match the first killer at spot 0, the value will be:
 
-```csharp
+```rust,ignore
 value = MVV_LVA_OFFSET - ((0 + 1) * 10)
 value = MVV_LVA_OFFSET - (1 * 10)
 value = MVV_LVA_OFFSET - 10

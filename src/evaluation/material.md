@@ -80,7 +80,7 @@ incrementally. (Rustic uses the second approach.)
 
 Rustic has a struct holding all the piece types in its Board definitions:
 
-```csharp
+```rust,ignore
 pub struct Pieces;
 impl Pieces {
     pub const KING: Piece = 0;
@@ -96,7 +96,7 @@ impl Pieces {
 Using this, we can create an array which assigns a numerical value to each
 piece. These are implementations of the values from above:
 
-```csharp
+```rust,ignore
 pub const PIECE_VALUES: [u16; 6] = [0, 900, 500, 320, 310, 100];
 // --- or this one ---
 pub const PIECE_VALUES: [u16; 6] = [0, 980, 475, 320, 310, 100];
@@ -104,7 +104,7 @@ pub const PIECE_VALUES: [u16; 6] = [0, 980, 475, 320, 310, 100];
 
 So, this table can be indexed by:
 
-```csharp
+```rust,ignore
 let v = PIECE_VALUES[Pieces::Queen]; // v = 900 here.
 let v = PIECE_VALUES[Pieces::Pawn]; // v = 100 here.
 ```
@@ -146,7 +146,7 @@ implementing the PST's. We can then skip this example.
 Here's the pseudo-code to count the material balance for use in the
 evaluation function:
 
-```csharp
+```rust,ignore
 function count_material(position) {
     let value_white = 0;
     let value_black = 0;
@@ -193,7 +193,7 @@ incremental update. To achieve this, Rustic keeps the material in a game
 state struct, along with some other things it needs to know throughout the
 game:
 
-```csharp
+```rust,ignore
 pub struct GameState {
     pub active_color: u8,
     pub castling: u8,
@@ -211,7 +211,7 @@ The "material" member keeps the total material value for each side
 throughout the game. It is initialized in the Board class, when the engine
 starts:
 
-```csharp
+```rust,ignore
 fn init(&mut self) {
     // ...
 
@@ -226,7 +226,7 @@ fn init(&mut self) {
 The function counting the material is an implementation of the
 pseudo-code given before, in Rust:
 
-```csharp
+```rust,ignore
 pub fn count(board: &Board) -> (u16, u16) {
     // Material values for white and black.
     let mut white_material: u16 = 0;
@@ -264,7 +264,7 @@ After starting, the engine will know the total material value for both
 white and black. As soon as a piece is removed from a square (by capture,
 or by moving it) or put down on a square the material value is updated:
 
-```csharp
+```rust,ignore
 pub fn remove_piece(&mut self, side: Side, piece: Piece, square: Square) {
     // ...
     self.game_state.material[side] -= PIECE_VALUES[piece];
@@ -291,7 +291,7 @@ With this implementation, the engine knows the white and black piece value
 count throughout the entire game, and the evaluation function only has to
 do one thing to use that as a basis:
 
-```csharp
+```rust,ignore
 pub fn evaluate_position(board: &Board) -> i16 {
     // ...
 

@@ -46,7 +46,7 @@ move by one player) that have been played without capturing a piece or
 moving a pawn. As soon as a piece is captured or a pawn is moved, this
 counter is reset to 0. Therefore a draw can be reported very easily:
 
-```csharp
+```rust,ignore
 pub fn draw_by_fifty_move_rule(&self) -> bool {
     self.game_state.halfmove_clock >= MAX_MOVE_RULE
 }
@@ -105,7 +105,7 @@ point.
 
 This is the function:
 
-```csharp
+```rust,ignore
 pub fn draw_by_repetition_rule(&self) -> u8 {
     let mut count = 0;
     let mut stop = false;
@@ -192,7 +192,7 @@ not, to score the position as a draw.
 The function implementing this rule is fairly simple. It just lists all the
 positions in which a draw by insufficient material can be claimed:
 
-```csharp
+```rust,ignore
 pub fn draw_by_insufficient_material_rule(&self) -> bool {
     // Get the piece bitboards for white and black.
     let w = self.get_bitboards(Sides::WHITE);

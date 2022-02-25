@@ -44,7 +44,7 @@ The following function checks the above conditions. If any of them
 applies it returns *true* to indicate that checkmate can still be forced.
 It can be found in the file *draw.rs*:
 
-```csharp
+```rust,ignore
 pub fn sufficient_material_to_force_checkmate(&self) -> bool {
     let w = self.get_bitboards(Sides::WHITE);
     let b = self.get_bitboards(Sides::BLACK);
