@@ -207,7 +207,7 @@ As you can see, the operator returns 1 if one of the bits is set. It only
 returns 0 if both bits are not set. This can be used to turn bits in a set
 from 0 to one.
 
-> Note: Bit-sets in a chess engine are mostly 64-bits. If wwe are setting
+> Note: Bit-sets in a chess engine are mostly 64-bits. If we are setting
 > or checking for example the bit at location 59 in a set, we would use
 > this notation:
 >

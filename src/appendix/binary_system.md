@@ -61,7 +61,7 @@ We are out of numbers again...
 8: 1000 (one set of "two * two * two" ...)
 ```
 
-If you look closely, you can see the pattern of of 2, 2*2, 2*2*2... and you
+If you look closely, you can see the pattern of of 2, 2\*2, 2\*2\*2... and you
 can image that, if we need to add another digit, the pattern just repeats.
 If we take a 4-bit number "1111", the values of each bit are therefore as
 follows:
@@ -76,23 +76,25 @@ number  =   8 + 4 + 2 + 1 = 15
 Now we can count in the binary system:
 
 ```rust,ignore
-decimal     bit-wise
-0           0 0 0 0
-1           0 0 0 1
-2           0 0 1 0
-3           0 0 1 1
-4           0 1 0 0
-5           0 1 0 1
-6           0 1 1 0
-7           0 1 1 1
-8           1 0 0 0
-9           1 0 0 1
-10          1 0 1 0
-11          1 0 1 1
-12          1 1 0 0
-13          1 1 0 1
-14          1 1 1 0
-15          1 1 1 1
+decimal     bit-wise    calculation
+            8 4 2 1
+--------------------------------------------
+0           0 0 0 0     0 
+1           0 0 0 1     1
+2           0 0 1 0     2
+3           0 0 1 1     2 + 1 = 3
+4           0 1 0 0     4
+5           0 1 0 1     4 + 1 = 5
+6           0 1 1 0     4 + 2 = 6
+7           0 1 1 1     4 + 2 + 1 = 7
+8           1 0 0 0     8
+9           1 0 0 1     8 + 1 = 9
+10          1 0 1 0     8 + 2 = 10
+11          1 0 1 1     8 + 2 + 1 = 11
+12          1 1 0 0     8 + 4 = 12
+13          1 1 0 1     8 + 4 + 1 = 13
+14          1 1 1 0     8 + 4 + 2 = 14
+15          1 1 1 1     8 + 4 + 2 + 1 = 15
 // and so on
 ```
 
