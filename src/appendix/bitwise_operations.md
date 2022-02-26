@@ -10,6 +10,7 @@
   - [Bitwise AND (Get bits)](#bitwise-and-get-bits)
   - [Bitwise XOR (Toggle bit)](#bitwise-xor-toggle-bit)
   - [Unset bit](#unset-bit)
+- [Conclusion](#conclusion)
 
 <!-- /code_chunk_output -->
 
@@ -33,20 +34,19 @@ normally called the Most Significant Bit (MSB) and Least Significant Bit
 (LSB).
 
 > Note: When talking about bit sets, the Least Significant Bit (LSB) on the
-> right can be called "First bit", referring to the fact that it is the
-> first bit in the set. It can also be called "Bit 0" or even "0th Bit",
+> right can be called "First bit" or "bit 1", referring to the fact that it
+> is the first bit in the set. It can also be called "0th bit" or "bit 0",
 > because it is at location 0 in the set.
->
-> Because "First bit" and "Bit 0" are equivalent, this means that "Second
-> bit" and "Bit 1" are also equivalent. This can be very confusing, so keep
-> this in mind. I try to be consistent and talk about bit location instead
-> of bit number. It has the advantage of not having to think about
-> subtracting 1 from the bit number all the time, to know at which location
-> a bit is.
+
+> This can be very confusing, so keep this in mind. I try to be consistent
+> and talk about bit location instead of bit number, so in the case of this
+> book, the LSB is called "the bit at location 0", or "bit 0". It has the
+> advantage of not having to think about subtracting 1 from the bit number
+> all the time, to know at which location a bit is.
 >
 > When reading articles about bitwise operations and manipulations, just
-> make sure you know if the author is talking about bit locations or bit
-> numbers.
+> make sure you know if the author is talking about bit locations (LSB =
+> bit 0) or bit numbers (LSB = 1st bit / bit 1).
 
 ## Left and right shift
 
@@ -381,8 +381,223 @@ At least one of the bits at location 2 or 6 is set: true
 
 ## Bitwise XOR (Toggle bit)
 
--- epxlanation here --
+The Exclusive OR operator, abbreviated as XOR, can be used to toggle bits
+back and forth between disabled and enabled. This operator is represented
+by __^__ and it has the following truth-table:
+
+| bit | XOR | mask | result |
+|-----|-----|------|--------|
+| 1   | ^   | 1    | 0      |
+| 0   | ^   | 1    | 1      |
+| 1   | ^   | 0    | 1      |
+| 0   | ^   | 0    | 0      |
+
+As you can see this operator returns 1 if _either_ the bitset or the mask
+have a 1. If _both_ have a 1 or _both_ have 0, the operator returns 0.
+Therefore a bit can be toggled from 0 to 1 and from 1 to 0 by the same
+mask, as demonstrated by the code below:
+
+```rust,ignore
+fn main() {
+    let mut number: u8 = 36;
+    let mut mask: u8;
+
+    println!("Starting situation.");
+    println!("decimal: {number}");
+    println!("binary: {number:08b}\n");
+    
+    println!("Toggle the bit in location 2 from 1 to 0");
+    mask = 1u8 << 2;
+    number = number ^ mask;
+    println!("decimal: {number}");
+    println!("binary: {number:08b}\n");
+    
+    println!("Toggle the bit in location 2 from 0 to 1");
+    mask = 1u8 << 2;
+    number = number ^ mask;
+    println!("decimal: {number}");
+    println!("binary: {number:08b}\n");
+}
+```
+
+The output of this code is as follows:
+
+```rust,ignore
+Starting situation.
+decimal: 36
+binary: 00100100
+
+Toggle the bit in location 2 from 1 to 0
+decimal: 32
+binary: 00100000
+
+Toggle the bit in location 2 from 0 to 1
+decimal: 36
+binary: 00100100
+```
 
 ## Unset bit
 
--- epxlanation here --
+Sometimes bits in a set need to be disabled. To accomplish this, two
+operators must be combined: the bitwise NOT (__!__) and bitwise AND (__&__)
+operator. This operation is somewhat more difficult to understand than the
+others, so it requires a bit of explanation. Let's say we have a set of
+four bits, with the LSB and MSB enabled:
+
+```ignore
+bitset = 1001
+```
+
+Now we want to disable the most significant bit (the left-most one), so we
+create a mask that targets this bit:
+
+```ignore
+mask = 1000
+```
+
+However, there is no "unset bit" operator. Let's run through some of the
+available operators. If necessary, refer to the truth tables discussed
+earlier in this chapter.
+
+We can't use AND, because the left-most bit is enabled in both the bitset
+and the mask. In addition, the least significant bit will be disabled:
+
+```ignore
+1001
+1000
+----- &
+1000
+```
+
+Oops. We disabled the wrong bit.
+
+We also can't use NOT, because this will just invert all the bits:
+
+```ignore
+!(1001) = 0110
+```
+
+That is not what we want. Both the MSB and LSB are disabled, and the two
+bits in the middle are now enabled.
+
+Let's see about the OR operator:
+
+```ignore
+1001
+1000
+----- |
+1001
+```
+
+Meh. Nothing happened, so this can't be right.
+
+XOR then?
+
+```ignore
+1001
+1000
+----- ^
+0001
+```
+
+Hey, this worked! I can hear you thinking: "So why would we need to do
+weird stuff? XOR works fine. If a bit is set, it will disabled it." Yes,
+true enough... but now consider that we want to unset a bit _regardless_ if
+it was set or not. Let's take our bitset 1001, but now we want to unset the
+bit in location 2, even if it is unset already. Our mask will be be 0100,
+which targets the bit in location 2.
+
+```ignore
+1001
+0100
+---- ^
+1101
+```
+Oops. The bit in location 2 was already disabled, and XOR flipped it to
+enabled. XOR can _only_ be used to disable a bit if we _know_ it is
+enabled. So how do we disable a bit, even it is disabled already? We
+combine bitwise AND and bitwise NOT. First, we review what happens if we
+are disabling a bit that is enabled at the start:
+
+```ignore
+bitset  = 1001
+mask    = 1000 (disables MSB)
+
+ 1001
+!1000
+------ &
+ ?
+
+Flip the mask because of bitwise NOT:
+
+1001
+0111
+----- &
+?
+
+And now we can solve the AND:
+1001
+0111
+----- &
+0001
+```
+
+As you can see, this works. The MSB is disabled, while the LSB was left
+untouched. Now let's try to disable an already disabled bit:
+
+```ignore
+bitset  = 1001
+mask    = 0100 (disables bit in location 2)
+
+Note that the bit in location 2 is already disabled.
+
+ 1001
+!0100
+------ &
+ ?
+
+Flip the mask because of bitwise NOT:
+
+1001
+1011
+----- &
+?
+
+And now we can solve the AND:
+1001
+1011
+----- &
+1001
+```
+The bitset has not changed, which is correct: we created a mask to disable
+the bit in location 2. This bit was already disabled and after this
+operation it was still disabled. The other bits were not touched, so the
+bitset stayed unchanged. Thus the "unset bit" operation were a mask
+disables a bit in a bitset can be summarized as:
+
+```ignore
+x = bitset & (!bitmask)
+
+Where "x" will contain the new bitset.
+
+or shorter, if you want to use the same variable for the result:
+
+bitset &= !bitmask
+
+This works because the bitwise NOT operator takes precedence
+over bitwise AND, so it will be executed first.
+```
+
+# Conclusion
+
+There you have it: an explanation of the bitwise operations that are used
+within a bitboard-based chess engine. Make sure you understand this
+material perfectly, because without it you will struggle to understand what
+a bitboard-based chess engine is all about.
+
+For the extremely curious and brave, you could look into the mathematical
+field this topic belongs to: [Boolean
+algebra](https://en.wikipedia.org/wiki/Boolean_algebra). You are warned
+before embarking on that journey though: There be monsters, and insanity is
+around every corner... (which is to say that this topic can become
+extremely complex.)
