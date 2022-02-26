@@ -13,8 +13,9 @@ and pieces are the following:
   them from one another during play. Same as with the squares, these sets
   are normally called white and black, even if they have other colors.
 
-![Chessboard and pieces](../img/chessboard.png)<br /><small>Image credits:
-created by myself using a Canon EOS DSLR.</small>
+<span style="display: block; text-align:center; margin: 0px;">![Chessboard
+and pieces](../img/chessboard.png)<br /><small>Credits: Photographed it
+myself using a Canon DSLR</small></span>
 
 > **Sidenote:** Mentioning this explicitly may seem pedantic, but there are
 > lots of different chess-like games: for example, there is [Chinese Chess

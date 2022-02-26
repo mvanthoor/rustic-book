@@ -5,6 +5,18 @@
 
 or, the art of Chess Programming in Rust.
 
-__**Marcel Vanthoor**__<br /><br />
+__**Marcel Vanthoor**__<br /><hr />
 
-_Latest update: February 24, 2022_
+_Latest update: February 26, 2022_<br />
+
+Updated chapters:<br />
+[Appendix - The Binary System](../appendix/binary_system.md)<br />
+[Appendix - Bitwise operations](../appendix/bitwise_operations.md)<br />
+[Board Representation -
+Introduction](../board_representation/introduction.md)<br />
+[Board Representation - Detecting the Bishop
+Pair](../board_representation/detecting_bishop_pair.md)<br />
+[Board Representation - Cannot force
+mate](../board_representation/detecting_cant_force_mate.md)<br />
+[Board Representation - Detecting draws by FIDE
+rules](../board_representation/detecting_fide_draws.md)
