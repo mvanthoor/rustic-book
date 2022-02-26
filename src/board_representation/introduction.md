@@ -13,22 +13,21 @@ and pieces are the following:
   them from one another during play. Same as with the squares, these sets
   are normally called white and black, even if they have other colors.
 
-![Chessboard and pieces](../img/chessboard.png)<br /> <small>[Image from
-Free PNG Logos
-(https://www.freepnglogos.com/)](https://www.freepnglogos.com/)</small>
+![Chessboard and pieces](../img/chessboard.png)<br /><small>Image credits:
+created by myself using a Canon EOS DSLR.</small>
 
 > **Sidenote:** Mentioning this explicitly may seem pedantic, but there are
 > lots of different chess-like games: for example, there is [Chinese Chess
 > (XiangQi)](https://en.wikipedia.org/wiki/Xiangqi) and its cousin [Korean
 > Chess (Janggi)](https://en.wikipedia.org/wiki/Janggi), Japan has its own
 > version called [Shogi](https://en.wikipedia.org/wiki/Shogi), which has
-> different variants. Of course we have the ancestor of Western Chess,
+> different variants. Of course we have the ancestors of Western Chess,
 > [Shatranj](https://en.wikipedia.org/wiki/Shatranj) and
 > [Chaturanga](https://en.wikipedia.org/wiki/Chaturanga). If you still
 > haven't had enough, there is [Thai chess
-> (Makruk)](https://en.wikipedia.org/wiki/Makruk) also [Fairy
+> (Makruk)](https://en.wikipedia.org/wiki/Makruk) and even [Fairy
 > Chess](https://en.wikipedia.org/wiki/Fairy_chess) with lots of different
-> board sizes and pieces. We also have
+> board sizes and pieces. A unique chess-like game is
 > [Arimaa](https://en.wikipedia.org/wiki/Arimaa), which was specifically
 > created to be more difficult for computers than Western Chess. I'm sure I
 > still didn't mention more than a few chess-like games, but I don't want
