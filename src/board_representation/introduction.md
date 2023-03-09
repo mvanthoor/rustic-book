@@ -109,5 +109,5 @@ operations](../appendix/bitwise_operations.md) Last chance to study these
 topics before you're going to need them. A lot. Don't say I didn't warn
 you. [I did: in the second prerequisite.](../front_matter/prereq.md))
 
-The next chapter will explain how bitboards work and how the board
+The next chapters will explain how bitboards work and how the board
 representation is organized.

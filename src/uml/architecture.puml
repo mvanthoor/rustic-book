@@ -25,6 +25,8 @@ IComm <|-- Uci
 IComm <|-- XBoard
 Engine *-- Search
 Search --> Evaluation
-Uci <..> GUI
-XBoard <..> GUI
+Uci <.. GUI
+Uci ..> GUI
+XBoard <.. GUI
+XBoard ..> GUI
 @enduml

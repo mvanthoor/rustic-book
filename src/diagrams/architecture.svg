@@ -16,9 +16,11 @@ reverse link Engine to TT--><path d="M186.44,147.58 C205.67,163.22 230.18,183.16
 reverse link IComm to Uci--><path d="M154.63,263.98 C154.47,280.39 154.29,298.83 154.17,311.87 " fill="none" id="IComm-backto-Uci" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="147.64,263.82,154.83,243.89,161.63,263.96,147.64,263.82" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[41c2d4f10d5fff81e0c92935ae66a3e5]
 reverse link IComm to XBoard--><path d="M183.89,259.05 C199.46,276.58 218.04,297.5 230.79,311.87 " fill="none" id="IComm-backto-XBoard" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="none" points="178.48,263.49,170.44,243.89,188.95,254.2,178.48,263.49" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[e1065f988d0de1d5934ea5c661e8728b]
 reverse link Engine to Search--><path d="M128.12,148.75 C109.5,167.28 85.28,191.38 69.21,207.37 " fill="none" id="Engine-backto-Search" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="137.53,139.39,130.4557,140.7877,129.025,147.8555,136.0993,146.4578,137.53,139.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[07786af87e6cbb241fa755fde7dfeeb0]
-link Search to Evaluation--><path d="M52,243.89 C52,261.22 52,287.91 52,306.77 " fill="none" id="Search-to-Evaluation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="52,311.87,56,302.87,52,306.87,48,302.87,52,311.87" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[97777214f4d7f76ce00ec712761eafca]
-link Uci to GUI--><path d="M163.96,353.19 C170.51,367.78 179.16,387.07 186.35,403.08 " fill="none" id="Uci-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="188.53,407.94,188.51,398.0912,186.49,403.3751,181.2061,401.3551,188.53,407.94" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="161.8,348.39,161.8456,358.2388,163.8518,352.9496,169.141,354.9558,161.8,348.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5392b2b8ae9d4c3f064353e7ee6b5a8]
-link XBoard to GUI--><path d="M236.04,353.19 C229.49,367.78 220.84,387.07 213.65,403.08 " fill="none" id="XBoard-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="211.47,407.94,218.7939,401.3551,213.51,403.3751,211.49,398.0912,211.47,407.94" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="238.2,348.39,230.859,354.9558,236.1482,352.9496,238.1544,358.2388,238.2,348.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[5f50bdfd1590f44413ca4928286e84a6]
+link Search to Evaluation--><path d="M52,243.89 C52,261.22 52,287.91 52,306.77 " fill="none" id="Search-to-Evaluation" style="stroke:#A80036;stroke-width:1.0;"/><polygon fill="#A80036" points="52,311.87,56,302.87,52,306.87,48,302.87,52,311.87" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[79118beb8b521c6a0328b55ae8b6430d]
+reverse link Uci to GUI--><path d="M153.36,353.61 C158.1,369.67 167.64,391.25 177.32,407.94 " fill="none" id="Uci-backto-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="151.95,348.39,150.4273,358.1204,153.2499,353.2181,158.1522,356.0406,151.95,348.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[97777214f4d7f76ce00ec712761eafca]
+link Uci to GUI--><path d="M172.24,348.39 C182.17,363.32 192.66,385.19 198.78,403.02 " fill="none" id="Uci-to-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="200.39,407.94,201.3918,398.1422,198.8346,403.1881,193.7887,400.6309,200.39,407.94" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[19b542b27d40c7ded1e567cbadec38f9]
+reverse link XBoard to GUI--><path d="M225.58,352.77 C215.73,368.91 205.65,390.96 200.27,407.94 " fill="none" id="XBoard-backto-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="228.34,348.39,220.1514,353.8624,225.6695,352.6171,226.9148,358.1352,228.34,348.39" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[d5392b2b8ae9d4c3f064353e7ee6b5a8]
+link XBoard to GUI--><path d="M248.63,348.39 C245.13,363.45 235.87,385.57 225.88,403.48 " fill="none" id="XBoard-to-GUI" style="stroke:#A80036;stroke-width:1.0;stroke-dasharray:7.0,7.0;"/><polygon fill="#A80036" points="223.33,407.94,231.2723,402.116,225.8138,403.6005,224.3292,398.142,223.33,407.94" style="stroke:#A80036;stroke-width:1.0;"/><!--MD5=[042f67999a9f1aefae8f8f85c53e2c65]
 @startuml architecture
 skinparam shadowing false
 skinparam componentStyle rectangle
@@ -46,11 +48,13 @@ IComm <|- - Uci
 IComm <|- - XBoard
 Engine *- - Search
 Search - -> Evaluation
-Uci <..> GUI
-XBoard <..> GUI
+Uci <.. GUI
+Uci ..> GUI
+XBoard <.. GUI
+XBoard ..> GUI
 @enduml
 
-PlantUML version 1.2021.7(Sun May 23 14:40:07 CEST 2021)
+PlantUML version 1.2022.0(Tue Jan 11 17:16:42 CET 2022)
 (GPL source distribution)
 Java Runtime: OpenJDK Runtime Environment
 JVM: OpenJDK 64-Bit Server VM
