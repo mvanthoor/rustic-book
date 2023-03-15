@@ -50,6 +50,10 @@
 - [Appendix](./appendix/appendix.md)
     - [The binary system](./appendix/binary_system.md)
     - [Bitwise operations](./appendix/bitwise_operations.md)
+- [Ramblings](./ramblings/index.md)
+    - [2023-03-14 - Picking up again](./ramblings/20230314_picking_up.md)
+    - [2023-03-15 - A new computer](./ramblings/20230315_new_computer.md)
+
 
 [On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)
