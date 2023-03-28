@@ -7,6 +7,9 @@ specific version, you can click on the Github link to visit that version's
 release page. Versions that have been tested by the CCRL list have a
 clickable Elo rating, linking to their CCRL page.
 
+**Rustic Alpha 3.0.3 | 2.2 | 1.3** | March 28, 2023 | No executable <sup>2</sup> |
+[Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-3.0.3)
+
 **Rustic Alpha 3.0.2 | 2.1 | 1.2** | June 11, 2022 | No executable <sup>2</sup> |
 [Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-3.0.2)
 
