@@ -7,6 +7,9 @@ specific version, you can click on the Github link to visit that version's
 release page. Versions that have been tested by the CCRL list have a
 clickable Elo rating, linking to their CCRL page.
 
+**Rustic Alpha 3.0.2 | 2.1 | 1.2** | June 11, 2022 | No executable <sup>2</sup> |
+[Github](https://git.io/JX6kx)
+
 **Rustic Alpha 3.0.1** | November 6, 2021 | No executable <sup>1</sup> |
 [Github](https://git.io/JX6kx) | 1867 Elo
 
@@ -27,3 +30,8 @@ Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&eac
 >module. There have been no changes in the chess playing part of the engine.
 >You can [download the executables for version Rustic Alpha
 >3.0.0](https://git.io/JX6T1).
+
+><sup>2</sup> These are maintenance updates for existing versions of Rustic
+>that update a library to the latest version, or change the code to compile
+>cleanly with a newer version of Rust. These versions have no new
+>executable. The existing ones can be used for testing purposes.
