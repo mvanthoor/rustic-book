@@ -8,21 +8,31 @@ release page. Versions that have been tested by the CCRL list have a
 clickable Elo rating, linking to their CCRL page.
 
 **Rustic Alpha 3.0.2 | 2.1 | 1.2** | June 11, 2022 | No executable <sup>2</sup> |
-[Github](https://git.io/JX6kx)
+[Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-3.0.2)
 
 **Rustic Alpha 3.0.1** | November 6, 2021 | No executable <sup>1</sup> |
-[Github](https://git.io/JX6kx) | 1867 Elo
+[Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-3.0.1) | 1867 Elo
 
-**Rustic Alpha 3** | June 18, 2021 | [Download](https://git.io/JX6T1) |
-[Github](https://git.io/JX6Ty) | [1867 Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&each_game=1&eng=Rustic%20Alpha%203.0.0%2064-bit#Rustic_Alpha_3_0_0_64-bit)
+**Rustic Alpha 3** | June 18, 2021 |
+[Download](https://github.com/mvanthoor/rustic/releases/download/alpha-3.0.0/rustic-alpha-3.0.0.0.zip)
+| [Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-3.0.0) |
+[1867
+Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&each_game=1&eng=Rustic%20Alpha%203.0.0%2064-bit#Rustic_Alpha_3_0_0_64-bit)
 
-**Rustic Alpha 2** | March 17, 2021 | [Download](https://git.io/JYL6G) |
-[Github](https://git.io/JYLBS) | [1815 Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&each_game=1&eng=Rustic%20Alpha%202%2064-bit#Rustic_Alpha_2_64-bit)
+**Rustic Alpha 2** | March 17, 2021 |
+[Download](https://github.com/mvanthoor/rustic/releases/download/alpha-2/rustic-alpha-2-bin.zip)
+| [Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-2) |
+[1815
+Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&each_game=1&eng=Rustic%20Alpha%202%2064-bit#Rustic_Alpha_2_64-bit)
 
-**Rustic Alpha 1.1** | March 15, 2021 | [Download](https://git.io/JYL6L) |
-[Github](https://git.io/JYLBo) | 1675 Elo
+**Rustic Alpha 1.1** | March 15, 2021 |
+[Download](https://github.com/mvanthoor/rustic/releases/download/alpha-1.1/rustic-alpha-1.1-bin.zip)
+| [Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-1.1) |
+1675 Elo
 
-**Rustic Alpha 1** | January 24, 2021 | [Download](https://git.io/JYIhF) | [Github](https://git.io/JYIpy) |
+**Rustic Alpha 1** | January 24, 2021 |
+[Download](https://github.com/mvanthoor/rustic/releases/download/alpha-1/rustic-bin.zip)
+| [Github](https://github.com/mvanthoor/rustic/releases/tag/alpha-1) |
 [1675
 Elo](https://ccrl.chessdom.com/ccrl/404/cgi/engine_details.cgi?print=Details&each_game=1&eng=Rustic%20Alpha%201%2064-bit#Rustic_Alpha_1_64-bit)
 
