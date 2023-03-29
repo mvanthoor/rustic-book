@@ -7,7 +7,7 @@ or, the art of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__<br /><hr />
 
-_Latest update: February 26, 2022_<br />
+_Latest update: March 28, 2023_<br />
 
 Updated chapters:<br />
 [Ramblings section added](../ramblings/index.md)<br />
