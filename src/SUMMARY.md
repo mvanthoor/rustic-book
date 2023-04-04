@@ -51,9 +51,10 @@
     - [The binary system](./appendix/binary_system.md)
     - [Bitwise operations](./appendix/bitwise_operations.md)
 - [Ramblings](./ramblings/index.md)
-    - [2023-03-14 - Picking up again](./ramblings/20230314_picking_up.md)
-    - [2023-03-15 - A new computer](./ramblings/20230315_new_computer.md)
-
+    - [2023](./ramblings/2023/index.md)
+        - [March 14 - Picking up again](./ramblings/2023/20230314_picking_up.md)
+        - [March 15 - A new computer](./ramblings/2023/20230315_new_computer.md)
+        - [April 01 - Computer build done](./ramblings/2023/20230401_computer_build_done.md)
 
 [On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)
