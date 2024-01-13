@@ -1,4 +1,4 @@
-# A new computer
+# March 15, 2023 - A new computer
 
 In 2023 my current computer will be 7 years old. It was built in the second
 half of 2016 and it has four cores and 32 GB of RAM. To be honest, for all

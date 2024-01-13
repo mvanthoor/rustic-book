@@ -1,4 +1,4 @@
-# Computer build done
+# April 01, 2023 - Computer build done
 
 As said about two weeks ago, I'm going to build and install a new computer
 for chess engine development. After some effort and searching through

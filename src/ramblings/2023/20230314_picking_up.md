@@ -1,4 +1,4 @@
-# Picking up again
+# March 14, 2023 - Picking up again
 
 You will probably have noticed that there hasn't been a new major version
 of Rustic since June 2021 and may be wondering if the engine and this book
