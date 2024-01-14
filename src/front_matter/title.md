@@ -7,9 +7,10 @@ or, the art of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__<br /><hr />
 
-_Latest update: January 12, 2024_<br />
+_Latest update: January 14, 2024_<br />
 
-Updated chapters:<br />
+Most recently updated chapters:<br />
+[Board Representation - Bitboard page](../board_representation/bitboards.md)
 [Ramblins - January 12, 2024 - Texel Tuner](../ramblings/2024/20240112_texel_tuner.md)<br />
 [Ramblings - new section](../ramblings/index.md)<br />
 [Appendix - The Binary System](../appendix/binary_system.md)<br />
