@@ -1,1 +1,0 @@
-# Reading FEN-strings
