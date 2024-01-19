@@ -58,7 +58,9 @@
         - [April 01 - Computer build
           done](./ramblings/2023/20230401_computer_build_done.md)
     - [2024](./ramblings/2024/index.md)
-        - [Januari 12 - Writing a Texel Tuner](./ramblings/2024/20240112_texel_tuner.md)
+        - [January 12 - Writing a Texel
+          Tuner](./ramblings/2024/20240112_texel_tuner.md)
+        - [January 19 - Fixing Undefined Behavior](./ramblings/2024/20240119_fixing_ub.md)
 
 [On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)
