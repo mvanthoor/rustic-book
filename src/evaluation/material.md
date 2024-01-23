@@ -15,16 +15,30 @@
 
 # Material counting
 
+>__Sidenote:__ Material counting is done in Rustic Alpha 1, 2 and 3, up to
+>and including Alpha 3.0.4. These versions have a separate material count,
+>which is later combined with the Piece Square Tables (PSQT, see next
+>chapter). Rustic Alpha 3.0.5, as a preparation for version 4, unified the
+>material count into the PSQT's. The reason for this is that tuning the
+>evaluation function becomes easier and somewhat faster. It does not change
+>anything with regard to the playing strength of the engine or the
+>implementation of the PSQT's. This unification just means that, for
+>example, the Piece Square Table for the queen will start at 900, instead
+>of at 0. I'm leaving this chapter in the book for people who want to first
+>implement material counting and then PSQT's separately to understand
+>exactly how these mechanics work. The PSQT-chapter will also have a side
+>note mentioning this.
+
 ## Explanation
 
 Counting the material on the board is the most basic way of evaluating a
 chess position. You can just compare material: "I have one bishop and 2
 knights, while my opponent has two bishops and one knight. So light pieces
 are equal. We both have a queen, and one rook, so that is equal as well. He
-has four pawns and I have five... so in the end, I'm one pawn up." That is
-basically it, with counting material.
+has four pawns and I have five... so in the end, I'm one pawn up." That's
+it, nothing more to it.
 
-Somewhat more complicated is the relationships between pieces, if material
+Somewhat more complicated is the relationships between pieces if material
 is not equally balanced. How much pawns is one knight worth? How much
 bishops + pawns is a rook worth? What do I need to get back for giving up
 my queen (if it's not the queen of the opponent)? Humans often use this:
@@ -41,8 +55,8 @@ worth a queen too. A queen is also equivalent to a rook + knight + pawn,
 and so on.
 
 Some people prefer the values below. For example, Max Euwe (World Champion
-1935-1937), who was a well-known chess educator in the middle part of the
-20th century:
+1935-1937), who was a well-known chess educator in the Netherlands in the
+middle part of the 20th century:
 
 - Queen: 9.5 points
 - Rook: 4.5 points
@@ -53,19 +67,26 @@ Some people prefer the values below. For example, Max Euwe (World Champion
 So a bishop and knight are still worth three pawns, but Euwe states that a
 rook cannot be exactly compensated. A knight + pawn is just a tiny bit too
 little, while a knight + two pawns is a tiny bit too much. Two rooks fall
-_just_ short of a queen, but rook + pawn is a bit over; same with 3 light
-pieces versus a queen.
+_just_ short of a queen, but two rooks + pawn is a bit more than one queen.
+Three light pieces fall just short of the queen, but one extra pawn is half
+a pawn more.
+
+Things like this can determine the playing style of both chess players and
+chess engines. If a chess engine is programmed in such a way that three
+light pieces are exactly one queen it may give up its queen to win three light
+pieces, everything else being equal. Another engine, assuming the queen is
+half a pawn more than three light pieces, will not make that trade.
 
 Which is the best setup? It completely depends on your  playing style. I've
 tested both setups with Rustic Alpha 1 and 2, and with my own hand-written
-PST's (Piece-Square Tables), the first setup is the better. Versions of
-Rustic with the first setup are about 30-40 Elo stronger than the ones with
-the second setup. If I had written my PST's differently, it could have been
-the other way around, so in your engine, try both.
+Piece Square Tables (PSQT's), the first setup is a little stronger.
+Versions of Rustic with the first setup are about 30-40 Elo stronger than
+the ones with the second setup. If I had written my PST's differently, it
+could have been the other way around, so in your engine, try both.
 
-For more information about PST's, see the chapter about Piece-Square
-tables. Also take into account that later, the material values will be
-worked directly into the Piece-Square tables, and these will then be
+For more information about PSQT's, see the next chapter. Also take into
+account that later, the material values will be worked directly into the
+PSQT's as mentioned in the sidenote above, and these will then be
 automatically tuned. This is going to be discussed in the "Tapering and
 Tuning" chapter.
 
@@ -74,7 +95,8 @@ Tuning" chapter.
 Implementation difficulty of counting the material balance is in the easy
 to lower medium range. We will be discussing two methods of calculating the
 material balance: counting from scratch, and keeping the value updated
-incrementally. (Rustic uses the second approach.)
+incrementally. (Rustic uses the second approach, because it is MUCH faster.
+The same goes for PSQT's which can be counted in the same two ways.)
 
 ### Value per piece type
 
@@ -97,9 +119,9 @@ Using this, we can create an array which assigns a numerical value to each
 piece. These are implementations of the values from above:
 
 ```rust,ignore
-pub const PIECE_VALUES: [u16; 6] = [0, 900, 500, 320, 310, 100];
+pub const PIECE_VALUES: [u16; 6] = [0, 900, 500, 300, 300, 100];
 // --- or this one ---
-pub const PIECE_VALUES: [u16; 6] = [0, 980, 475, 320, 310, 100];
+pub const PIECE_VALUES: [u16; 6] = [0, 950, 450, 300, 300, 100];
 ```
 
 So, this table can be indexed by:
@@ -109,14 +131,14 @@ let v = PIECE_VALUES[Pieces::Queen]; // v = 900 here.
 let v = PIECE_VALUES[Pieces::Pawn]; // v = 100 here.
 ```
 
-There are two differences with the values we saw earlier in the chapter.
+We need to take two things into account in the evaluation:
 
 First, the evaluation is MUCH faster if we only use integers. If at all
 possible, we will never use floating point numbers while calculating
-anything. (Except, maybe, in the very last step before outputting
-something.) This is the reason why we have multiplied all the values by one
-hundred. This gives the evaluation a way to think in terms of "parts of a
-pawn", by using values such as 50 or 10, instead of 0.5 or 0.1.
+anything. (Except, in the very last step before outputting the result.)
+This is the reason why we have multiplied all the values by one hundred.
+This gives the evaluation a way to think in terms of "parts of a pawn", by
+using values such as 50 or 10, instead of 0.5 or 0.1.
 
 Second, in _most_ chess engines, it turns out to be better to have the
 bishop be worth slightly more than the knight, and that a light piece is a
@@ -153,17 +175,16 @@ function count_material(position) {
 
     // For example, piece-type == knight
     for each piece_type in all_piece_types {
-        // For all knights on the board
         for each piece in piece_type {
             if piece is a white piece {
                 value_white += PIECE_VALUES[piece];
-            } else if piece is a black piece {
+            } else {
                 value_black += PIECE_VALUES[piece];
             }
         }
     }
 
-    let balance =  value_white - value_black;
+    let balance = value_white - value_black;
     return balance;
 }
 ```
@@ -188,10 +209,10 @@ game you know the material balance is equal. When you move a piece and
 there is an exchange, you can then adjust the material balance to the new
 situation.
 
-This is exactly what Rustic Alpha 1 and 2 do, and it's called an
-incremental update. To achieve this, Rustic keeps the material in a game
-state struct, along with some other things it needs to know throughout the
-game:
+This is exactly what Rustic does, and it's called an incremental update. It
+uses this technique in more situations, because it saves lots of time. To
+achieve this, Rustic keeps the material in a game state struct, along with
+some other things it needs to know throughout the game:
 
 ```rust,ignore
 pub struct GameState {
@@ -260,6 +281,10 @@ pub fn count(board: &Board) -> (u16, u16) {
 }
 ```
 
+(In later versions of Rustic the 'material' member in the GameState struct
+and this function will not be there, because the material values have been
+merged with the PSQT's.)
+
 After starting, the engine will know the total material value for both
 white and black. As soon as a piece is removed from a square (by capture,
 or by moving it) or put down on a square the material value is updated:
@@ -279,13 +304,14 @@ pub fn put_piece(&mut self, side: Side, piece: Piece, square: Square) {
 ```
 
 Note that this will even take promotions into account: remove a pawn from
-the 7th rank and thus subtract _the knight's_ value from the material
-count, and then put a queen down, adding _the queen's_ value back to the
+the 7th rank and thus subtract _the pawn_ value from the material
+count, and then put a queen down, adding _the queen_ value back to the
 material count.
 
 Obviously, the remove_piece() and put_piece() functions also remove and put
 the piece, and they keep other incremental scores next to the material,
-such as as the incrementally updated PST's. That code has been omitted.
+such as as the incrementally updated PSQT's. That code has been omitted
+here for simplicity's sake.
 
 With this implementation, the engine knows the white and black piece value
 count throughout the entire game, and the evaluation function only has to
@@ -301,7 +327,7 @@ pub fn evaluate_position(board: &Board) -> i16 {
     // Base evaluation, by counting material.
     let mut value = w_material - b_material;
 
-    // ...
+    // ... other evaluation terms here ---
 
     // Return evaluation value.
     value
@@ -312,13 +338,11 @@ As you can see, the re-counting of the piece value from scratch has been
 reduced to just getting the white and black values from the board and then
 subtracting them.
 
-This exact same technique will also be used to implement the Piece-Square
-tables incrementally, which will be the next chapter. It is exactly the
-same, only there are 6 arrays instead of 2 (one for each piece type instead
-of each side), and 64 integers per array instead of 6 (one for each square
-instead of for each piece type).
+This exact same technique will also be used to implement the PSQT's
+incrementally, which will be the next chapter. It is exactly the same, only
+there are 6 arrays instead of 2 (one for each piece type instead of each
+side), and 64 integers per array instead of 6 (one for each square instead
+of for each piece type).
 
-Now that we know how we can keep the material count, we can move on to the
-next part of the evaluation: Piece-Square Tables. These will add a little
-bit of positional knowledge to the chess engine on top of the material
-count, so it will have an idea of what to do with a piece.
+On to the PSQT's, which are one of the most important terms of most chess
+engines, because they function as the basis of the positional knowledge.
