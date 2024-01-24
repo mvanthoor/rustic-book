@@ -34,6 +34,7 @@
     - [Understanding evaluation](./evaluation/understand.md)
     - [Material counting](./evaluation/material.md)
     - [Piece-Square Tables](./evaluation/psqt.md)
+    - [Tapering the evaluation](./evaluation/tapering.md)
 - [Communication](./communication/communication.md)
     - [Introduction](./communication/introduction.md)
     - [Comparison](./communication/comparison.md)

@@ -7,11 +7,11 @@ or, the art of Chess Programming in Rust.
 
 __**Marcel Vanthoor**__<br /><hr />
 
-_Latest update: January 23, 2024_<br />
+_Latest update: January 24, 2024 - 22:00 (Dutch Time)_<br />
 
 Most recently updated chapters:<br />
-1. [Evaluation - Material Counting](../evaluation/material.md)<br />
 1. [Evaluation - Piece-Square Tables](../evaluation/psqt.md)<br />
+1. [Evaluation - Material Counting](../evaluation/material.md)<br />
 1. [Ramblings - January 12, 2024 - Fixing Undefined Behavior](../ramblings/2024/20240119_fixing_ub.md)<br />
 1. [Board Representation - Handling FEN strings](../board_representation/handling_fen_strings.md)<br />
 1. [Board Representation - Bitboard page](../board_representation/bitboards.md)<br />
