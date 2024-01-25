@@ -455,6 +455,6 @@ using the board's functions that call piece movement:
 ```
 
 So now that you understand the purpose and workings of the PSQT's, we can
-move on to the next step: tapering the evaluation. All terms of the
-evaluation can be tapered; after seeing this process for the PSQT's, you'll
-be able to apply this to any evaluation term.
+move on to the next step: implementing the evaluation function. After what
+you've done up to this point, the first version of the evaluation will turn
+out to be rather easy.

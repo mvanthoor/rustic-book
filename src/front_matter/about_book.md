@@ -98,3 +98,21 @@ material to review. Parts of the tutorials above are no exception; even if
 you _don't_ want to create a chess engine by following a tutorial, those
 videos can still be of help. Just find the ones about the topic you are
 researching in the playlist.
+
+# Code consistency: book vs. engine
+
+Part of this book was written during the development of Rustic Alpha 2 and
+3, the rest during the development of Rustic 4 and later. This means that
+there will be some differences between the code in the book and the code
+you may see in any one version of the engine. The engine is constantly
+changing, so it's almost impossible to keep this book updated with the
+latest version. The plan at this point is to target the book at
+Rustic 4 and higher. This means that some things as described in this book
+were implemented in Alpha 3 and before, but they have been removed from the
+engine since version 4 or later. One example is [material
+counting](../evaluation/material.md) and [single-value
+PSQT's](../evaluation/psqt.md), which were part of Rustic Alpha 3, but they
+have been replaced by a [Tapered Evaluation](../evaluation/tapering.md) in
+version 4. However, it should still be possible to understand the basics of
+these concepts so you can implement them. Similar things will happen with
+other concepts throughout the book.
