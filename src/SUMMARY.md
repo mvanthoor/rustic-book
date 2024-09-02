@@ -53,16 +53,6 @@
 - [Appendix](./appendix/appendix.md)
     - [The binary system](./appendix/binary_system.md)
     - [Bitwise operations](./appendix/bitwise_operations.md)
-- [Ramblings](./ramblings/index.md)
-    - [2023](./ramblings/2023/index.md)
-        - [March 14 - Picking up again](./ramblings/2023/20230314_picking_up.md)
-        - [March 15 - A new computer](./ramblings/2023/20230315_new_computer.md)
-        - [April 01 - Computer build
-          done](./ramblings/2023/20230401_computer_build_done.md)
-    - [2024](./ramblings/2024/index.md)
-        - [January 12 - Writing a Texel
-          Tuner](./ramblings/2024/20240112_texel_tuner.md)
-        - [January 19 - Fixing Undefined Behavior](./ramblings/2024/20240119_fixing_ub.md)
 
 [On idiomatic Rust](./back_matter/idiomatic.md)
 [Building Rustic](./back_matter/build.md)
