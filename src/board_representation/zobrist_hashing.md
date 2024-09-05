@@ -217,8 +217,8 @@ pub struct ZobristRandoms {
 >**Sidenote** This version still uses the 65 en-passant square keys, but
 >for the overall implementation this makes no difference.
 
-Then I fill up each of the arrays with random numbers. For example, for the
-square/piece/side part, I use this code:
+Then we fill up each of the arrays with random numbers. For example, for the
+square/piece/side part, Rustic uses this code:
 
 ```rust,ignore
 zobrist_randoms.rnd_pieces.iter_mut().for_each(|side| {
