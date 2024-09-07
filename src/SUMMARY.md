@@ -22,6 +22,7 @@
 - [Board Functionality](./board_functionality/board_functionality.md)
     - [Introduction](./board_functionality/introduction.md)
     - [Handling FEN-strings](./board_functionality/handling_fen_strings.md)
+    - [Piece movement](./board_functionality/piece_movement.md)
     - [Detecting the bishop pair](./board_functionality/detecting_bishop_pair.md)
     - [Detecting cannot force mate](./board_functionality/detecting_cant_force_mate.md)
     - [Detecting draws by FIDE
