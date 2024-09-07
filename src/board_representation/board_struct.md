@@ -1,3 +1,3 @@
-# The Board struct
+# Board struct
 
 This page has not been written yet.
