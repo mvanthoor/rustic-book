@@ -1,0 +1,1 @@
+# Detecting cannot force mate
