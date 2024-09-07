@@ -77,15 +77,15 @@ then re-add the value it now has on the new square. For more information
 about this, see the chapter [about the Evaluation
 function](../evaluation/evaluation.md).
 
-The variable next_move is not really necessary, but it can come in very
-handy. It holds the move that was played in this position. It ends up in
-the history table. What happens is that the engine, before making a move,
-captures the current state, adds the move to be played, and pushes this
-into the history table. that way, the move made in a position is avaialbe
-or even the entire game can be reconstructed from the history. In the
-initial stages of building the chess engine where you basically "play by
-hand" on the command-line this can be a useful feature. I never took this
-out in case it becomes useful again in future debugging sessions.
+The variable next_move is not absolutely necessary, but it is very useful
+when making and unmaking moves during the search and gameplay. It holds the
+move that was played in this position. It ends up in the history table.
+What happens is that the engine, before making a move, captures the current
+state, adds the move to be played, and pushes this into the history table.
+This way the engine doesn't need to store the entire board; it can just get
+the previous game and undo the move that was made there, to restore the
+previous position. This saves having to store the entire board in the
+history.
 
 That is it for the GameState struct. Now we only need a history struct
 which keeps track of the entire game's history. Believe it or not, but this
