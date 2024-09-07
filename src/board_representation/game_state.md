@@ -18,8 +18,7 @@ pub struct GameState {
 }
 ```
 
-Most of the variables speak for themselves, but for the sake of
-completeness they are listed below with a short description.
+Here are the descriptions for each of the state variables.
 
 | Variable           | Meaning                           |
 |--------------------|-----------------------------------|
@@ -33,8 +32,21 @@ completeness they are listed below with a short description.
 | 8. psqt_value      | Piece Square Table Value          |
 | 9. next_move       | The move played in this position  |
 
+The variable *active_color* just holds which side is to move in this
+position. The castling permissions variable is an integer, representing
+which side can castle where.
+
+The variable *en_passant* marks the "active" en_passant square, if any.
+Imagine there is a black pawn on _d4_, and white plays _c2-c4_. The c4-pawn
+can now be captured by _d4xc3 ep_, so after the move _c2-c4_, the square
+_c3_ becomes the active en-passant square. Note that this is only set
+directly after the white _c2-c4_ two-square pawn move, and it will be unset
+after whatever move black decides to play. This is because en-passant is
+only a valid move directly after a two-square pawn push.
+
 Sometimes the values for half_move_clock and fullmove_number can be
-confusing.
+confusing, so we'll discuss them a bit further to make sure these are
+understood correctly.
 
 In day-to-day chess talk, chess we tend to call it a "move" when one side
 moves a piece. Technically though, this is only a half-move. The full move
