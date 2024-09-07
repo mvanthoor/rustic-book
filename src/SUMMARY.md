@@ -18,7 +18,7 @@
     - [Zobrist Hashing](./board_representation/zobrist_hashing.md)
     - [Game State](./board_representation/game_state.md)
     - [Game History](./board_representation/game_history.md)
-- [Board Functionality](./board_functionality/board_actions.md)
+- [Board Functionality](./board_functionality/board_functionality.md)
     - [Introduction](./board_functionality/introduction.md)
     - [Handling FEN-strings](./board_functionality/handling_fen_strings.md)
     - [Detecting the bishop pair](./board_functionality/detecting_bishop_pair.md)
