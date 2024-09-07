@@ -9,6 +9,8 @@
   - [Eplanation](#eplanation)
   - [Extending the method to chess](#extending-the-method-to-chess)
   - [Implementation](#implementation)
+  - [Initialization](#initialization)
+  - [Access to the keys](#access-to-the-keys)
 
 <!-- /code_chunk_output -->
 
@@ -235,6 +237,81 @@ doing: for each side, for each piece, on each square, generate a random
 number. The code for the other keys (castling, side to move, and
 en-passant) is very similar.
 
+>**Sidenote** Obviously it would be possible to generate the Zobrist
+>randoms once and then just copy/paste them into the code. You could even
+>use an online number generator to create them, because their values don't
+>matter, as long as they use the full 64 bits. I decided to use the rnd
+>crate with the ChaCha algorithm, because it is guaranteed (at the time of
+>writing this) to generate the same list of random numbers on any platform
+>Rust runs on, as long as you seed the number generator with the same seed.
+>However, even if it wouldn't generate the same numbers each time, it would
+>still work. That could make debugging harder though, if the Zobrist Keys
+>don't work as intended. It is therefore best that the Zobrist Keys are the
+>same on every run of the engine, so it would be advisable to either use
+>static keys, or a seeded random number generator.
+
+## Initialization
+
+We first have to initialize the Zobrist Key for the position we are
+starting out with. I can hear you think: if we would use static numbers
+instead of generating them, couldn't we just calculate the key once and
+just assign it? It would work, but only for the standard starting position.
+It would be impossible to support Fischer Random Chess (FRC, Chess960) or
+start a game from a different position such as when giving pawn odds.
+Therefore we just write a function to set up the initial Zobrist Key.
+
+```rust,ignore
+  pub fn init_zobrist_key(&self) -> ZobristKey {
+      let mut key: u64 = 0;
+
+      // "bb_w" is shorthand for "self.bb_pieces[Sides::WHITE]".
+      let bb_w = self.bb_pieces[Sides::WHITE];
+      let bb_b = self.bb_pieces[Sides::BLACK];
+
+      // Iterate through all piece types, for both white and black.
+      // "piece_type" is enumerated, and it'll start at 0 (KING), then 1
+      // (QUEEN), and so on.
+      for (piece_type, (w, b)) in bb_w.iter().zip(bb_b.iter()).enumerate() {
+          // Assume the first iteration; piece_type will be 0 (KING). The
+          // following two statements will thus get all the pieces of
+          // type "KING" for white and black. (This will obviously only
+          // be one king, but with rooks, there will be two in the
+          // starting position.)
+          let mut white_pieces = *w;
+          let mut black_pieces = *b;
+
+          // Iterate through all the piece locations of the current piece
+          // type. Get the square the piece is on, and then hash that
+          // square/piece combination into the zobrist key.
+          while white_pieces > 0 {
+              let square = bits::next(&mut white_pieces);
+              key ^= self.zobrist_randoms.piece(Sides::WHITE, piece_type, square);
+          }
+
+          // Same for black.
+          while black_pieces > 0 {
+              let square = bits::next(&mut black_pieces);
+              key ^= self.zobrist_randoms.piece(Sides::BLACK, piece_type, square);
+          }
+      }
+
+      // Hash the castling, side to move, and en-passant state.
+      key ^= self.zobrist_randoms.castling(self.game_state.castling);
+      key ^= self
+          .zobrist_randoms
+          .side(self.game_state.active_color as usize);
+      key ^= self.zobrist_randoms.en_passant(self.game_state.en_passant);
+
+      key
+  }
+```
+
+We need a place to put the board's current Zobrist Key. The GameState
+struct, which collects all manner of data about the current position is an
+ideal location for this, so we'll discuss this in the next chapter.
+
+## Access to the keys
+
 Because the random numbers are hidden inside this struct, we also need some
 functions to get to them:
 
@@ -258,20 +335,5 @@ functions to get to them:
       }
   }
 ```
-The "board key" is in the GameState struct. For this, see the [Game
-State](./game_state.md) page.
 
->**Sidenote** Obviously it would be possible to generate the Zobrist
->randoms once and then just copy/paste them into the code. You could even
->use an online number generator to create them, because their values don't
->matter, as long as they use the full 64 bits. I decided to use the rnd
->crate with the ChaCha algorithm, because it is guaranteed (at the time of
->writing this) to generate the same list of random numbers on any platform
->Rust runs on, as long as you seed the number generator with the same seed.
->However, even if it wouldn't generate the same numbers each time, it would
->still work. That could make debugging harder though, if the Zobrist Keys
->don't work as intended.
-
-We need a place to put the board's current Zobrist Key. The GameState
-struct, which collects all manner of data about the current position is an
-ideal location for this, so we'll discuss this in the next chapter.
+That's it for the Zobrist Keys. The next chapter deals with the GameState struct.
