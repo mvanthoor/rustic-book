@@ -216,7 +216,7 @@ pub bb_side: [Bitboard; Sides::BOTH],
 ```
 
 This array holds two bitboards: one with all the pieces for the white side,
-one with all the pieces for the black side. This is very useful, becase we
+one with all the pieces for the black side. This is very useful, because we
 often need to do things such as this:
 
 ```rust,ignore
