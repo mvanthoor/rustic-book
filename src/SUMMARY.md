@@ -27,6 +27,8 @@
     - [Detecting cannot force mate](./board_functionality/detecting_cant_force_mate.md)
     - [Detecting draws by FIDE
       rules](./board_functionality/detecting_fide_draws.md)
+- [The Move Generator](./move_generator/move_generator.md)
+    - [Introduction](./move_generator/introduction.md)
 - [Search](./search/search.md)
     - [Introduction](./search/introduction.md)
     - [Move Ordering](./search/ordering/ordering.md)
