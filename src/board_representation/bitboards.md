@@ -250,6 +250,14 @@ how the binary system and bitwise operations work; lines such this one are
 going to be throughout the entire engine, everywhere and anywhere, all the
 time, especially in the move generator and the evaluation function.
 
+The one thing you're almost sure to ask now is: how do we initialize these
+bitboards? How do we know which bits to set for which pieces? The
+initialization is done when the engine starts, or when it receives a
+command to read a new FEN-string. Se the chapter [Handling
+FEN-strings](../board_functionality/handling_fen_strings.md) in the Board
+Functionality section to see how a position given to the engine is
+converted into a set of bitboards.
+
 Now let's move on to something easier before your head explodes. The next
 chapter deals with the piece list, which is related to the bitboards, but
 much easier to understand.
