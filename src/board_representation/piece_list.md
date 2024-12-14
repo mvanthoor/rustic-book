@@ -112,7 +112,7 @@ program such as CuteChess will count the game as lost.
 Now we've collected all the parts for the board representation:
 
 - Bitboards; 12 (6 per color)
-- Bitboards; 2 (ooccupancy per color)
+- Bitboards; 2 (occupancy per color)
 - Game State
 - Game History
 - Zobrist Keys
@@ -122,5 +122,3 @@ Now we can go and combine al of this into a Board Struct, which will
 complete the board representation. Then, we'll have to write some
 functions to get the board to do something. On to the next and final
 chapter of this section: [Board Struct](./board_struct.md)
-
-

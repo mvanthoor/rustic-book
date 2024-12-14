@@ -297,7 +297,7 @@ fn pieces(board: &mut Board, part: &str) -> FenResult {
 
 ### Part 2: Side to move
 
-The harderst part is already done. The next few parsers are much simpler
+The hardest part is already done. The next few parsers are much simpler
 and are probably self-explanatory. Parsing succeeds if all the requirements
 for the part are met, and the information from the part is put into the
 board. If any of the requirements fail, these functions return an error and

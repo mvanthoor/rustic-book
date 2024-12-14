@@ -1,13 +1,13 @@
 # Game History
 
-The chess engine needs to keep a history of all positions that occured in
+The chess engine needs to keep a history of all positions that occurred in
 the game, including the associated data. This is needed for functionality
 such as move takebacks (which is done during search, for example) and
 determining if a game is a draw due to three-fold repetition.
 
 There are three ways to keep the game history:
 
-1. Save the entire board, including all the associated staes, each time a
+1. Save the entire board, including all the associated states, each time a
    move is made. When a move is taken back, you restore the previous
    version of the board with everything in it. This is a simple method to
    understand and relatively easy to implement, but the drawback is that it
@@ -17,7 +17,7 @@ There are three ways to keep the game history:
    save the entire board or the game state. Saving just the move is very
    fast. the problem with this method though is that it needs to not only
    undo the move, but also incrementally undo all the associated data, such
-   as the Zobirst Key, Phase and PSQT values, castling, and the en-passant
+   as the Zobrist Key, Phase and PSQT values, castling, and the en-passant
    square. This will take extra work and calculation on top of reversing
    the move, so restoring a board can still be slow.
 3. The last option is to save the game state, and include the move that was

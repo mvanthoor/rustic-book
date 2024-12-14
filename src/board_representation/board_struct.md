@@ -15,7 +15,7 @@ they're all being put together:
 - Piece List
 - Zobrist Keys.
 
-So, wihtout further ado, here's the Board struct:
+So, without further ado, here's the Board struct:
 
 ```rust,ignore
 pub struct Board {

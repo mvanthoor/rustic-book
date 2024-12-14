@@ -174,7 +174,7 @@ pub bb_pieces: [[Bitboard; NrOf::PIECE_TYPES]; Sides::BOTH],
 pub bb_side: [Bitboard; Sides::BOTH],
 ```
 
-bb_piece contains 6 arrays for white and 6 arrays for black. Each arary is
+bb_piece contains 6 arrays for white and 6 arrays for black. Each array is
 set up like this, containing only pieces for one color:
 
 - index 0: all kings (always only one)
@@ -191,7 +191,7 @@ let white_rooks = bb_pieces[Sides::WHITE][Pieces::ROOK];
 ```
 
 Because this is something we need a lot, there's a function for this. Many
-oneliners such as this are wrapped into a function:
+one-liners such as this are wrapped into a function:
 
 ```rust,ignore
 pub fn get_pieces(&self, side: Side, piece: Piece) -> Bitboard {
