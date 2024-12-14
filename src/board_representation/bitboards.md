@@ -131,7 +131,7 @@ implementation of the chess engine starts_.
 
 Rustic uses two array with 6 bitboards each. One array is for the white
 pieces, the other is for the black ones. There are 6 bitboards per side,
-because there are 6 piece types: King, Queen, Rook, Bischop, Knight and
+because there are 6 piece types: King, Queen, Rook, Bishop, Knight and
 pawn. These 6 piece types are represented in this struct:
 
 ```rust,ignore

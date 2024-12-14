@@ -39,7 +39,7 @@ feature can be rewritten in any desired programming language.
 The programming language obviously needs the right capabilities, so please
 note that something like
 [WhiteSpace](https://en.wikipedia.org/wiki/Whitespace_(programming_language))
-is probably out. Even _if_ the language you choose hase enough capabilities
+is probably out. Even _if_ the language you choose has enough capabilities
 to write a non-trivial project in it, the language still may not be a good
 fit. The programming language choice is your own responsibility. Any and
 all suffering will be of your own making. Choose your language wisely.

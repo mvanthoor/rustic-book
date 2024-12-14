@@ -82,7 +82,7 @@ For normal playing and testing, the binary of version 3.0.0 can be used.
     - Increment **a**: A new strength-gaining feature was added.
     - Increment **b**: A bug was fixed that gained strength.
     - Increment **c**: A feature was added or a bug was fixed that did not
-      gain stregnth. It is not necessary to test this version for a rating
+      gain strength. It is not necessary to test this version for a rating
       change.
 - Misc:
   - Updated crossbeam-channel to version 0.5.1
@@ -181,7 +181,7 @@ This is a bugfix release. Alpha 1 lost all of its games on time forfeit
 when playing in MoveTime mode (for example, when playing seconds/move).
 
 Bugfixes:
-- Do not exceed alotted time in MoveTime mode.
+- Do not exceed allotted time in MoveTime mode.
 ### January 24, 2021 - Rustic Alpha 1
 
 This is the initial release.

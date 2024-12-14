@@ -6,7 +6,7 @@
 - [Zobrist Hashing](#zobrist-hashing)
   - [What is this?](#what-is-this)
   - [Why do we need this?](#why-do-we-need-this)
-  - [Eplanation](#eplanation)
+  - [Explanation](#explanation)
   - [Extending the method to chess](#extending-the-method-to-chess)
   - [Implementation](#implementation)
   - [Initialization](#initialization)
@@ -54,6 +54,7 @@ he can get stuck in a loop by adding and removing pieces one after the
 other. Still, it is enough to explain how the Zobrist method works.
 
 We now want to define the Zobrist hashing method:
+
 - We must have a number that is unique for the board position it was
   calculated for.
 - When the board position changes, we must be able to update this number.
@@ -134,7 +135,7 @@ two values.
 
 Now let's extend this method to chess. The previous simple game had only 15
 different positions (binary 0000 to 1111), so we could effectively give
-each square/piece combination its own number/key by hand and combinging
+each square/piece combination its own number/key by hand and combining
 those into a board key. With chess this is not possible, because for all
 intents and purposes, the number of positions is unlimited. Compared to the
 previous game, chess has:
