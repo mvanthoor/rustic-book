@@ -241,7 +241,7 @@ this, it is easy to "ask" the board for certain things. The line determines
 which squares on the board are empty. It works as follows:
 
 - Take the bb_side bitboard for all of White's pieces.
-- Take thee bb_side bitboard for all of Black's pieces.
+- Take the bb_side bitboard for all of Black's pieces.
 - Combine them to get all the pieces on the board (called "occupancy").
 - Then, all squares that are NOT in this bitboard must be empty.
 
