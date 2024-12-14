@@ -20,7 +20,7 @@
 
 Zobrist hashing is a method of representing unique positions in a board
 game using a single large number. It was developed by Albert Lindsey
-Zobrist (1942) in 1970 and it is this that Dr. Zobrist is most fanmous for.
+Zobrist (1942) in 1970 and it is this that Dr. Zobrist is most famous for.
 When first studying this method it can be a bit confusing, but after you
 get your head around it, you will surely appreciate its elegance.
 
@@ -38,7 +38,7 @@ again. This saves an enormous amount of calculation time; so much so, that
 adding a transposition table to an engine will typically gain 130-150 Elo
 points in playing strength.
 
-## Eplanation
+## Explanation
 
 To make it simpler to explain, let us first boil it down to its most simple
 version. To do so, we'll define a rather simple board game:
