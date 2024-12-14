@@ -56,7 +56,7 @@ The definitions of each part are as follows:
 
 1. Black pieces are denoted with small letters. White pieces are denoted
     with capital letters. The letters are K, Q, R, B, N, and P, which
-    stand for King, Queen, Rook, Bischop, Knight and Pawn respectively. A
+    stand for King, Queen, Rook, Bishop, Knight and Pawn respectively. A
     number means the number of empty squares after the last piece. The
     forward slash means that the row is finished and we start describing
     the next row. The position setup starts at the top left (black's side,
@@ -172,7 +172,7 @@ exactly mirrors the steps as laid out above.
         }
 
         // Put the temporary board in the original one's place if setting
-        // up the position is succesful.
+        // up the position is successful.
         temp_board.init();
         *self = temp_board;
 
