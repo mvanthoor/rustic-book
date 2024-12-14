@@ -47,7 +47,7 @@ The FEN-string has the following characteristics:
   at 1 and is incremented after black's move.
   
 >Note about part 6: This is the number of _upcoming_ full moves. After
->white's first move (for example: _1. e4_), the nmber stays at one, but
+>white's first move (for example: _1. e4_), the number stays at one, but
 >after black's move (for example: _1. ... e5_), it becomes 2. This means
 >that the position after _1. e4, e5_ is at full move nr. 2. This is
 >correct: white's next move is the first half of the next full move.
