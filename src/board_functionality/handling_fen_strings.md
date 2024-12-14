@@ -53,6 +53,7 @@ The FEN-string has the following characteristics:
 >correct: white's next move is the first half of the next full move.
 
 The definitions of each part are as follows:
+
 1. Black pieces are denoted with small letters. White pieces are denoted
     with capital letters. The letters are K, Q, R, B, N, and P, which
     stand for King, Queen, Rook, Bischop, Knight and Pawn respectively. A
@@ -92,8 +93,8 @@ we're going to do are the following steps:
 4. Put each part through its respective parser.
 5. As soon as one of the parser functions fails, the FEN-parsing fails.
 6. If all the parts are parsed without errors, the board is set up.
-6. We initialize everything else that isn't handled by the FEN-string.
-7. Put the temporary board into the engine's board.
+7. We initialize everything else that isn't handled by the FEN-string.
+8. Put the temporary board into the engine's board.
 
 ### FEN definitions
 
@@ -397,6 +398,7 @@ fn half_move_clock(board: &mut Board, part: &str) -> FenResult {
 ```
 
 ### Part 6: Full-Move number
+
 ```rust,ignore
 // Part 6: Parse full move number.
 fn full_move_number(board: &mut Board, part: &str) -> FenResult {
