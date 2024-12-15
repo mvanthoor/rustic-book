@@ -4,6 +4,6 @@
 
 # Rustic Chess Engine book
 
-This repository holds the book about the workings of the Rustic chess
-engine. Rustic's code [can be found on
-GitHub](https://github.com/mvanthoor/rustic). The engine is open source 
+[b]Please note that unlike the Rustic Chess Engine, the Rustic Book is
+copyrighted. [See the License for more information about
+this.](https://github.com/mvanthoor/rustic-book?tab=License-1-ov-file)[/b]

@@ -30,3 +30,6 @@ When making a contribution, take into account that:
 - However, you will receive credits in the text.
 - I might somehow change the contribution before including it.
 - I might decide to not include it at all for whatever reason.
+
+Thanks for your understanding. I hope this work may be of use to you,
+particularly in combination with the Rustic Chess Engine code.
