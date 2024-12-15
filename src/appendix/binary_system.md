@@ -103,5 +103,5 @@ in binary representation. If not, you should go back and read this page
 again; if necessary, find some more information on the internet and
 practice a bit with this subject matter. Understanding this perfectly is
 *absolutely essential* to be able to write a bitboard based chess engine.
-Counting in the binary system and combinding numbers (or more correctly,
+Counting in the binary system and combining numbers (or more correctly,
 sets of bits) with one another, comes up over and over again.

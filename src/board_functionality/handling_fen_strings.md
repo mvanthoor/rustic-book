@@ -47,15 +47,16 @@ The FEN-string has the following characteristics:
   at 1 and is incremented after black's move.
   
 >Note about part 6: This is the number of _upcoming_ full moves. After
->white's first move (for example: _1. e4_), the nmber stays at one, but
+>white's first move (for example: _1. e4_), the number stays at one, but
 >after black's move (for example: _1. ... e5_), it becomes 2. This means
 >that the position after _1. e4, e5_ is at full move nr. 2. This is
 >correct: white's next move is the first half of the next full move.
 
 The definitions of each part are as follows:
+
 1. Black pieces are denoted with small letters. White pieces are denoted
     with capital letters. The letters are K, Q, R, B, N, and P, which
-    stand for King, Queen, Rook, Bischop, Knight and Pawn respectively. A
+    stand for King, Queen, Rook, Bishop, Knight and Pawn respectively. A
     number means the number of empty squares after the last piece. The
     forward slash means that the row is finished and we start describing
     the next row. The position setup starts at the top left (black's side,
@@ -92,8 +93,8 @@ we're going to do are the following steps:
 4. Put each part through its respective parser.
 5. As soon as one of the parser functions fails, the FEN-parsing fails.
 6. If all the parts are parsed without errors, the board is set up.
-6. We initialize everything else that isn't handled by the FEN-string.
-7. Put the temporary board into the engine's board.
+7. We initialize everything else that isn't handled by the FEN-string.
+8. Put the temporary board into the engine's board.
 
 ### FEN definitions
 
@@ -171,7 +172,7 @@ exactly mirrors the steps as laid out above.
         }
 
         // Put the temporary board in the original one's place if setting
-        // up the position is succesful.
+        // up the position is successful.
         temp_board.init();
         *self = temp_board;
 
@@ -296,7 +297,7 @@ fn pieces(board: &mut Board, part: &str) -> FenResult {
 
 ### Part 2: Side to move
 
-The harderst part is already done. The next few parsers are much simpler
+The hardest part is already done. The next few parsers are much simpler
 and are probably self-explanatory. Parsing succeeds if all the requirements
 for the part are met, and the information from the part is put into the
 board. If any of the requirements fail, these functions return an error and
@@ -397,6 +398,7 @@ fn half_move_clock(board: &mut Board, part: &str) -> FenResult {
 ```
 
 ### Part 6: Full-Move number
+
 ```rust,ignore
 // Part 6: Parse full move number.
 fn full_move_number(board: &mut Board, part: &str) -> FenResult {

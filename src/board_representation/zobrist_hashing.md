@@ -6,7 +6,7 @@
 - [Zobrist Hashing](#zobrist-hashing)
   - [What is this?](#what-is-this)
   - [Why do we need this?](#why-do-we-need-this)
-  - [Eplanation](#eplanation)
+  - [Explanation](#explanation)
   - [Extending the method to chess](#extending-the-method-to-chess)
   - [Implementation](#implementation)
   - [Initialization](#initialization)
@@ -20,7 +20,7 @@
 
 Zobrist hashing is a method of representing unique positions in a board
 game using a single large number. It was developed by Albert Lindsey
-Zobrist (1942) in 1970 and it is this that Dr. Zobrist is most fanmous for.
+Zobrist (1942) in 1970 and it is this that Dr. Zobrist is most famous for.
 When first studying this method it can be a bit confusing, but after you
 get your head around it, you will surely appreciate its elegance.
 
@@ -38,7 +38,7 @@ again. This saves an enormous amount of calculation time; so much so, that
 adding a transposition table to an engine will typically gain 130-150 Elo
 points in playing strength.
 
-## Eplanation
+## Explanation
 
 To make it simpler to explain, let us first boil it down to its most simple
 version. To do so, we'll define a rather simple board game:
@@ -54,6 +54,7 @@ he can get stuck in a loop by adding and removing pieces one after the
 other. Still, it is enough to explain how the Zobrist method works.
 
 We now want to define the Zobrist hashing method:
+
 - We must have a number that is unique for the board position it was
   calculated for.
 - When the board position changes, we must be able to update this number.
@@ -134,7 +135,7 @@ two values.
 
 Now let's extend this method to chess. The previous simple game had only 15
 different positions (binary 0000 to 1111), so we could effectively give
-each square/piece combination its own number/key by hand and combinging
+each square/piece combination its own number/key by hand and combining
 those into a board key. With chess this is not possible, because for all
 intents and purposes, the number of positions is unlimited. Compared to the
 previous game, chess has:

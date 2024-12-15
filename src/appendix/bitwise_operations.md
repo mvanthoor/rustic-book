@@ -20,7 +20,7 @@ Bitwise operations are the bread and butter of a bitboard-based chess
 engine. This chapter explains how these operations work. A chess engine
 uses 64-bit integers, but to demonstrate the workings we're going to use an
 8-bit integer. This will save writing out long strings of zeroes. For the
-demonstration we'll use the same number thoughout:
+demonstration we'll use the same number throughout:
 
 ```rust,ignore
 decimal:  36

@@ -78,7 +78,7 @@ This rule is one of the more extensive draw rules, stated as follows:
 > it is moved.
 
 To be able to follow this rule, the engine has to have [Zobrist
-hashing](./zobrist_hashing.md) implemented already, so positioins can be
+hashing](./zobrist_hashing.md) implemented already, so positions can be
 uniquely identified. *Everything* in the position has to be the same. This
 includes "available moves", "player to move", "en passant", and "castling
 rights" as mentioned above.

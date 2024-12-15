@@ -131,7 +131,7 @@ implementation of the chess engine starts_.
 
 Rustic uses two array with 6 bitboards each. One array is for the white
 pieces, the other is for the black ones. There are 6 bitboards per side,
-because there are 6 piece types: King, Queen, Rook, Bischop, Knight and
+because there are 6 piece types: King, Queen, Rook, Bishop, Knight and
 pawn. These 6 piece types are represented in this struct:
 
 ```rust,ignore
@@ -174,7 +174,7 @@ pub bb_pieces: [[Bitboard; NrOf::PIECE_TYPES]; Sides::BOTH],
 pub bb_side: [Bitboard; Sides::BOTH],
 ```
 
-bb_piece contains 6 arrays for white and 6 arrays for black. Each arary is
+bb_piece contains 6 arrays for white and 6 arrays for black. Each array is
 set up like this, containing only pieces for one color:
 
 - index 0: all kings (always only one)
@@ -191,7 +191,7 @@ let white_rooks = bb_pieces[Sides::WHITE][Pieces::ROOK];
 ```
 
 Because this is something we need a lot, there's a function for this. Many
-oneliners such as this are wrapped into a function:
+one-liners such as this are wrapped into a function:
 
 ```rust,ignore
 pub fn get_pieces(&self, side: Side, piece: Piece) -> Bitboard {
@@ -241,7 +241,7 @@ this, it is easy to "ask" the board for certain things. The line determines
 which squares on the board are empty. It works as follows:
 
 - Take the bb_side bitboard for all of White's pieces.
-- Take thee bb_side bitboard for all of Black's pieces.
+- Take the bb_side bitboard for all of Black's pieces.
 - Combine them to get all the pieces on the board (called "occupancy").
 - Then, all squares that are NOT in this bitboard must be empty.
 

@@ -98,7 +98,7 @@ page](https://www.chessprogramming.org/Bitboards)). In the beginning this
 is somewhat harder to understand compared to the array approach mentioned
 above, but once you get the hang of it this representation becomes very
 natural to work with. Also, current-day computers are 64-bit, and a
-(Western!) chess board has 64 sqaures... this seems a match made in heaven.
+(Western!) chess board has 64 squares... this seems a match made in heaven.
 
 Now that you know what a board representation is and why we need it, we can
 start looking into how Rustic tackles this part of the chess engine.

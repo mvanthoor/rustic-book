@@ -69,7 +69,7 @@ evaluation function.
 
 The Phase Value and PSQT Value are calculated by the evaluation function to
 try and determining who is better in the position. Because this is a
-lenghty job, just like the Zobrist Key, these values are calculated at the
+lengthy job, just like the Zobrist Key, these values are calculated at the
 start of the game and put into these variables. As soon as a piece is
 moved, the variables can be updated. This works similar to the Zobrist
 Keys: when a piece moves, remove the value it had on the previous square,

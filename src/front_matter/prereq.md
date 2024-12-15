@@ -106,7 +106,7 @@ throw it away, instead of trying to undo everything you did.
 I mean it. Don't skimp on this. Many IDE's and editors have provisions for
 Git and other version control systems built in, or they provide plugins or
 extensions. If you don't like built-in version control or your favorite
-eidtor doesn't support it, then there are many GUI-applications to be
+editor doesn't support it, then there are many GUI-applications to be
 found; open-source, freemium and paid. If you are really a contrarian, you
 can also use choose a different version control system. It doesn't matter,
 as long as you use _something_.

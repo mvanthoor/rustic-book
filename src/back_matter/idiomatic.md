@@ -18,7 +18,7 @@ features. Consider for example the printing of a struct's values to the
 screen in a pretty way, or converting such a struct into a string, so it
 can be appended to the end of another string. To achieve this, I
 implemented ".print()" and ".to_string()" for some structs. Sometimes there
-were even completely seperate functions for printing, carried over from the
+were even completely separate functions for printing, carried over from the
 very first versions of the engine.
 
 The idiomatic way to do this is to implement the trait "Display". This has
@@ -36,7 +36,7 @@ For example, one place where you will encounter an "old-fashioned" way of doing
 things is when Rustic iterates over the move list. It uses a for-loop,
 instead of an iterator. The reason is that the this list is an array backed
 with a counter, so it can be stored on the stack. (In case of a Vec, it
-would be stored on the heap, which is slower.) When I implemeted Iterator
+would be stored on the heap, which is slower.) When I implemented Iterator
 for MoveList the engine's speed dropped by 10% because of the Some/None
 check that comes with an iterator. Therefore I just use a for-loop, so the
 engine doesn't lose 10% speed. Should I find a way to implement an Iterator
