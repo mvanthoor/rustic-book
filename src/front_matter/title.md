@@ -7,10 +7,11 @@ or, the art of Chess Programming in Rust
 
 __**Marcel Vanthoor**__<br /><hr />
 
-_Latest update:  October 28, 2024 - 20:35 (Dutch Time)_<br />
+_Latest update:  December 15, 2024 - 21:30 (Dutch Time)_<br />
 _Make sure to press CTRL+F5 so you see the latest version of this book_.</br>
 
 Most recently updated chapters:<br />
+1. [Fixed many typo's (thanks to "Wermos")](title.md)
 1. [Write Board Struct Chapter](../board_representation/board_struct.md)
 1. [Rewrite About Me](../back_matter/me.md)
 1. [Small update to the Bitboards chapter](../board_representation/bitboards.md)
@@ -22,6 +23,5 @@ Most recently updated chapters:<br />
 1. [Added the Game State chapter](../board_representation/game_state.md)
 1. [Move some stuff to Board Functionality](../board_functionality/introduction.md)
 1. [Updated the Zobrist Hashing chapter](../board_representation/zobrist_hashing.md)
-1. [Added the Zobrist Hashing chapter](../board_representation/zobrist_hashing.md)
 
-© Marcel Vanthoor, 2019-2024
+© 2019 - 2025, Marcel Vanthoor, all rights reserved.
