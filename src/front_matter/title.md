@@ -11,7 +11,7 @@ _Latest update:  December 15, 2024 - 21:30 (Dutch Time)_<br />
 _Make sure to press CTRL+F5 so you see the latest version of this book_.</br>
 
 Most recently updated chapters:<br />
-1. [Fixed many typo's (thanks to "Wermos")](title.md)
+1. [Fixed many typo's (thanks to "Wermos")](./title.md)
 1. [Write Board Struct Chapter](../board_representation/board_struct.md)
 1. [Rewrite About Me](../back_matter/me.md)
 1. [Small update to the Bitboards chapter](../board_representation/bitboards.md)
