@@ -71,5 +71,4 @@ same board and the same pieces.
 >make things either very messy, or it would maybe even be impossible.
 
 Now that we have determined how the board should be working, we can dive
-into the first section: [Setting up the board position by using an
-FEN-string.](./handling_fen_strings.md)
+into it and look at the easiest parts: [Support functions.](./support_functions.md)

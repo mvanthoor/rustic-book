@@ -21,6 +21,7 @@
     - [Board struct](./board_representation/board_struct.md)
 - [Board Functionality](./board_functionality/board_functionality.md)
     - [Introduction](./board_functionality/introduction.md)
+    - [Support Functions](./board_functionality/support_functions.md)
     - [Handling FEN-strings](./board_functionality/handling_fen_strings.md)
     - [Piece movement](./board_functionality/piece_movement.md)
     - [Detecting the bishop pair](./board_functionality/detecting_bishop_pair.md)
