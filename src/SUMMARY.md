@@ -19,6 +19,7 @@
     - [Game State](./board_representation/game_state.md)
     - [Game History](./board_representation/game_history.md)
     - [Board struct](./board_representation/board_struct.md)
+    - [Initialization](./board_representation/init.md)
 - [Board Functionality](./board_functionality/board_functionality.md)
     - [Introduction](./board_functionality/introduction.md)
     - [Support Functions](./board_functionality/support_functions.md)

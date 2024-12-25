@@ -35,8 +35,5 @@ structures in one Board struct, it is easy to either create copies or even
 new boards when required.
 
 Another advantage of packaging everything up in an overarching struct is
-that we can now create functionality for the board, such as setting up the
-position by using an FEN string. These functions are discussed in the next
-section [Board
-Functionality](../board_functionality/board_functionality.md). See you
-there.
+that we can now create and initialize the board using its own constructor
+and init function. This will be discussed in [the next chapter.]()
