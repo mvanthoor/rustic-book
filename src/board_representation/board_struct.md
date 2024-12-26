@@ -36,4 +36,4 @@ new boards when required.
 
 Another advantage of packaging everything up in an overarching struct is
 that we can now create and initialize the board using its own constructor
-and init function. This will be discussed in [the next chapter.]()
+and init function. This will be discussed in [the next chapter.](./init.md)
