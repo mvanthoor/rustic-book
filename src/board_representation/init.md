@@ -213,6 +213,8 @@ What it does is basically:
 - See on which square the piece is
 - Hash the Zobrist Key for that color/piece-type/square combination into
   the "key" variable.
+- Hash the Zobrist Keys for castling, active color, and en-passant state
+  into the key.
 - When done, return the key. This is the Zobrist Key for the position which
   is on the board.
 

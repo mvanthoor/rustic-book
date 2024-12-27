@@ -24,16 +24,16 @@ This might actually not clarify things too well, if you're not yet
 well-versed in the concept of "separation of responsibility", so here's are
 some examples of what I mean.
 
-Because I can can determine if a side has a bishop pair or not by just
+Because we can can determine if a side has a bishop pair or not by just
 looking at the board, without even using the engine, the function should
 belong to the board.
 
 That example should be clear enough. The one about moving pieces is a bit
-more difficult, because... isn't it the _engine_ who moves pieces? Let's
-see.
+more difficult, because... isn't it the _engine_ that moves the pieces?
+Let's see.
 
-I can move a piece from one square to the other by just using the board. I
-don't need the engine for this. Pick up the piece, put it down somewhere
+We can move a piece from one square to the other by just using the board.
+We don't need the engine for this. Pick up the piece, put it down somewhere
 else. Thus, the function should be in the board. "But, you could make an
 illegal move", I hear you thinking. Yes, indeed. But this is the part of
 "without taking outside information into account."
@@ -49,9 +49,12 @@ Why is that?
 If the move is legal or not in that position, is not the responsibility of
 the board to determine. It is something the engine needs to decide, before
 the move even happens. This is critical if you want to write an engine that
-can play different variants of chess. Such an engine can have different
-move generators and different rule sets, even though each variant uses the
-same board and the same pieces.
+can play different variants of chess. Such an engine can have a different
+move generator and a different rule set compared to Western chess (or, it
+could even have multiple move generators and rule sets), even though each
+variant uses the same board and the same pieces. It should be possible to
+move pieces around as the engine sees fit according to its move generator
+and rule set.
 
 >**Sidenote**: You will find the make() and unmake() functions in the
 >playmove.rs file, which belongs to the board. I can imagine that this is
@@ -66,9 +69,9 @@ same board and the same pieces.
 >
 >The reason why make() and unmake() are in the board and not in the engine
 >is because then the entire Engine struct would need to be available in the
->Search function so it can make and unmake moves. Because Search is a part
->of the Engine struct itself and running in a separate thread, this would
->make things either very messy, or it would maybe even be impossible.
+>Search function so that function can make and unmake moves. Because Search
+>is a part of the Engine struct itself and running in a separate thread,
+>this would make things either very messy, or it could even be impossible.
 
 Now that we have determined how the board should be working, we can dive
 into it and look at the easiest parts: [Support functions.](./support_functions.md)
