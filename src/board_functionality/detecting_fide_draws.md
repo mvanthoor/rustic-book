@@ -211,8 +211,7 @@ pub fn draw_by_insufficient_material_rule(&self) -> bool {
         return false;
     }
 
-    // No queens, rooks or pawns. We may have a draw. For this, one of the following conditions
-    // in material balance must be true:
+    // No queens, rooks or pawns. We may have a draw. For this, one of the following conditions in material balance must be true:
 
     // King vs. King
     let kk = w[Pieces::BISHOP] == 0
