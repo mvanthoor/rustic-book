@@ -25,7 +25,7 @@
     - [Support Functions](./board_functionality/support_functions.md)
     - [Handling FEN-strings](./board_functionality/handling_fen_strings.md)
     - [Moving Pieces](./board_functionality/moving_pieces.md)
-    - [Piece movement](./board_functionality/piece_movement.md)
+    - [Making and Unmaking moves](./board_functionality/make_unmake.md)
     - [Detecting the bishop pair](./board_functionality/detecting_bishop_pair.md)
     - [Detecting cannot force mate](./board_functionality/detecting_cant_force_mate.md)
     - [Detecting draws by FIDE

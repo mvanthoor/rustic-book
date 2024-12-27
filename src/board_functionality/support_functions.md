@@ -6,7 +6,6 @@
 - [Support Functions](#support-functions)
   - [Explanation](#explanation)
   - [List of support functions](#list-of-support-functions)
-    - [new](#new)
     - [reset](#reset)
     - [get_pieces](#get_pieces)
     - [get_bitboards](#get_bitboards)
@@ -61,23 +60,6 @@ Below is a list of all the support functions accompanied by a short
 description.
 
 ## List of support functions
-
-### new
-
-Creates a brand new board.
-
-```rust,ignore
-pub fn new() -> Self {
-    Self {
-        bb_pieces: [[EMPTY; NrOf::PIECE_TYPES]; Sides::BOTH],
-        bb_side: [EMPTY; Sides::BOTH],
-        game_state: GameState::new(),
-        history: History::new(),
-        piece_list: [Pieces::NONE; NrOf::SQUARES],
-        zobrist_randoms: Arc::new(ZobristRandoms::new()),
-    }
-}
-```
 
 ### reset
 
