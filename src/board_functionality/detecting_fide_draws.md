@@ -198,8 +198,9 @@ pub fn draw_by_insufficient_material_rule(&self) -> bool {
     let w = self.get_bitboards(Sides::WHITE);
     let b = self.get_bitboards(Sides::BLACK);
 
-    // Determine if at least one side has either a Queen, a Rook or a pawn (qrp). If this is the
-    // case, a draw by rule is not possible because mate can be achieved.
+    // Determine if at least one side has either a Queen, a Rook or a
+    // pawn (qrp). If this is the case, a draw by rule is not possible
+    // because mate can be achieved.
     let qrp = w[Pieces::QUEEN] != 0
         || w[Pieces::ROOK] != 0
         || w[Pieces::PAWN] != 0
@@ -211,7 +212,8 @@ pub fn draw_by_insufficient_material_rule(&self) -> bool {
         return false;
     }
 
-    // No queens, rooks or pawns. We may have a draw. For this, one of the following conditions in material balance must be true:
+    // No queens, rooks or pawns. We may have a draw. For this, one of
+    // the following conditions in material balance must be true:
 
     // King vs. King
     let kk = w[Pieces::BISHOP] == 0
@@ -244,10 +246,11 @@ pub fn draw_by_insufficient_material_rule(&self) -> bool {
         && b[Pieces::BISHOP].count_ones() == 1
         && b[Pieces::KNIGHT] == 0;
 
-    // If we have King/Bishop vs King/Bishop, an additional condition applies. Both bishops have
-    // to be on the same colored square for a draw to be claimable. If they are on different
-    // colored squares, a mate is still possible (even though one player must assist the other
-    // in actually achieving it).
+    // If we have King/Bishop vs King/Bishop, an additional condition
+    // applies. Both bishops have to be on the same colored square for
+    // a draw to be claimable. If they are on different colored
+    // squares, a mate is still possible (even though one player must
+    // assist the other in actually achieving it).
     let same_color_sq = if kbkb {
         let wb_sq = w[Pieces::BISHOP].trailing_zeros() as usize;
         let bb_sq = b[Pieces::BISHOP].trailing_zeros() as usize;
@@ -257,8 +260,8 @@ pub fn draw_by_insufficient_material_rule(&self) -> bool {
         false
     };
 
-    // If we have any of these conditions, a draw can be claimed according to FIDE rules of
-    // "draw by insufficient material."
+    // If we have any of these conditions, a draw can be claimed
+    // according to FIDE rules of "draw by insufficient material."
     if kk || kbk || knk || kkb || kkn || (kbkb && same_color_sq) {
         return true;
     }
