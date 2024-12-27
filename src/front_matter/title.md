@@ -5,7 +5,7 @@
 
 or, the art of Chess Programming in Rust
 
-__**Marcel Vanthoor**__<br /><hr />
+© 2019 - 2025 __**Marcel Vanthoor**__, all rights reserved.<br /><hr />
 
 _Latest update:  December 27, 2024 - 23:00 (Dutch Time)_<br />
 _Make sure to press CTRL+F5 so you see the latest version of this book_.</br>
@@ -23,5 +23,3 @@ Most recently updated chapters:<br />
 1. [Finish the Piece List chapter](../board_representation/piece_list.md)
 1. [Add the Piece List chapter](../board_representation/piece_list.md)
 1. [Updated the Bitboards chapter](../board_representation/bitboards.md)
-
-© 2019 - 2025, Marcel Vanthoor, all rights reserved.
