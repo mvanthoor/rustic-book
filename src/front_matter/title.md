@@ -7,7 +7,7 @@ or, the art of Chess Programming in Rust
 
 __**Marcel Vanthoor**__<br /><hr />
 
-_Latest update:  December 24, 2024 - 13:00 (Dutch Time)_<br />
+_Latest update:  December 27, 2024 - 12:30 (Dutch Time)_<br />
 _Make sure to press CTRL+F5 so you see the latest version of this book_.</br>
 
 Most recently updated chapters:<br />
