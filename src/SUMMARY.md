@@ -24,6 +24,7 @@
     - [Introduction](./board_functionality/introduction.md)
     - [Support Functions](./board_functionality/support_functions.md)
     - [Handling FEN-strings](./board_functionality/handling_fen_strings.md)
+    - [Moving Pieces](./board_functionality/moving_pieces.md)
     - [Piece movement](./board_functionality/piece_movement.md)
     - [Detecting the bishop pair](./board_functionality/detecting_bishop_pair.md)
     - [Detecting cannot force mate](./board_functionality/detecting_cant_force_mate.md)

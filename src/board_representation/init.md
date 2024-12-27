@@ -7,6 +7,10 @@
   - [The init-function](#the-init-function)
   - [Initializing pieces per side](#initializing-pieces-per-side)
   - [Initializing the piece list](#initializing-the-piece-list)
+  - [Initializing the game state](#initializing-the-game-state)
+  - [Initializing the PSQT values](#initializing-the-psqt-values)
+  - [Incremental updates](#incremental-updates)
+  - [Next...](#next)
 
 <!-- /code_chunk_output -->
 
@@ -143,4 +147,192 @@ number into the array to find out if, and what piece is on that square.
 
 [The piece list section can be found here.](./piece_list.md)
 
+## Initializing the game state
 
+The game state has multiple parts to it:
+
+- It needs to calculate the current Zobrist key. (See the chapter about
+  [Zobrist Hasing](./zobrist_hashing.md) for more information on how to set
+  up the zobrist hash values.) The key is calculated like this:
+
+```rust,ignore
+pub fn init_zobrist_key(&self) -> ZobristKey {
+    // Keep the key here.
+    let mut key: u64 = 0;
+
+    // Same here: "bb_w" is shorthand for
+    // "self.bb_pieces[Sides::WHITE]".
+    let bb_w = self.bb_pieces[Sides::WHITE];
+    let bb_b = self.bb_pieces[Sides::BLACK];
+
+    // Iterate through all piece types, for both white and black.
+    // "piece_type" is enumerated, and it'll start at 0 (KING), then 1
+    // (QUEEN), and so on.
+    for (piece_type, (w, b)) in bb_w.iter().zip(bb_b.iter()).enumerate() {
+        // Assume the first iteration; piece_type will be 0 (KING). The
+        // following two statements will thus get all the pieces of
+        // type "KING" for white and black. (This will obviously only
+        // be one king, but with rooks, there will be two in the
+        // starting position.)
+        let mut white_pieces = *w;
+        let mut black_pieces = *b;
+
+        // Iterate through all the piece locations of the current piece
+        // type. Get the square the piece is on, and then hash that
+        // square/piece combination into the zobrist key.
+        while white_pieces > 0 {
+            let square = bits::next(&mut white_pieces);
+            key ^= self.zobrist_randoms.piece(Sides::WHITE, piece_type, square);
+        }
+
+        // Same for black.
+        while black_pieces > 0 {
+            let square = bits::next(&mut black_pieces);
+            key ^= self.zobrist_randoms.piece(Sides::BLACK, piece_type, square);
+        }
+    }
+
+    // Hash the castling, active color, and en-passant state.
+    key ^= self.zobrist_randoms.castling(self.game_state.castling);
+    key ^= self
+        .zobrist_randoms
+        .side(self.game_state.active_color as usize);
+    key ^= self.zobrist_randoms.en_passant(self.game_state.en_passant);
+
+    // Done; return the key.
+    key
+}
+```
+
+The function seems a bit complicated at first sight because of the nested for and while
+loops, but with the help of the comments it should still be fairly obvious.
+What it does is basically:
+
+- Loop through all the white and black pieces
+- Determine the piece type per color (e.g.: White Knight)
+- See on which square the piece is
+- Hash the Zobrist Key for that color/piece-type/square combination into
+  the "key" variable.
+- When done, return the key. This is the Zobrist Key for the position which
+  is on the board.
+
+(_The next two parts tie into the engine's evaluation. Note that the
+sections on Evaluation may not be complete yet._)
+
+Next, _if the engine uses a Tapered Evaluation, the game phase has te be
+calculated. We haven't discussed this yet, but you can find more
+information about the game phase in the [Evaluation
+Chapter](../evaluation/evaluation.md). What it does is tell the engine
+which phase the game is in: opening, middle game, or endgame. The function
+look fairly similar to the Zobrist Key initialization:
+
+```rust,ignore
+pub fn count_phase(board: &Board) -> i16 {
+    let mut phase_w: i16 = 0;
+    let mut phase_b: i16 = 0;
+    let bb_w = board.bb_pieces[Sides::WHITE];
+    let bb_b = board.bb_pieces[Sides::BLACK];
+
+    for (piece_type, (w, b)) in bb_w.iter().zip(bb_b.iter()).enumerate() {
+        let mut white_pieces = *w;
+        let mut black_pieces = *b;
+
+        while white_pieces > 0 {
+            phase_w += EvalParams::PHASE_VALUES[piece_type];
+            bits::next(&mut white_pieces);
+        }
+
+        while black_pieces > 0 {
+            phase_b += EvalParams::PHASE_VALUES[piece_type];
+            bits::next(&mut black_pieces);
+        }
+    }
+
+    phase_w + phase_b
+}
+```
+
+It runs through all the white and black pieces per piece type. It adds all
+the phase values for each piece type, for white and black. At the end it
+adds both phases together and returns the result. The more pieces that are
+on the board, the higher the end result will be; so a higher phase value
+will mean that the game is in an earlier stage. An endgame has less pieces
+on the board, so the phase value will be lower.
+
+Lastly, the next move is set to 0, as there is no history and thus no next
+move, because we've just initialized the board.
+
+## Initializing the PSQT values
+
+This part also ties into the engines evaluation. It sets up the initial
+PSQT value for each side. See the sections on [Piece Square
+Tables](../evaluation/psqt.md) and [Tapered
+PSQT's](../evaluation/tapering.md) for more information on what these
+tables do in the engine. (As a short recap: they tell the engine what
+squares are good for which piece type, as a rule of thumb, which is the
+starting point of the evaluation function.) Rustic Alpha 3 and before had a
+simple evaluation with one value per piece/square combination, but Rustic 4
+has a tapered evaluation with two values per piece/square combination. When
+setting up the position, we need to know the PSQT-value for white and for
+black. Again, the function is similar to the Zobrist and phase
+initialization function:
+
+```rust,ignore
+pub fn psqt_apply(board: &Board, psqt_set: &PsqtSet) -> (W, W) {
+    let mut psqt_w_mg: i16 = 0; // White middle-game value
+    let mut psqt_w_eg: i16 = 0; // White end-game value
+    let mut psqt_b_mg: i16 = 0; // Black middle-game value
+    let mut psqt_b_eg: i16 = 0; // Black end-game value
+    let bb_white = board.bb_pieces[Sides::WHITE]; // Array of white piece bitboards
+    let bb_black = board.bb_pieces[Sides::BLACK]; // Array of black piece bitboards
+
+    // Iterate through the white and black bitboards (at the same time.)
+    for (piece_type, (w, b)) in bb_white.iter().zip(bb_black.iter()).enumerate() {
+        let mut white_pieces = *w; // White pieces of type "piece_type"
+        let mut black_pieces = *b; // Black pieces of type "piece_type"
+
+        // Iterate over pieces of the current piece_type for white.
+        while white_pieces > 0 {
+            let square = bits::next(&mut white_pieces);
+            psqt_w_mg += psqt_set[piece_type][FLIP[square]].mg();
+            psqt_w_eg += psqt_set[piece_type][FLIP[square]].eg();
+        }
+
+        // Iterate over pieces of the current piece_type for black.
+        while black_pieces > 0 {
+            let square = bits::next(&mut black_pieces);
+            psqt_b_mg += psqt_set[piece_type][square].mg();
+            psqt_b_eg += psqt_set[piece_type][square].eg()
+        }
+    }
+
+    (W(psqt_w_mg, psqt_w_eg), W(psqt_b_mg, psqt_b_eg))
+}
+```
+
+So this function iterates over the white and black pieces per piece type
+and then calculates the total "PSQT White Middle Game" and "PSQT White End
+Game" value; and obviously the same for black. It ends up with 4 values,
+which are then returned. (The "W" is just a type wrapper which means
+"Weight", so two values per side can be returned at once.)
+
+## Incremental updates
+
+After setting all these values, they are never recalculated from scratch
+like this during a game. This would take too much time, because the values
+change with every move. It would be a massive waste: why, for example,
+would we need to run over the pawns, bishops, kings, queens, etc... if it
+was a knight that moved? It would be much faster to take the knight out of
+all the values according to its starting square and put it back in
+according to the destination square. If it captures something on the
+destination square, we take that piece out of the values and we're done. We
+will see how this works exactly in the section about [Moving
+Pieces](../board_functionality/moving_pieces.md).
+
+## Next...
+
+Now that board creation and initialization are done, we can finally start
+looking at the [Board
+Functionality](../board_functionality/board_functionality.md), where we
+define and write functions to make the board usable by giving us
+information about the position, or moving pieces.
