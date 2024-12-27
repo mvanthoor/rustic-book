@@ -161,10 +161,10 @@ positions should be drawn, because no player can achieve a mate, right?
 Wrong...
 
 K+B vs. K+B:<br />
-<img src="../../positions/kbkb_mate.png" />
+<img src="../positions/kbkb_mate.png" />
 
 K+N vs. K+N:<br />
-<img src="../../positions/knkn_mate.png" />
+<img src="../positions/knkn_mate.png" />
 
 *Foul play!* I hear you cry. *Black must have assisted white in achieving
 these mates, because they cannot be forced!* True enough: these mates
