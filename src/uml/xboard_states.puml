@@ -1,0 +1,12 @@
+@startuml XBoardStates
+    hide empty description
+
+    [*] --> Observing : [xboard]
+    Observing --> Observing : [usermove, new]
+    Observing --> Analyzing : [analyze]
+    Analyzing --> Observing : [exit]
+    Analyzing --> Analyzing : [usermove, setboard]
+    Observing ---> Thinking : [go]
+    Thinking --> Observing : [force] 
+    Observing -up-> [*] : quit
+@enduml
